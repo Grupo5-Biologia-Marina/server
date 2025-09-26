@@ -1,10 +1,22 @@
 import { Request, Response } from 'express';
 import { DiscoverModel } from '../models/DiscoverModel';
 import { CreateDiscoverDto, IDiscoverResponse, ApiResponse, DiscoverStatus } from '../types/types';
+import { AuthenticatedRequest } from '../types/auth';
 
 // POST: crear un descubrimiento
-export const createDiscover = async (req: Request, res: Response): Promise<void> => {
+export const createDiscover = async (req: AuthenticatedRequest, res: Response): Promise<void> => {
   try {
+        // Verificar que el usuario existe
+    if (!req.user) {
+      res.status(401).json({ success: false, message: 'Unauthorized' });
+      return;
+    }
+
+    // Solo admin puede crear
+    if (req.user.role !== 'ADMIN') {
+      res.status(403).json({ success: false, message: 'Forbidden: Only admin can create discoveries' });
+      return;
+    }
     const discoverData: CreateDiscoverDto = req.body;
 
     const discover = await DiscoverModel.create({
@@ -93,4 +105,45 @@ export const getDiscoverById = async (req: Request, res: Response): Promise<void
       error: error.message
     });
   }
+};
+
+//DELETE
+export const deleteDiscover = async (req: AuthenticatedRequest, res: Response): Promise<void> => {
+    try{
+        const { id } req.params;
+
+        if (!req.user) {
+            res.status(401).json({ success: false, message: 'Unauthorized'});
+            return;
+        }
+
+        if (req.user.role !== 'ADMIN') {
+            ResizeObserver.status(403).json({ success: false, message: 'Forbidden: Only admin can delete discoveries'});
+            return;
+        }
+        //Buscar el descubrimietno por ID en mySQL
+        const discover = await DiscoverModel.Model.findByPk(id);
+
+        if (!discover) {
+            res.status(404).json({ success: false, message: 'Discovery not found'});
+            return;
+        }
+
+        await discover.destroy();
+
+        const response: ApiResponse<null> = {
+            success: true,
+            message: 'Discovery deleted successfully',
+        };
+
+        res.status(200).json(response);
+
+    } catch (error: any) {
+        console.error('Error deleting discovery:', error);
+        res.status(500).json({
+            success: false,
+            message: 'Server error while deliting discovery',
+            error: error.message 
+        });
+    }
 };
