@@ -3,6 +3,7 @@ import express from "express";
 import dotenv from "dotenv";
 dotenv.config(); // 👈 cargar variables de entorno primero
 import db_connection from "./database/db_connection";
+import UserModel from "./models/UserModel";
 
 // Importar rutas (cuando estén listas se descomentan)
 // import authRoutes from "./routes/authRoutes";
@@ -25,6 +26,25 @@ app.get("/health", async (_req, res) => {
     res.status(500).json({ status: "error", message: "DB connection failed" });
   }
 });
+
+// ───── ENDPOINT TEMPORAL PARA TESTEAR USER MODEL ─────
+// app.post("/test-user", async (_req, res) => {
+//   try {
+//     const user = await UserModel.create({
+//       username: "testuser",
+//       firstname: "Test",
+//       lastname: "User",
+//       email: "test@example.com",
+//       password: "securepassword",
+//       role: "user",
+//     });
+
+//     res.status(201).json({ success: true, data: user.toJSON() });
+//   } catch (error) {
+//     console.error(error);
+//     res.status(500).json({ success: false, error });
+//   }
+// });
 
 /* ───── RUTAS TEMPORALES (DUMMY) ───── */
 const dummyAuthController = {
