@@ -18,8 +18,11 @@ console.log("🔎 ENV ->", {
   DB_DIALECT,
 });
 
+const DB_PORT = Number(process.env.DB_PORT) || 3306;
+
 const db_connection = new Sequelize(DB_NAME, USER_DB, PASSWORD_DB, {
   host: HOST,
+  port: DB_PORT,
   dialect: DB_DIALECT,
   define: {
     timestamps: true,
