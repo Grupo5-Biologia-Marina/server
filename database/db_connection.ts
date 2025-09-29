@@ -9,7 +9,7 @@ const PASSWORD_DB: string = process.env.PASSWORD_DB!;
 const HOST: string = process.env.HOST!;
 const DB_DIALECT = (process.env.DB_DIALECT || "mysql") as "mysql";
 
-// 👇 Debug temporal para ver qué valores llegan del .env
+//Debug temporal para ver qué valores llegan del .env
 console.log("🔎 ENV ->", {
   DB_NAME,
   USER_DB,
