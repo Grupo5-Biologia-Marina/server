@@ -1,5 +1,5 @@
 import { Response, NextFunction } from "express";
-import { UserModel } from "../models/UserModel";
+import UserModel from "../models/UserModel";
 import { ApiResponse } from "../types/types";
 import { AuthenticatedRequest } from "../types/auth";
 

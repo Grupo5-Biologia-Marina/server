@@ -1,7 +1,7 @@
 import { Request, Response, NextFunction } from "express";
 import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
-import { UserModel } from "../models/UserModel";
+import UserModel from "../models/UserModel";
 import { ApiResponse } from "../types/types";
 
 const JWT_SECRET = process.env.JWT_SECRET || "secret";
