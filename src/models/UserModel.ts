@@ -1,5 +1,5 @@
 import { DataTypes, Model } from "sequelize";
-import sequelize from "../database/db_connection";
+import sequelize from "../../src/database/db_connection";
 import crypto from "crypto";
 
 class UserModel extends Model {
@@ -57,4 +57,4 @@ UserModel.init(
   }
 );
 
-export default UserModel;
+export default UserModel
