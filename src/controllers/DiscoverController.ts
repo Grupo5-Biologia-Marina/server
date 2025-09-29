@@ -110,7 +110,7 @@ export const getDiscoverById = async (req: Request, res: Response): Promise<void
 //DELETE
 export const deleteDiscover = async (req: AuthenticatedRequest, res: Response): Promise<void> => {
     try{
-        const { id } req.params;
+        const { id } = req.params;
 
         if (!req.user) {
             res.status(401).json({ success: false, message: 'Unauthorized'});
