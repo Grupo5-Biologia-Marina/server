@@ -1,8 +1,9 @@
 import { DataTypes, Model, Optional } from "sequelize";
 import sequelize from "../database/db_connection";
-import UserModel from "../models/UserModel";
+import UserModel from "./UserModel";
+import CategoryModel from "./CategoryModel";
 
-interface DiscoverAttributes {
+export interface PostAttributes {
   id: number;
   userId: Buffer;
   content: string;
@@ -10,11 +11,11 @@ interface DiscoverAttributes {
   updatedAt?: Date;
 }
 
-interface DiscoverCreationAttributes
-  extends Optional<DiscoverAttributes, "id" | "createdAt" | "updatedAt"> {}
+export interface PostCreationAttributes
+  extends Optional<PostAttributes, "id" | "createdAt" | "updatedAt"> {}
 
-class DiscoverModel extends Model<DiscoverAttributes, DiscoverCreationAttributes>
-  implements DiscoverAttributes {
+export class PostModel extends Model<PostAttributes, PostCreationAttributes>
+  implements PostAttributes {
   declare id: number;
   declare userId: Buffer;
   declare content: string;
@@ -22,7 +23,7 @@ class DiscoverModel extends Model<DiscoverAttributes, DiscoverCreationAttributes
   declare updatedAt?: Date;
 }
 
-DiscoverModel.init(
+PostModel.init(
   {
     id: {
       type: DataTypes.INTEGER.UNSIGNED,
@@ -57,7 +58,7 @@ DiscoverModel.init(
   },
   {
     sequelize,
-    modelName: "Discover",
+    modelName: "Post",
     tableName: "posts",
     timestamps: true,
     createdAt: "createdAt",
@@ -65,7 +66,21 @@ DiscoverModel.init(
   }
 );
 
-UserModel.hasMany(DiscoverModel, { foreignKey: "userId", as: "posts" });
-DiscoverModel.belongsTo(UserModel, { foreignKey: "userId", as: "user" });
+UserModel.hasMany(PostModel, { foreignKey: "userId", as: "posts" });
+PostModel.belongsTo(UserModel, { foreignKey: "userId", as: "user" });
 
-export default DiscoverModel;
+PostModel.belongsToMany(CategoryModel, {
+  through: "post_categories",
+  foreignKey: "postId",
+  otherKey: "categoryId",
+  as: "categories",
+});
+
+CategoryModel.belongsToMany(PostModel, {
+  through: "post_categories",
+  foreignKey: "categoryId",
+  otherKey: "postId",
+  as: "posts",
+});
+
+export default PostModel;

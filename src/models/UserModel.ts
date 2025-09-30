@@ -2,7 +2,7 @@ import { DataTypes, Model } from "sequelize";
 import sequelize from "../../src/database/db_connection";
 import crypto from "crypto";
 
-class UserModel extends Model {
+export class UserModel extends Model {
   declare id: Buffer;
   declare username: string;
   declare firstname?: string;
@@ -57,4 +57,4 @@ UserModel.init(
   }
 );
 
-export default UserModel
+export default UserModel;
