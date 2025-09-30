@@ -2,7 +2,7 @@ import { DataTypes, Model, Optional } from "sequelize";
 import sequelize from "../database/db_connection";
 import UserModel from "../models/UserModel";
 
-interface DiscoverAttributes {
+export interface DiscoverAttributes {
   id: number;
   userId: Buffer;
   content: string;
@@ -10,10 +10,10 @@ interface DiscoverAttributes {
   updatedAt?: Date;
 }
 
-interface DiscoverCreationAttributes
+export interface DiscoverCreationAttributes
   extends Optional<DiscoverAttributes, "id" | "createdAt" | "updatedAt"> {}
 
-class DiscoverModel extends Model<DiscoverAttributes, DiscoverCreationAttributes>
+export class DiscoverModel extends Model<DiscoverAttributes, DiscoverCreationAttributes>
   implements DiscoverAttributes {
   declare id: number;
   declare userId: Buffer;
