@@ -1,0 +1,16 @@
+services:
+  db:
+    image: mysql:8.0.33
+    container_name: lastdiscover
+    environment:
+      MYSQL_ROOT_PASSWORD: ${DB_ROOT_PASSWORD}
+      MYSQL_DATABASE: ${DB_NAME}
+      MYSQL_USER: ${USER_DB}
+      MYSQL_PASSWORD: ${PASSWORD_DB}
+    ports:
+      - "3307:3306"
+    volumes:
+      - last_discover_data:/var/lib/mysql
+
+volumes:
+  last_discover_data:
