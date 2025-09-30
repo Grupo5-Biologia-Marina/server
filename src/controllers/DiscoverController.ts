@@ -1,10 +1,14 @@
 import { Request, Response } from 'express';
+<<<<<<< HEAD
+import PostModel from '../models/PostModel';
+=======
 import DiscoverModel from '../models/PostModel';
 import { CreateDiscoverDto, IDiscoverResponse, ApiResponse, DiscoverStatus } from '../types/types';
+>>>>>>> 93eb686503836471b08f20cd636da8f0266e6b52
 import { AuthenticatedRequest } from '../types/auth';
 
 // POST: crear un descubrimiento
-export const createDiscover = async (req: AuthenticatedRequest, res: Response): Promise<void> => {
+export const createPost = async (req: AuthenticatedRequest, res: Response): Promise<void> => {
   try {
         // Verificar que el usuario existe
     if (!req.user) {
@@ -14,21 +18,21 @@ export const createDiscover = async (req: AuthenticatedRequest, res: Response): 
 
     // Solo admin puede crear
     if (req.user.role !== 'ADMIN') {
-      res.status(403).json({ success: false, message: 'Forbidden: Only admin can create discoveries' });
+      res.status(403).json({ success: false, message: 'Forbidden: Only admin can create Descubrimientos' });
       return;
     }
-    const discoverData: CreateDiscoverDto = req.body;
+    const discoverData: CreatePostDto = req.body;
 
-    const discover = await DiscoverModel.create({
+    const discover = await PostModel.create({
       ...discoverData,
-      status: DiscoverStatus.DRAFT,
+      status: PostStatus.DRAFT,
       publishedDate: new Date()
     });
 
-    const response: ApiResponse<IDiscoverResponse> = {
+    const response: ApiResponse<IPostResponse> = {
       success: true,
-      data: discover.toJSON() as IDiscoverResponse,
-      message: 'Discovery created successfully'
+      data: discover.toJSON() as IPostResponse,
+      message: 'Descubrimiento created successfully'
     };
 
     res.status(201).json(response);
@@ -55,44 +59,44 @@ export const createDiscover = async (req: AuthenticatedRequest, res: Response): 
 };
 
 // GET: obtener todos los descubrimientos
-export const getDiscovers = async (req: Request, res: Response): Promise<void> => {
+export const getPosts = async (req: Request, res: Response): Promise<void> => {
   try {
-    const discovers = await DiscoverModel.findAll();
-    const response: ApiResponse<IDiscoverResponse[]> = {
+    const discovers = await PostModel.findAll();
+    const response: ApiResponse<IPostResponse[]> = {
       success: true,
-      data: discovers.map(d => d.toJSON() as IDiscoverResponse),
-      message: 'Discoveries fetched successfully'
+      data: discovers.map(d => d.toJSON() as IPostResponse),
+      message: 'Descubrimientos fetched successfully'
     };
     res.status(200).json(response);
 
   } catch (error: any) {
-    console.error('Error fetching discoveries:', error);
+    console.error('Error fetching Descubrimientos:', error);
     res.status(500).json({
       success: false,
-      message: 'Server error while fetching discoveries',
+      message: 'Server error while fetching Descubrimientos',
       error: error.message
     });
   }
 };
 
 // GET ONE: obtener un descubrimiento por ID
-export const getDiscoverById = async (req: Request, res: Response): Promise<void> => {
+export const getPostById = async (req: Request, res: Response): Promise<void> => {
   try {
     const { id } = req.params;
-    const discover = await DiscoverModel.findByPk(id);
+    const discover = await PostModel.findByPk(id);
 
     if (!discover) {
       res.status(404).json({
         success: false,
-        message: 'Discovery not found'
+        message: 'Descubrimiento not found'
       });
       return;
     }
 
-    const response: ApiResponse<IDiscoverResponse> = {
+    const response: ApiResponse<IPostResponse> = {
       success: true,
-      data: discover.toJSON() as IDiscoverResponse,
-      message: 'Discovery fetched successfully'
+      data: discover.toJSON() as IPostResponse,
+      message: 'Descubrimiento fetched successfully'
     };
 
     res.status(200).json(response);
@@ -108,7 +112,7 @@ export const getDiscoverById = async (req: Request, res: Response): Promise<void
 };
 
 //DELETE
-export const deleteDiscover = async (req: AuthenticatedRequest, res: Response): Promise<void> => {
+export const deletePost = async (req: AuthenticatedRequest, res: Response): Promise<void> => {
     try{
         const { id } = req.params;
 
@@ -118,14 +122,14 @@ export const deleteDiscover = async (req: AuthenticatedRequest, res: Response): 
         }
 
         if (req.user.role !== 'ADMIN') {
-            res.status(403).json({ success: false, message: 'Forbidden: Only admin can delete discoveries'});
+            res.status(403).json({ success: false, message: 'Forbidden: Only admin can delete Descubrimientos'});
             return;
         }
         //Buscar el descubrimietno por ID en mySQL
-        const discover = await DiscoverModel.findByPk(id);
+        const discover = await PostModel.findByPk(id);
 
         if (!discover) {
-            res.status(404).json({ success: false, message: 'Discovery not found'});
+            res.status(404).json({ success: false, message: 'Descubrimiento not found'});
             return;
         }
 
@@ -134,7 +138,7 @@ export const deleteDiscover = async (req: AuthenticatedRequest, res: Response): 
         const response: ApiResponse<null> = {
             success: true,
             data: null,
-            message: 'Discovery deleted successfully',
+            message: 'Descubrimiento deleted successfully',
         };
 
         res.status(200).json(response);
@@ -149,7 +153,7 @@ export const deleteDiscover = async (req: AuthenticatedRequest, res: Response): 
     }
 };
 //PUT
-export const updateDiscover = async (req: AuthenticatedRequest, res: Response): Promise<void> => {
+export const updatePost = async (req: AuthenticatedRequest, res: Response): Promise<void> => {
   try {
     const { id } = req.params;
     //Verificamos que el usuario existe
@@ -159,27 +163,27 @@ export const updateDiscover = async (req: AuthenticatedRequest, res: Response): 
     }
     //Solo admin puede editar
     if(req.user.role !== 'ADMIN') {
-      res.status(403).json({ success: false, message: 'Forbidden: Only admin can update discoveries'})
+      res.status(403).json({ success: false, message: 'Forbidden: Only admin can update Descubrimientos'})
       return;
     }
     //Buscar el descubrimiento por ID
-    const discover = await DiscoverModel.findByPk(id);
+    const discover = await PostModel.findByPk(id);
 
     if (!discover) {
-      res.status(404).json({ success: false, message: 'Discovery not found'});
+      res.status(404).json({ success: false, message: 'Descubrimiento not found'});
       return;
     }
 
     //Obtener los datos para actualizar del body
-    const updateData: Partial<CreateDiscoverDto> = req.body;
+    const updateData: Partial<CreatePostDto> = req.body;
 
     //Actualizar en descubrimiento
     await discover.update(updateData);
 
-    const response: ApiResponse<IDiscoverResponse> = {
+    const response: ApiResponse<IPostResponse> = {
       success: true,
-      data: discover.toJSON() as IDiscoverResponse,
-      message: 'Discovery updated successfully'
+      data: discover.toJSON() as IPostResponse,
+      message: 'Descubrimiento updated successfully'
     };
 
     res.status(200).json(response);
