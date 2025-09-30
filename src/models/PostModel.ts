@@ -1,6 +1,7 @@
 import { DataTypes, Model, Optional } from "sequelize";
 import sequelize from "../database/db_connection";
 import UserModel from "./UserModel";
+import CategoryModel from "./CategoryModel";
 
 export interface PostAttributes {
   id: number;
@@ -67,5 +68,19 @@ PostModel.init(
 
 UserModel.hasMany(PostModel, { foreignKey: "userId", as: "posts" });
 PostModel.belongsTo(UserModel, { foreignKey: "userId", as: "user" });
+
+PostModel.belongsToMany(CategoryModel, {
+  through: "post_categories",
+  foreignKey: "postId",
+  otherKey: "categoryId",
+  as: "categories",
+});
+
+CategoryModel.belongsToMany(PostModel, {
+  through: "post_categories",
+  foreignKey: "categoryId",
+  otherKey: "postId",
+  as: "posts",
+});
 
 export default PostModel;
