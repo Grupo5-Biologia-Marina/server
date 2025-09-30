@@ -1,6 +1,8 @@
-# 🌊 Backend - Biología Marina
+# 🌊 Proyecto Backend - El Gran Azul
 
-Este proyecto es la API del sistema de **El Gran Azul**, desarrollada con **Node.js**, **Express**, **TypeScript** y **Sequelize** como ORM, conectada a una base de datos **MySQL**.
+Este proyecto es la **API** del sistema de **El Gran Azul**, dedicada a los descubrimientos de la biología marina.  
+Está desarrollada con **Node.js**, **Express**, **TypeScript** y **Sequelize** como ORM, conectada a una base de datos **MySQL**.  
+Permite almacenar, gestionar y consultar información sobre nuevas especies, investigaciones y hallazgos en el océano, ofreciendo datos estructurados que luego pueden ser consumidos por un frontend para mostrar publicaciones, perfiles de investigadores y noticias marinas.  
 
 ---
 
