@@ -1,5 +1,6 @@
 'use strict';
 
+/** @type {import('sequelize-cli').Migration} */
 module.exports = {
   async up(queryInterface, Sequelize) {
     await queryInterface.createTable('posts', {
@@ -10,7 +11,7 @@ module.exports = {
         allowNull: false,
       },
       userId: {
-        type: 'BINARY(16)',
+        type: Sequelize.INTEGER.UNSIGNED,
         allowNull: false,
         references: {
           model: 'users',
@@ -33,6 +34,8 @@ module.exports = {
         allowNull: false,
         defaultValue: Sequelize.NOW,
       },
+    }, {
+      engine: 'InnoDB'
     });
   },
 
