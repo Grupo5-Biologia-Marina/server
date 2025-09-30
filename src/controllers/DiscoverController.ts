@@ -1,5 +1,5 @@
 import { Request, Response } from 'express';
-import { DiscoverModel } from '../models/DiscoverModel';
+import DiscoverModel from '../models/DiscoverModel';
 import { CreateDiscoverDto, IDiscoverResponse, ApiResponse, DiscoverStatus } from '../types/types';
 import { AuthenticatedRequest } from '../types/auth';
 
