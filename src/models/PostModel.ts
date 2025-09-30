@@ -5,7 +5,7 @@ import CategoryModel from "./CategoryModel";
 
 export interface PostAttributes {
   id: number;
-  userId: Buffer;
+  userId: number;
   content: string;
   createdAt?: Date;
   updatedAt?: Date;
@@ -17,7 +17,7 @@ export interface PostCreationAttributes
 export class PostModel extends Model<PostAttributes, PostCreationAttributes>
   implements PostAttributes {
   declare id: number;
-  declare userId: Buffer;
+  declare userId: number;
   declare content: string;
   declare createdAt?: Date;
   declare updatedAt?: Date;
@@ -32,7 +32,7 @@ PostModel.init(
       allowNull: false,
     },
     userId: {
-      type: DataTypes.BLOB("tiny"),
+      type: DataTypes.INTEGER.UNSIGNED,
       allowNull: false,
       references: {
         model: UserModel,
