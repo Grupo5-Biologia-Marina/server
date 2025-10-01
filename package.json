@@ -6,7 +6,7 @@
   "scripts": {
     "build": "tsc",
     "start": "node dist/app.js",
-    "dev": "ts-node-dev --respawn --transpile-only app.ts",
+    "dev": "ts-node-dev --respawn --transpile-only src/app.ts",
     "test": "jest --watchAll --no-cache --detectOpenHandles --passWithNoTests",
     "test:watch": "jest --watch",
     "lint": "eslint . --ext .ts"
@@ -16,6 +16,7 @@
     "cors": "^2.8.5",
     "dotenv": "^17.2.2",
     "express": "^5.1.0",
+    "express-validator": "^7.2.1",
     "jsonwebtoken": "^9.0.2",
     "mysql2": "^3.15.1",
     "sequelize": "^6.37.7",

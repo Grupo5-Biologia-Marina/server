@@ -1,19 +1,19 @@
-import { Router } from "express";
-import {
-  createDiscover,
-  getDiscovers,
-  getDiscoverById,
-} from "../controllers/discoverController";
+// import { Router } from "express";
+// import {
+//   createDiscover,
+//   getDiscovers,
+//   getDiscoverById,
+// } from "../controllers/discoverController";
 
-const router = Router();
+// const router = Router();
 
 // POST → crear un descubrimiento
-router.post("/", createDiscover);
+// router.post("/", createDiscover);
 
 // GET → obtener todos los descubrimientos
-router.get("/", getDiscovers);
+// router.get("/", getDiscovers);
 
 // GET → obtener un descubrimiento por ID
-router.get("/:id", getDiscoverById);
+// router.get("/:id", getDiscoverById);
 
-export default router;
+// export default router;
