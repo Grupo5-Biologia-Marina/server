@@ -1,10 +1,11 @@
 import { DataTypes, Model, Optional } from "sequelize";
 import sequelize from "../database/db_connection";
 import UserModel from "./UserModel";
+import CategoryModel from "./CategoryModel";
 
 export interface PostAttributes {
   id: number;
-  userId: Buffer;
+  userId: number;
   content: string;
   createdAt?: Date;
   updatedAt?: Date;
@@ -16,7 +17,7 @@ export interface PostCreationAttributes
 export class PostModel extends Model<PostAttributes, PostCreationAttributes>
   implements PostAttributes {
   declare id: number;
-  declare userId: Buffer;
+  declare userId: number;
   declare content: string;
   declare createdAt?: Date;
   declare updatedAt?: Date;
@@ -31,7 +32,7 @@ PostModel.init(
       allowNull: false,
     },
     userId: {
-      type: DataTypes.BLOB("tiny"),
+      type: DataTypes.INTEGER.UNSIGNED,
       allowNull: false,
       references: {
         model: UserModel,
@@ -67,5 +68,19 @@ PostModel.init(
 
 UserModel.hasMany(PostModel, { foreignKey: "userId", as: "posts" });
 PostModel.belongsTo(UserModel, { foreignKey: "userId", as: "user" });
+
+PostModel.belongsToMany(CategoryModel, {
+  through: "post_categories",
+  foreignKey: "postId",
+  otherKey: "categoryId",
+  as: "categories",
+});
+
+CategoryModel.belongsToMany(PostModel, {
+  through: "post_categories",
+  foreignKey: "categoryId",
+  otherKey: "postId",
+  as: "posts",
+});
 
 export default PostModel;

@@ -1,10 +1,5 @@
 import { Request, Response } from 'express';
-<<<<<<< HEAD
 import PostModel from '../models/PostModel';
-=======
-import DiscoverModel from '../models/PostModel';
-import { CreateDiscoverDto, IDiscoverResponse, ApiResponse, DiscoverStatus } from '../types/types';
->>>>>>> 93eb686503836471b08f20cd636da8f0266e6b52
 import { AuthenticatedRequest } from '../types/auth';
 
 // POST: crear un descubrimiento

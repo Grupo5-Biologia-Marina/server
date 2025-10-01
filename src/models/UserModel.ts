@@ -3,7 +3,7 @@ import sequelize from "../../src/database/db_connection";
 import crypto from "crypto";
 
 export class UserModel extends Model {
-  declare id: Buffer;
+  declare id: number;
   declare username: string;
   declare firstname?: string;
   declare lastname?: string;
@@ -15,11 +15,10 @@ export class UserModel extends Model {
 UserModel.init(
   {
     id: {
-      type: DataTypes.BLOB("tiny"), // BINARY(16)
+      type: DataTypes.INTEGER.UNSIGNED,
       primaryKey: true,
       allowNull: false,
-      defaultValue: () =>
-        Buffer.from(crypto.randomUUID().replace(/-/g, ""), "hex"),
+      autoIncrement: true,
     },
     username: {
       type: DataTypes.STRING(50),
