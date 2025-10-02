@@ -3,7 +3,7 @@ import {
   createDiscover,
   getDiscovers,
   getDiscoverById,
-} from "../controllers/discoverController";
+} from "../controllers/PostController";
 
 const router = Router();
 
