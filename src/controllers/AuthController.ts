@@ -1,81 +1,86 @@
-import { Request, Response, NextFunction } from "express";
-import bcrypt from "bcrypt";
-import jwt from "jsonwebtoken";
+import { Request, Response } from "express";
+import crypto from "crypto";
 import UserModel from "../models/UserModel";
-import { ApiResponse } from "../types/types";
+import jwt from "jsonwebtoken";
 
-const JWT_SECRET = process.env.JWT_SECRET || "secret";
+const hashPassword = (password: string): string => {
+  return crypto.createHash("sha256").update(password).digest("hex");
+};
 
-// POST /auth/register
-export const registerUser = async (
-  req: Request,
-  res: Response,
-  next: NextFunction
-) => {
+export const registerUser = async (req: Request, res: Response): Promise<void> => {
   try {
-    const { username, email, password, role } = req.body;
+    const { username, email, password } = req.body;
 
-    const existingUser = await UserModel.findOne({ where: { email } });
-    if (existingUser) {
-      const err = new Error("Email already in use");
-      (err as any).statusCode = 400;
-      throw err;
+    if (!username || !email || !password) {
+      res.status(400).json({ success: false, message: "Faltan datos obligatorios" });
+      return;
     }
 
-    const hashedPassword = await bcrypt.hash(password, 10);
+    const hashedPassword = hashPassword(password);
 
-    const newUser = await UserModel.create({
+    const user = await UserModel.create({
       username,
       email,
       password: hashedPassword,
-      role: role || "user"
+      role: "user",
     });
 
-    const response: ApiResponse<any> = {
+    res.status(201).json({
       success: true,
-      message: "User created successfully",
-      data: { id: newUser.id, username: newUser.username, email: newUser.email, role: newUser.role }
-    };
-
-    res.status(201).json(response);
-  } catch (error) {
-    next(error);
+      message: "Usuario registrado con éxito",
+      data: {
+        id: user.id,
+        username: user.username,
+        email: user.email,
+        role: user.role,
+      },
+    });
+  } catch (error: any) {
+    res.status(500).json({
+      success: false,
+      message: "Error en el servidor durante el registro",
+      error: error.message,
+    });
   }
 };
 
-// POST /auth/login
-export const loginUser = async (
-  req: Request,
-  res: Response,
-  next: NextFunction
-) => {
+export const loginUser = async (req: Request, res: Response): Promise<void> => {
   try {
     const { email, password } = req.body;
 
+    if (!email || !password) {
+      res.status(400).json({ success: false, message: "Email y password son obligatorios" });
+      return;
+    }
+
     const user = await UserModel.findOne({ where: { email } });
     if (!user) {
-      const err = new Error("Invalid credentials");
-      (err as any).statusCode = 401;
-      throw err;
+      res.status(401).json({ success: false, message: "Credenciales inválidas" });
+      return;
     }
 
-    const passwordMatch = await bcrypt.compare(password, user.password);
-    if (!passwordMatch) {
-      const err = new Error("Invalid credentials");
-      (err as any).statusCode = 401;
-      throw err;
+    const hashedPassword = hashPassword(password);
+    if (user.password !== hashedPassword) {
+      res.status(401).json({ success: false, message: "Credenciales inválidas" });
+      return;
     }
 
-    const token = jwt.sign({ id: user.id, role: user.role }, JWT_SECRET, { expiresIn: "1h" });
+    const token = jwt.sign(
+      { id: user.id, role: user.role },
+      process.env.JWT_SECRET || "defaultsecret",
+      { expiresIn: "1h" }
+    );
 
-    const response: ApiResponse<any> = {
+    res.status(200).json({
       success: true,
-      message: "Login successful",
-      data: { token, id: user.id, username: user.username, role: user.role }
-    };
-
-    res.status(200).json(response);
-  } catch (error) {
-    next(error);
+      message: "Login exitoso",
+      token,
+    });
+  } catch (error: any) {
+    res.status(500).json({
+      success: false,
+      message: "Error en el servidor durante el login",
+      error: error.message,
+    });
   }
 };
