@@ -1,14 +1,17 @@
 import { Request, Response } from "express";
-import crypto from "crypto";
+import bcrypt from "bcrypt";
 import UserModel from "../models/UserModel";
 import jwt from "jsonwebtoken";
 
 const hashPassword = (password: string): string => {
-  return crypto.createHash("sha256").update(password).digest("hex");
+  const salt = bcrypt.genSaltSync(10);
+  return bcrypt.hashSync(password, salt);
 };
 
 export const registerUser = async (req: Request, res: Response): Promise<void> => {
   try {
+    console.log("Register request body:", req.body);
+
     const { username, email, password } = req.body;
 
     if (!username || !email || !password) {
@@ -16,7 +19,7 @@ export const registerUser = async (req: Request, res: Response): Promise<void> =
       return;
     }
 
-    const hashedPassword = hashPassword(password);
+    const hashedPassword = hashPassword(password); 
 
     const user = await UserModel.create({
       username,
@@ -24,6 +27,8 @@ export const registerUser = async (req: Request, res: Response): Promise<void> =
       password: hashedPassword,
       role: "user",
     });
+
+    console.log("Usuario creado:", user.id, user.email); 
 
     res.status(201).json({
       success: true,
@@ -36,6 +41,7 @@ export const registerUser = async (req: Request, res: Response): Promise<void> =
       },
     });
   } catch (error: any) {
+    console.error("Error registerUser:", error); 
     res.status(500).json({
       success: false,
       message: "Error en el servidor durante el registro",
@@ -46,6 +52,8 @@ export const registerUser = async (req: Request, res: Response): Promise<void> =
 
 export const loginUser = async (req: Request, res: Response): Promise<void> => {
   try {
+    console.log("Login request body:", req.body);
+
     const { email, password } = req.body;
 
     if (!email || !password) {
@@ -54,13 +62,17 @@ export const loginUser = async (req: Request, res: Response): Promise<void> => {
     }
 
     const user = await UserModel.findOne({ where: { email } });
+    console.log("Usuario encontrado:", user ? user.email : "no user");
+
     if (!user) {
       res.status(401).json({ success: false, message: "Credenciales inválidas" });
       return;
     }
 
-    const hashedPassword = hashPassword(password);
-    if (user.password !== hashedPassword) {
+    const isMatch = await bcrypt.compare(password, user.password);
+    console.log("Password match:", isMatch);
+
+    if (!isMatch) {
       res.status(401).json({ success: false, message: "Credenciales inválidas" });
       return;
     }
@@ -71,12 +83,15 @@ export const loginUser = async (req: Request, res: Response): Promise<void> => {
       { expiresIn: "1h" }
     );
 
+    console.log("Login exitoso, token generado");
+
     res.status(200).json({
       success: true,
       message: "Login exitoso",
       token,
     });
   } catch (error: any) {
+    console.error("Error loginUser:", error);
     res.status(500).json({
       success: false,
       message: "Error en el servidor durante el login",

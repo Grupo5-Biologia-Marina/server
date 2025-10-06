@@ -1,6 +1,5 @@
 import { DataTypes, Model } from "sequelize";
 import sequelize from "../../src/database/db_connection";
-import crypto from "crypto";
 
 export class UserModel extends Model {
   declare id: number;
@@ -53,6 +52,7 @@ UserModel.init(
     modelName: "User",
     tableName: "users",
     timestamps: true,
+    underscored: false,
   }
 );
 
