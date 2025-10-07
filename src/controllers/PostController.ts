@@ -2,6 +2,7 @@ import { Request, Response } from 'express';
 import PostModel from '../models/PostModel';
 import { AuthenticatedRequest } from '../types/auth';
 import { PostCreateInput, PostOutput, ApiResponse } from '../types/posts';
+import cloudinary from '../utils/cloudinary';
 
 export const createPost = async (req: AuthenticatedRequest, res: Response): Promise<void> => {
   try {
@@ -19,7 +20,9 @@ export const createPost = async (req: AuthenticatedRequest, res: Response): Prom
 
     const post = await PostModel.create({
       userId: postData.userId,
+      title: postData.title,
       content: postData.content,
+      credits: postData.credits,
     });
 
     const response: ApiResponse<PostOutput> = {

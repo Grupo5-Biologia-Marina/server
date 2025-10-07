@@ -6,7 +6,9 @@ import CategoryModel from "./CategoryModel";
 export interface PostAttributes {
   id: number;
   userId: number;
+  title: string
   content: string;
+  credits?: string;
   createdAt?: Date;
   updatedAt?: Date;
 }
@@ -18,7 +20,9 @@ export class PostModel extends Model<PostAttributes, PostCreationAttributes>
   implements PostAttributes {
   declare id: number;
   declare userId: number;
+  declare title: string;
   declare content: string;
+  declare credits?: string;
   declare createdAt?: Date;
   declare updatedAt?: Date;
 }
@@ -40,20 +44,31 @@ PostModel.init(
       },
       onUpdate: "CASCADE",
       onDelete: "CASCADE",
+      field: "userId",
+    },
+    title: {
+      type: DataTypes.STRING(255),
+      allowNull: false,
     },
     content: {
       type: DataTypes.TEXT,
       allowNull: false,
     },
+    credits: {
+      type: DataTypes.STRING(500),
+      allowNull: true,
+    },
     createdAt: {
       type: DataTypes.DATE,
       allowNull: false,
       defaultValue: DataTypes.NOW,
+      field: "createdAt",
     },
     updatedAt: {
       type: DataTypes.DATE,
       allowNull: false,
       defaultValue: DataTypes.NOW,
+      field: "updatedAt",
     },
   },
   {

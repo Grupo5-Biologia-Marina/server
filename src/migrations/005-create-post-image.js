@@ -3,32 +3,32 @@
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
   async up(queryInterface, Sequelize) {
-    await queryInterface.createTable('posts', {
+    await queryInterface.createTable('post_images', {
       id: {
         type: Sequelize.INTEGER.UNSIGNED,
         autoIncrement: true,
         primaryKey: true,
         allowNull: false,
       },
-      userId: {
+      postId: {
         type: Sequelize.INTEGER.UNSIGNED,
         allowNull: false,
         references: {
-          model: 'users',
+          model: 'posts',
           key: 'id',
         },
         onUpdate: 'CASCADE',
         onDelete: 'CASCADE',
       },
-      title: {
-        type: Sequelize.STRING(255),
+      url: {
+        type: Sequelize.STRING(500),
         allowNull: false,
       },
-      content: {
-        type: Sequelize.TEXT,
-        allowNull: false,
+      caption: {
+        type: Sequelize.STRING(500),
+        allowNull: true,
       },
-      credits: {
+      credit: {
         type: Sequelize.STRING(500),
         allowNull: true,
       },
@@ -48,6 +48,6 @@ module.exports = {
   },
 
   async down(queryInterface, Sequelize) {
-    await queryInterface.dropTable('posts');
+    await queryInterface.dropTable('post_images');
   },
 };
