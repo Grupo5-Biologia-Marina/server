@@ -26,7 +26,7 @@ const db_connection = new Sequelize(DB_NAME, USER_DB, PASSWORD_DB, {
   dialect: DB_DIALECT,
   define: {
     timestamps: true,
-    underscored: true,
+    underscored: false,
   },
 });
 
