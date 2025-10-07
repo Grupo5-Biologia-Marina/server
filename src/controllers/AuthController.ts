@@ -12,7 +12,7 @@ export const registerUser = async (req: Request, res: Response): Promise<void> =
   try {
     console.log("Register request body:", req.body);
 
-    const { username, email, password } = req.body;
+    const { username, firstname, lastname, email, password } = req.body;
 
     if (!username || !email || !password) {
       res.status(400).json({ success: false, message: "Faltan datos obligatorios" });
@@ -23,6 +23,8 @@ export const registerUser = async (req: Request, res: Response): Promise<void> =
 
     const user = await UserModel.create({
       username,
+      firstname,
+      lastname,
       email,
       password: hashedPassword,
       role: "user",
@@ -30,9 +32,16 @@ export const registerUser = async (req: Request, res: Response): Promise<void> =
 
     console.log("Usuario creado:", user.id, user.email); 
 
+    const token = jwt.sign(
+      { id: user.id, role: user.role },
+      process.env.JWT_SECRET || "defaultsecret",
+      { expiresIn: "1h" }
+    );
+
     res.status(201).json({
       success: true,
       message: "Usuario registrado con éxito",
+      token,
       data: {
         id: user.id,
         username: user.username,
