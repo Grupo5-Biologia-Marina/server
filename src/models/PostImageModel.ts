@@ -40,6 +40,7 @@ PostImageModel.init(
       references: { model: PostModel, key: "id" },
       onUpdate: "CASCADE",
       onDelete: "CASCADE",
+      field: 'postId',
     },
     url: {
       type: DataTypes.STRING(500),
