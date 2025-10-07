@@ -2,10 +2,7 @@ import { Request, Response } from "express";
 import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
 import UserModel from "../models/UserModel";
-import nodemailer from "nodemailer";
-import dotenv from "dotenv";
-
-dotenv.config();
+import { sendWelcomeEmail } from "../utils/mailer";
 
 // Función para hashear contraseña
 const hashPassword = (password: string): string => {
@@ -13,47 +10,54 @@ const hashPassword = (password: string): string => {
   return bcrypt.hashSync(password, salt);
 };
 
-// Configuración de nodemailer con Gmail + App Password
-const transporter = nodemailer.createTransport({
-  service: "gmail",
-  auth: {
-    user: process.env.EMAIL_USER, // tu email, ejemplo: elgranazul@gmail.com
-    pass: process.env.EMAIL_PASS, // la App Password generada en Gmail
-  },
-});
-
-const sendWelcomeEmail = async (email: string, username: string) => {
-  const htmlContent = `
-    <div style="font-family: Arial; color: #0ff; background:#001f2f; padding:2rem; border-radius:1rem;">
-      <h1>Hola ${username} 👋</h1>
-      <p>Gracias por unirte a <strong>El Gran Azul</strong>! Sumérgete en los misterios del océano y descubre los últimos descubrimientos marinos.</p>
-      <a href="${process.env.FRONTEND_URL}/login" style="padding:0.5rem 1rem; background:#00f2ff; color:#001f2f; border-radius:0.5rem; font-weight:bold; text-decoration:none;">Acceder a tu cuenta</a>
-    </div>
-  `;
-
-  await transporter.sendMail({
-    from: `"El Gran Azul 🌊" <${process.env.EMAIL_USER}>`,
-    to: email,
-    subject: "¡Bienvenido a El Gran Azul! 🐋",
-    html: htmlContent,
-  });
-
-  console.log(`Email de bienvenida enviado a ${email} para ${username}`);
-};
-
 export const registerUser = async (req: Request, res: Response): Promise<void> => {
   try {
-    console.log("Register request body:", req.body);
+    console.log("📝 Solicitud de registro recibida");
 
     const { username, firstname, lastname, email, password } = req.body;
 
+    // Validación de campos obligatorios
     if (!username || !email || !password) {
-      res.status(400).json({ success: false, message: "Faltan datos obligatorios" });
+      res.status(400).json({ 
+        success: false, 
+        message: "Faltan datos obligatorios: username, email y password son requeridos" 
+      });
+      return;
+    }
+
+    // Validación de formato de email
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+      res.status(400).json({ 
+        success: false, 
+        message: "Formato de email inválido" 
+      });
+      return;
+    }
+
+    // Verificar si el usuario ya existe
+    const existingUser = await UserModel.findOne({ where: { email } });
+    if (existingUser) {
+      res.status(409).json({ 
+        success: false, 
+        message: "Este email ya está registrado" 
+      });
+      return;
+    }
+
+    // Verificar si el username ya existe
+    const existingUsername = await UserModel.findOne({ where: { username } });
+    if (existingUsername) {
+      res.status(409).json({ 
+        success: false, 
+        message: "Este nombre de usuario ya está en uso" 
+      });
       return;
     }
 
     const hashedPassword = hashPassword(password);
 
+    // Crear usuario
     const user = await UserModel.create({
       username,
       firstname,
@@ -63,15 +67,18 @@ export const registerUser = async (req: Request, res: Response): Promise<void> =
       role: "user",
     });
 
-    console.log("Usuario creado:", user.id, user.email);
+    console.log(`✅ Usuario creado: ${user.username} (${user.email})`);
 
-    // ✅ Enviar email de bienvenida
-    await sendWelcomeEmail(email, username);
+    // Enviar email de bienvenida (sin bloquear la respuesta)
+    sendWelcomeEmail(email, username)
+      .then(() => console.log(`📧 Email de bienvenida enviado a ${email}`))
+      .catch((error) => console.error(`⚠️ Error enviando email (no crítico):`, error.message));
 
+    // Generar token JWT
     const token = jwt.sign(
-      { id: user.id, role: user.role },
+      { id: user.id, role: user.role, username: user.username },
       process.env.JWT_SECRET || "defaultsecret",
-      { expiresIn: "1h" }
+      { expiresIn: "24h" }
     );
 
     res.status(201).json({
@@ -81,66 +88,85 @@ export const registerUser = async (req: Request, res: Response): Promise<void> =
       data: {
         id: user.id,
         username: user.username,
+        firstname: user.firstname,
+        lastname: user.lastname,
         email: user.email,
         role: user.role,
       },
     });
   } catch (error: any) {
-    console.error("Error registerUser:", error);
+    console.error("❌ Error en registerUser:", error);
     res.status(500).json({
       success: false,
       message: "Error en el servidor durante el registro",
-      error: error.message,
+      error: process.env.NODE_ENV === 'development' ? error.message : undefined,
     });
   }
 };
 
 export const loginUser = async (req: Request, res: Response): Promise<void> => {
   try {
-    console.log("Login request body:", req.body);
+    console.log("🔐 Solicitud de login recibida");
 
     const { email, password } = req.body;
 
+    // Validación de campos
     if (!email || !password) {
-      res.status(400).json({ success: false, message: "Email y password son obligatorios" });
+      res.status(400).json({ 
+        success: false, 
+        message: "Email y password son obligatorios" 
+      });
       return;
     }
 
+    // Buscar usuario
     const user = await UserModel.findOne({ where: { email } });
-    console.log("Usuario encontrado:", user ? user.email : "no user");
 
     if (!user) {
-      res.status(401).json({ success: false, message: "Credenciales inválidas" });
+      res.status(401).json({ 
+        success: false, 
+        message: "Credenciales inválidas" 
+      });
       return;
     }
 
+    // Verificar contraseña
     const isMatch = await bcrypt.compare(password, user.password);
-    console.log("Password match:", isMatch);
 
     if (!isMatch) {
-      res.status(401).json({ success: false, message: "Credenciales inválidas" });
+      res.status(401).json({ 
+        success: false, 
+        message: "Credenciales inválidas" 
+      });
       return;
     }
 
+    // Generar token JWT
     const token = jwt.sign(
       { id: user.id, role: user.role, username: user.username },
       process.env.JWT_SECRET || "defaultsecret",
-      { expiresIn: "1h" }
+      { expiresIn: "24h" }
     );
 
-    console.log("Login exitoso, token generado");
+    console.log(`✅ Login exitoso para: ${user.email}`);
 
     res.status(200).json({
       success: true,
       message: "Login exitoso",
       token,
+      data: {
+        id: user.id,
+        username: user.username,
+        email: user.email,
+        role: user.role,
+      },
     });
   } catch (error: any) {
-    console.error("Error loginUser:", error);
+    console.error("❌ Error en loginUser:", error);
     res.status(500).json({
       success: false,
       message: "Error en el servidor durante el login",
-      error: error.message,
+      error: process.env.NODE_ENV === 'development' ? error.message : undefined,
     });
   }
 };
