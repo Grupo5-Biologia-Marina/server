@@ -1,5 +1,6 @@
 import { Router } from "express";
 import { getPosts, createPost } from "../controllers/PostController";
+import { authenticate } from "../middlewares/authMiddleware";
 
 const router = Router();
 
@@ -7,6 +8,6 @@ const router = Router();
 router.get("/", getPosts);
 
 // POST /posts → crea un post (solo admin o user autenticado)
-router.post("/", createPost);
+router.post("/", authenticate, createPost);
 
 export default router;

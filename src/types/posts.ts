@@ -1,6 +1,8 @@
 export interface PostCreateInput {
   userId: number;
+  title: string;
   content: string;
+  credits?: string;
 }
 
 export interface PostOutput {
