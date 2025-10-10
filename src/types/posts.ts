@@ -3,6 +3,8 @@ export interface PostCreateInput {
   title: string;
   content: string;
   credits?: string;
+  categories?: number[];
+  images?: string [];
 }
 
 export interface PostOutput {

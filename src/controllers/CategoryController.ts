@@ -2,7 +2,7 @@
 import { Request, Response } from 'express';
 import CategoryModel from '../models/CategoryModel';
 import { AuthenticatedRequest } from '../types/auth';
-import { ApiResponse } from '../types/types';
+import { ApiResponse } from '../types/posts';
 
 // GET: obtener todas las categorías
 export const getCategories = async (req: Request, res: Response): Promise<void> => {
