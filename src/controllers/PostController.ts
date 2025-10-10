@@ -17,21 +17,25 @@ export const createPost = async (req: AuthenticatedRequest, res: Response): Prom
     }
 
     const postData: PostCreateInput = req.body;
+    
+    // ✅ Extraer las propiedades de postData
+    const { userId, title, content, credits, categories, images } = postData;
 
     // 1️⃣ Crear post principal
     const post = await PostModel.create({ userId, title, content, credits });
     const postId = post.id;
 
-    // 2️⃣ Asociar categorías (tabla intermedia post_categorias)
+    // 2️⃣ Asociar categorías usando Sequelize (buscar por nombre)
     if (Array.isArray(categories) && categories.length > 0) {
-      for (const categoryId of categories) {
-        const category = await CategoryModel.findByPk(categoryId);
-        if (category) {
-          await db_connection.query(
-            'INSERT INTO post_categorias (post_id, category_id) VALUES (?, ?)',
-            { replacements: [postId, categoryId] }
-          );
+      const categoryInstances = await CategoryModel.findAll({
+        where: {
+          name: categories
         }
+      });
+
+      if (categoryInstances.length > 0) {
+        // @ts-ignore - Sequelize adds this method automatically
+        await post.setCategories(categoryInstances);
       }
     }
 
@@ -42,10 +46,25 @@ export const createPost = async (req: AuthenticatedRequest, res: Response): Prom
       }
     }
 
+    // 4️⃣ Obtener el post completo con relaciones
+    const fullPost = await PostModel.findByPk(postId, {
+      include: [
+        {
+          model: CategoryModel,
+          as: 'categories',
+          through: { attributes: [] }
+        },
+        {
+          model: PostImageModel,
+          as: 'images'
+        }
+      ]
+    });
+
     // ✅ Respuesta
-    const response: ApiResponse<PostOutput> = {
+    const response: ApiResponse<any> = {
       success: true,
-      data: post.toJSON() as PostOutput,
+      data: fullPost?.toJSON(),
       message: 'Post created successfully',
     };
     res.status(201).json(response);
@@ -71,10 +90,26 @@ export const createPost = async (req: AuthenticatedRequest, res: Response): Prom
 
 export const getPosts = async (req: Request, res: Response): Promise<void> => {
   try {
-    const posts = await PostModel.findAll();
-    const response: ApiResponse<PostOutput[]> = {
+    // 🔍 Obtener posts con categorías e imágenes usando Sequelize
+    const posts = await PostModel.findAll({
+      include: [
+        {
+          model: CategoryModel,
+          as: 'categories',
+          through: { attributes: [] },
+          attributes: ['id', 'name', 'description']
+        },
+        {
+          model: PostImageModel,
+          as: 'images',
+          attributes: ['id', 'url', 'caption', 'credit']
+        }
+      ]
+    });
+
+    const response: ApiResponse<any[]> = {
       success: true,
-      data: posts.map((p) => p.toJSON() as PostOutput),
+      data: posts.map(p => p.toJSON()),
       message: 'Posts fetched successfully',
     };
     res.status(200).json(response);
@@ -92,7 +127,21 @@ export const getPosts = async (req: Request, res: Response): Promise<void> => {
 export const getPostById = async (req: Request, res: Response): Promise<void> => {
   try {
     const { id } = req.params;
-    const post = await PostModel.findByPk(id);
+    const post = await PostModel.findByPk(id, {
+      include: [
+        {
+          model: CategoryModel,
+          as: 'categories',
+          through: { attributes: [] },
+          attributes: ['id', 'name', 'description']
+        },
+        {
+          model: PostImageModel,
+          as: 'images',
+          attributes: ['id', 'url', 'caption', 'credit']
+        }
+      ]
+    });
 
     if (!post) {
       res.status(404).json({
@@ -102,9 +151,9 @@ export const getPostById = async (req: Request, res: Response): Promise<void> =>
       return;
     }
 
-    const response: ApiResponse<PostOutput> = {
+    const response: ApiResponse<any> = {
       success: true,
-      data: post.toJSON() as PostOutput,
+      data: post.toJSON(),
       message: 'Post fetched successfully',
     };
 
