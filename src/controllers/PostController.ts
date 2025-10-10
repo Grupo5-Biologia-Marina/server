@@ -2,15 +2,12 @@ import { Request, Response } from 'express';
 import PostModel from '../models/PostModel';
 import { AuthenticatedRequest } from '../types/auth';
 import { PostCreateInput, PostOutput, ApiResponse } from '../types/posts';
-import cloudinary from '../utils/cloudinary';
 import db_connection from '../database/db_connection';
 import CategoryModel from '../models/CategoryModel';
 import PostImageModel from '../models/PostImageModel';
 
-
 export const createPost = async (req: AuthenticatedRequest, res: Response): Promise<void> => {
   try {
-    // ✅ Validar admin
     if (!req.user) {
       res.status(401).json({ success: false, message: 'Unauthorized' });
       return;
@@ -22,11 +19,10 @@ export const createPost = async (req: AuthenticatedRequest, res: Response): Prom
 
     const { title, content, credits, userId, categories, images }: PostCreateInput = req.body;
 
-    // 1️⃣ Crear post principal
     const post = await PostModel.create({ userId, title, content, credits });
     const postId = post.id;
 
-    // 2️⃣ Asociar categorías (tabla intermedia post_categorias)
+    // Asociar categorías
     if (Array.isArray(categories) && categories.length > 0) {
       for (const categoryId of categories) {
         const category = await CategoryModel.findByPk(categoryId);
@@ -39,14 +35,13 @@ export const createPost = async (req: AuthenticatedRequest, res: Response): Prom
       }
     }
 
-    // 3️⃣ Guardar imágenes (tabla post_images)
+    // Guardar imágenes
     if (Array.isArray(images) && images.length > 0) {
       for (const imageUrl of images) {
         await PostImageModel.create({ postId, url: imageUrl });
       }
     }
 
-    // ✅ Respuesta
     const response: ApiResponse<PostOutput> = {
       success: true,
       data: post.toJSON() as PostOutput,
@@ -56,15 +51,6 @@ export const createPost = async (req: AuthenticatedRequest, res: Response): Prom
 
   } catch (error: any) {
     console.error('Error creating post:', error);
-    if (error.name === 'SequelizeValidationError') {
-      const validationErrors = error.errors.map((e: any) => e.message);
-      res.status(400).json({
-        success: false,
-        message: 'Validation error',
-        error: validationErrors.join(', '),
-      });
-      return;
-    }
     res.status(500).json({
       success: false,
       message: 'Server error while creating post',
@@ -73,15 +59,37 @@ export const createPost = async (req: AuthenticatedRequest, res: Response): Prom
   }
 };
 
+// GET posts con imágenes y categorías
 export const getPosts = async (req: Request, res: Response): Promise<void> => {
   try {
-    const posts = await PostModel.findAll();
-    const response: ApiResponse<PostOutput[]> = {
+    const posts = await PostModel.findAll({
+      include: [
+        { model: PostImageModel, as: 'images', attributes: ['url'] },
+        { model: CategoryModel, as: 'categories', attributes: ['name'], through: { attributes: [] } },
+      ],
+      order: [['createdAt', 'DESC']],
+    });
+
+    const data: PostOutput[] = posts.map(post => {
+      const postJson = post.toJSON() as any; // aquí decimos que puede tener las relaciones
+      return {
+        id: postJson.id,
+        userId: postJson.userId,
+        title: postJson.title,
+        content: postJson.content,
+        credits: postJson.credits,
+        createdAt: postJson.createdAt,
+        updatedAt: postJson.updatedAt,
+        images: (postJson.images || []).map((img: any) => img.url),
+        categories: (postJson.categories || []).map((cat: any) => cat.name),
+      };
+    });
+
+    res.status(200).json({
       success: true,
-      data: posts.map((p) => p.toJSON() as PostOutput),
+      data,
       message: 'Posts fetched successfully',
-    };
-    res.status(200).json(response);
+    });
 
   } catch (error: any) {
     console.error('Error fetching posts:', error);
@@ -93,36 +101,48 @@ export const getPosts = async (req: Request, res: Response): Promise<void> => {
   }
 };
 
+
+// GET post por ID con imágenes y categorías
 export const getPostById = async (req: Request, res: Response): Promise<void> => {
   try {
     const { id } = req.params;
-    const post = await PostModel.findByPk(id);
+    const post = await PostModel.findByPk(id, {
+      include: [
+        { model: PostImageModel, as: 'images', attributes: ['url'] },
+        { model: CategoryModel, as: 'categories', attributes: ['name'], through: { attributes: [] } },
+      ],
+    });
 
     if (!post) {
-      res.status(404).json({
-        success: false,
-        message: 'Post not found',
-      });
+      res.status(404).json({ success: false, message: 'Post not found' });
       return;
     }
 
-    const response: ApiResponse<PostOutput> = {
-      success: true,
-      data: post.toJSON() as PostOutput,
-      message: 'Post fetched successfully',
+    const postJson = post.toJSON() as any;
+    const data: PostOutput = {
+      id: postJson.id,
+      userId: postJson.userId,
+      title: postJson.title,
+      content: postJson.content,
+      credits: postJson.credits,
+      createdAt: postJson.createdAt,
+      updatedAt: postJson.updatedAt,
+      images: (postJson.images || []).map((img: any) => img.url),
+      categories: (postJson.categories || []).map((cat: any) => cat.name),
     };
 
-    res.status(200).json(response);
+    res.status(200).json({
+      success: true,
+      data,
+      message: 'Post fetched successfully',
+    });
 
   } catch (error: any) {
     console.error('Error fetching post:', error);
-    res.status(500).json({
-      success: false,
-      message: 'Server error while fetching post',
-      error: error.message,
-    });
+    res.status(500).json({ success: false, message: 'Server error while fetching post', error: error.message });
   }
 };
+
 
 export const deletePost = async (req: AuthenticatedRequest, res: Response): Promise<void> => {
   try {

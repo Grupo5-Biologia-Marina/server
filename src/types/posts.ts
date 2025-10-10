@@ -10,7 +10,11 @@ export interface PostCreateInput {
 export interface PostOutput {
   id: number;
   userId: number;
+  title: string;
   content: string;
+  credits?: string;
+  categories?: string[];
+  images?: string[];
   createdAt: Date;
   updatedAt: Date;
 }
