@@ -34,6 +34,6 @@ app.get("/health", async (_req, res) => {
 app.use("/auth", authRoutes);   
 app.use("/users", userRoutes);  
 app.use("/api/posts", postRoutes);         
-app.use("/api/posts", postImagesRouter);    
+app.use("/api/posts", postImagesRouter);
 
 export { app };
