@@ -11,11 +11,6 @@ export const createPost = async (req: AuthenticatedRequest, res: Response): Prom
       return;
     }
 
-    if (req.user.role !== 'admin') {
-      res.status(403).json({ success: false, message: 'Forbidden: Only admin can create posts' });
-      return;
-    }
-
     const postData: PostCreateInput = req.body;
 
     const post = await PostModel.create({
@@ -114,15 +109,16 @@ export const deletePost = async (req: AuthenticatedRequest, res: Response): Prom
       return;
     }
 
-    if (req.user.role !== 'admin') {
-      res.status(403).json({ success: false, message: 'Forbidden: Only admin can delete posts' });
-      return;
-    }
-
     const post = await PostModel.findByPk(id);
 
     if (!post) {
       res.status(404).json({ success: false, message: 'Post not found' });
+      return;
+    }
+
+    // Admin puede borrar cualquier post, user solo el suyo
+    if (req.user.role !== 'admin' && post.userId !== parseInt(req.user.id)) {
+      res.status(403).json({ success: false, message: 'Forbidden: no puedes borrar este post' });
       return;
     }
 
@@ -155,15 +151,16 @@ export const updatePost = async (req: AuthenticatedRequest, res: Response): Prom
       return;
     }
 
-    if (req.user.role !== 'admin') {
-      res.status(403).json({ success: false, message: 'Forbidden: Only admin can update posts' });
-      return;
-    }
-
     const post = await PostModel.findByPk(id);
 
     if (!post) {
       res.status(404).json({ success: false, message: 'Post not found' });
+      return;
+    }
+
+    // Admin puede actualizar cualquier post, user solo el suyo
+    if (req.user.role !== 'admin' && post.userId !== parseInt(req.user.id)) {
+      res.status(403).json({ success: false, message: 'Forbidden: no puedes editar este post' });
       return;
     }
 
