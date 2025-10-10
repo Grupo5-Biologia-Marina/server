@@ -1,14 +1,14 @@
-// src/controllers/CategoryController.ts
 import { Request, Response } from 'express';
 import CategoryModel from '../models/CategoryModel';
 import { AuthenticatedRequest } from '../types/auth';
+import { CategoryApiResponse } from '../types/category';
 import { ApiResponse } from '../types/posts';
 
 // GET: obtener todas las categorías
 export const getCategories = async (req: Request, res: Response): Promise<void> => {
   try {
     const categories = await CategoryModel.findAll();
-    const response: ApiResponse<CategoryModel[]> = {
+    const response: CategoryApiResponse<CategoryModel[]> = {
       success: true,
       data: categories,
       message: 'Categories fetched successfully'
@@ -41,7 +41,7 @@ export const createCategory = async (req: AuthenticatedRequest, res: Response): 
 
     const category = await CategoryModel.create({ name, description });
 
-    const response: ApiResponse<CategoryModel> = {
+    const response: CategoryApiResponse<CategoryModel> = {
       success: true,
       data: category,
       message: 'Category created successfully'
@@ -95,7 +95,7 @@ export const updateCategory = async (req: AuthenticatedRequest, res: Response): 
 
     await category.update({ name, description });
 
-    const response: ApiResponse<CategoryModel> = {
+    const response: CategoryApiResponse<CategoryModel> = {
       success: true,
       data: category,
       message: 'Category updated successfully'
@@ -137,7 +137,7 @@ export const deleteCategory = async (req: AuthenticatedRequest, res: Response): 
 
     await category.destroy();
 
-    const response: ApiResponse<null> = {
+    const response: CategoryApiResponse<null> = {
       success: true,
       data: null,
       message: 'Category deleted successfully'

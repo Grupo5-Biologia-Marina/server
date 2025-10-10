@@ -5,6 +5,7 @@ export class CategoryModel extends Model {
   declare id: number;
   declare name: string;
   declare description?: string;
+  declare img?: string;
 }
 
 CategoryModel.init(
@@ -22,6 +23,10 @@ CategoryModel.init(
     },
     description: {
       type: DataTypes.STRING(255),
+      allowNull: true,
+    },
+    img: {
+      type: DataTypes.STRING(500), // URL de Cloudinary
       allowNull: true,
     },
   },

@@ -2,11 +2,12 @@ import { DataTypes, Model, Optional } from "sequelize";
 import sequelize from "../database/db_connection";
 import UserModel from "./UserModel";
 import CategoryModel from "./CategoryModel";
+import LikeModel from "./LikeModel";
 
 export interface PostAttributes {
   id: number;
   userId: number;
-  title: string
+  title: string;
   content: string;
   credits?: string;
   createdAt?: Date;
@@ -76,8 +77,6 @@ PostModel.init(
     modelName: "Post",
     tableName: "posts",
     timestamps: true,
-    createdAt: "createdAt",
-    updatedAt: "updatedAt",
   }
 );
 
@@ -96,6 +95,18 @@ CategoryModel.belongsToMany(PostModel, {
   foreignKey: "categoryId",
   otherKey: "postId",
   as: "posts",
+});
+
+// ❤️ Nueva relación con likes
+PostModel.hasMany(LikeModel, {
+  foreignKey: "postId",
+  as: "likes",
+  onDelete: "CASCADE",
+});
+
+LikeModel.belongsTo(PostModel, {
+  foreignKey: "postId",
+  as: "post",
 });
 
 export default PostModel;

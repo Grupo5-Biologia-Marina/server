@@ -16,6 +16,17 @@ module.exports = {
         createdAt: new Date(),
         updatedAt: new Date(),
       },
+      {
+        username: 'irina',
+        firstname: 'Irina',
+        lastname: 'Tiron',
+        email: 'irinatiron16@gmail.com',
+        password: passwordHash,
+        role: 'admin',
+        img: 'https://res.cloudinary.com/dkm0ahny1/image/upload/v1760090090/irina_fvp1m3.png',
+        createdAt: new Date(),
+        updatedAt: new Date(),
+      },
     ]);
   },
 

@@ -19,6 +19,10 @@ module.exports = {
         type: Sequelize.STRING(255),
         allowNull: true,
       },
+      img: {
+        type: Sequelize.STRING(500), // URL de Cloudinary
+        allowNull: true,
+      },
     }, {
       engine: 'InnoDB'
     });
