@@ -9,6 +9,7 @@ export class UserModel extends Model {
   declare email: string;
   declare password: string;
   declare role: "user" | "admin";
+  declare img?: string;
 }
 
 UserModel.init(
@@ -46,6 +47,10 @@ UserModel.init(
       allowNull: false,
       defaultValue: "user",
     },
+    img: {
+      type: DataTypes.STRING(500),
+      allowNull: true,
+    }
   },
   {
     sequelize,
