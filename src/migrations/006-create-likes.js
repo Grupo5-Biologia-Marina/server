@@ -4,17 +4,13 @@
 module.exports = {
   async up(queryInterface, Sequelize) {
     await queryInterface.createTable('likes', {
-      id: {
-        type: Sequelize.INTEGER.UNSIGNED,
-        autoIncrement: true,
-        primaryKey: true,
-      },
       userId: {
         type: Sequelize.INTEGER.UNSIGNED,
         allowNull: false,
         references: { model: 'users', key: 'id' },
         onDelete: 'CASCADE',
         onUpdate: 'CASCADE',
+        primaryKey: true, 
       },
       postId: {
         type: Sequelize.INTEGER.UNSIGNED,
@@ -22,6 +18,7 @@ module.exports = {
         references: { model: 'posts', key: 'id' },
         onDelete: 'CASCADE',
         onUpdate: 'CASCADE',
+        primaryKey: true, 
       },
     }, {
       engine: 'InnoDB',
