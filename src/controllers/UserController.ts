@@ -8,7 +8,7 @@ const hashPassword = (password: string): string => {
 
 export const createUser = async (req: Request, res: Response): Promise<void> => {
   try {
-    const { username, firstname, lastname, email, password, role } = req.body;
+    const { username, firstname, lastname, email, password, role, img } = req.body;
 
     if (!username || !email || !password) {
       res.status(400).json({
@@ -27,6 +27,7 @@ export const createUser = async (req: Request, res: Response): Promise<void> => 
       email,
       password: hashedPassword,
       role: role || "user",
+      img,
     });
 
     res.status(201).json({
@@ -38,6 +39,7 @@ export const createUser = async (req: Request, res: Response): Promise<void> => 
         lastname: user.lastname,
         email: user.email,
         role: user.role,
+        img: user.img,
       },
       message: "Usuario creado exitosamente",
     });
@@ -54,7 +56,7 @@ export const createUser = async (req: Request, res: Response): Promise<void> => 
 export const getUsers = async (req: Request, res: Response): Promise<void> => {
   try {
     const users = await UserModel.findAll({
-      attributes: ["id", "username", "firstname", "lastname", "email", "role"],
+      attributes: ["id", "username", "firstname", "lastname", "email", "role", "img"],
     });
 
     res.status(200).json({
@@ -76,7 +78,7 @@ export const getUserById = async (req: Request, res: Response): Promise<void> =>
   try {
     const { id } = req.params;
     const user = await UserModel.findByPk(id, {
-      attributes: ["id", "username", "firstname", "lastname", "email", "role"],
+      attributes: ["id", "username", "firstname", "lastname", "email", "role", "img"],
     });
 
     if (!user) {
@@ -102,7 +104,7 @@ export const getUserById = async (req: Request, res: Response): Promise<void> =>
 export const updateUser = async (req: Request, res: Response): Promise<void> => {
   try {
     const { id } = req.params;
-    const { username, firstname, lastname, email, password, role } = req.body;
+    const { username, firstname, lastname, email, password, role, img } = req.body;
 
     const user = await UserModel.findByPk(id);
 
@@ -117,6 +119,7 @@ export const updateUser = async (req: Request, res: Response): Promise<void> => 
       lastname,
       email,
       role,
+      img,
     };
 
     if (password) {
@@ -134,6 +137,7 @@ export const updateUser = async (req: Request, res: Response): Promise<void> => 
         lastname: user.lastname,
         email: user.email,
         role: user.role,
+        img: user.img,
       },
       message: "Usuario actualizado correctamente",
     });
