@@ -2,7 +2,6 @@ import { Router } from "express";
 import { getPosts, getPostById, createPost, updatePost, deletePost } from "../controllers/PostController";
 import { authenticate } from "../middlewares/authMiddleware";
 import { checkRole } from "../middlewares/roleMiddleware";
-import UserModel from '../models/UserModel';
 
 const router = Router();
 
