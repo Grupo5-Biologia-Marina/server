@@ -1,12 +1,16 @@
 import { Router } from "express";
-import { getPosts, createPost, updatePost, deletePost } from "../controllers/PostController";
+import { getPosts, getPostById, createPost, updatePost, deletePost } from "../controllers/PostController";
 import { authenticate } from "../middlewares/authMiddleware";
 import { checkRole } from "../middlewares/roleMiddleware";
+import UserModel from '../models/UserModel';
 
 const router = Router();
 
-// GET /posts → lista todos los posts solo si estás logueado (user o admin)
-router.get("/", authenticate, checkRole(["user", "admin"]), getPosts);
+// GET /posts → lista todos los posts (PÚBLICO - sin autenticación)
+router.get("/", getPosts);
+
+// GET /posts/:id → obtiene un post específico (PÚBLICO)
+router.get("/:id", getPostById);
 
 // POST /posts → crea un post (solo admin o user autenticado)
 router.post("/", authenticate, checkRole(["user", "admin"]), createPost);
