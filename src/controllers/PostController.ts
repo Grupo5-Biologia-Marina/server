@@ -6,6 +6,7 @@ import cloudinary from '../utils/cloudinary';
 import db_connection from '../database/db_connection';
 import CategoryModel from '../models/CategoryModel';
 import PostImageModel from '../models/PostImageModel';
+import UserModel from '../models/UserModel';
 
 
 export const createPost = async (req: AuthenticatedRequest, res: Response): Promise<void> => {
@@ -129,6 +130,11 @@ export const getPostById = async (req: Request, res: Response): Promise<void> =>
     const { id } = req.params;
     const post = await PostModel.findByPk(id, {
       include: [
+        {
+          model: UserModel,
+          as: 'user',
+          attributes: ['id', 'username', 'email']
+        },
         {
           model: CategoryModel,
           as: 'categories',
