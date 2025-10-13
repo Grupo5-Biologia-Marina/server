@@ -27,7 +27,7 @@ export const createPost = async (req: AuthenticatedRequest, res: Response): Prom
 
     const response: ApiResponse<PostOutput> = {
       success: true,
-      data: post.toJSON() as PostOutput,
+      data: fullPost?.toJSON(),
       message: 'Post created successfully',
     };
 
@@ -56,10 +56,26 @@ export const createPost = async (req: AuthenticatedRequest, res: Response): Prom
 
 export const getPosts = async (req: Request, res: Response): Promise<void> => {
   try {
-    const posts = await PostModel.findAll();
-    const response: ApiResponse<PostOutput[]> = {
+    // 🔍 Obtener posts con categorías e imágenes usando Sequelize
+    const posts = await PostModel.findAll({
+      include: [
+        {
+          model: CategoryModel,
+          as: 'categories',
+          through: { attributes: [] },
+          attributes: ['id', 'name', 'description']
+        },
+        {
+          model: PostImageModel,
+          as: 'images',
+          attributes: ['id', 'url', 'caption', 'credit']
+        }
+      ]
+    });
+
+    const response: ApiResponse<any[]> = {
       success: true,
-      data: posts.map((p) => p.toJSON() as PostOutput),
+      data: posts.map(p => p.toJSON()),
       message: 'Posts fetched successfully',
     };
     res.status(200).json(response);
@@ -77,7 +93,26 @@ export const getPosts = async (req: Request, res: Response): Promise<void> => {
 export const getPostById = async (req: Request, res: Response): Promise<void> => {
   try {
     const { id } = req.params;
-    const post = await PostModel.findByPk(id);
+    const post = await PostModel.findByPk(id, {
+      include: [
+        {
+          model: UserModel,
+          as: 'user',
+          attributes: ['id', 'username', 'email']
+        },
+        {
+          model: CategoryModel,
+          as: 'categories',
+          through: { attributes: [] },
+          attributes: ['id', 'name', 'description']
+        },
+        {
+          model: PostImageModel,
+          as: 'images',
+          attributes: ['id', 'url', 'caption', 'credit']
+        }
+      ]
+    });
 
     if (!post) {
       res.status(404).json({
@@ -87,9 +122,9 @@ export const getPostById = async (req: Request, res: Response): Promise<void> =>
       return;
     }
 
-    const response: ApiResponse<PostOutput> = {
+    const response: ApiResponse<any> = {
       success: true,
-      data: post.toJSON() as PostOutput,
+      data: post.toJSON(),
       message: 'Post fetched successfully',
     };
 
