@@ -1,31 +1,33 @@
 import "dotenv/config";
 import fs from "fs";
 import path from "path";
-import sequelize from "../../src/database/db_connection";
-import PostModel from "../../src/models/PostModel";
-import PostImageModel from "../../src/models/PostImageModel";
-import CategoryModel from "../../src/models/CategoryModel";
+import sequelize from "../src/database/db_connection";
+import PostModel from "../src/models/PostModel";
+import PostImageModel from "../src/models/PostImageModel";
+import CategoryModel from "../src/models/CategoryModel";
 
 async function syncPostsSeeder() {
   try {
-    console.log("🔄 Conectando a la base de datos...");
+    console.log("Conectando a la base de datos...");
     await sequelize.authenticate();
-    console.log("✅ Conexión establecida con éxito.");
+    console.log("Conexion establecida con exito.");
 
-    // Ruta al JSON generado con syncPosts.ts
     const jsonPath = path.resolve(__dirname, "../src/seeders/postsSeed.json");
 
     if (!fs.existsSync(jsonPath)) {
-      console.error("❌ No se encontró el archivo postsSeed.json. Ejecuta primero syncPosts.ts");
+      console.error("No se encontro postsSeed.json");
+      console.error(`Buscando en: ${jsonPath}`);
+      console.error("\nAsegurate de:");
+      console.error("   1. Haber ejecutado 'npx ts-node scripts/syncPosts.ts' primero");
+      console.error("   2. Tener el archivo postsSeed.json en src/seeders/");
       process.exit(1);
     }
 
     const postsData = JSON.parse(fs.readFileSync(jsonPath, "utf-8"));
-    console.log(`📦 Importando ${postsData.length} posts...`);
+    console.log(`Importando ${postsData.length} posts...\n`);
 
     for (const post of postsData) {
-      // Buscamos si el post ya existe
-      const [dbPost] = await PostModel.upsert({
+      const [dbPost, created] = await PostModel.upsert({
         id: post.id,
         userId: post.userId,
         title: post.title,
@@ -35,22 +37,23 @@ async function syncPostsSeeder() {
         updatedAt: new Date(post.updatedAt),
       });
 
-      // Guardar imágenes si hay
+      console.log(`${created ? 'Creado' : 'Actualizado'}: ${post.title}`);
+
       if (post.images?.length) {
         for (const img of post.images) {
           await PostImageModel.upsert({
             id: img.id,
             postId: dbPost.id,
             url: img.url,
-            caption: img.caption,
-            credit: img.credit,
+            caption: img.caption || null,
+            credit: img.credit || null,
             createdAt: img.createdAt ? new Date(img.createdAt) : new Date(),
             updatedAt: img.updatedAt ? new Date(img.updatedAt) : new Date(),
           });
         }
+        console.log(`  ${post.images.length} imagenes sincronizadas`);
       }
 
-      // Vincular categorías si existen
       if (post.categories?.length) {
         const categoryIds: number[] = [];
 
@@ -66,19 +69,18 @@ async function syncPostsSeeder() {
           categoryIds.push(category.id);
         }
 
-        // Forzamos el tipo para que TS no se queje
         await (dbPost as any).setCategories(categoryIds);
+        console.log(`  ${categoryIds.length} categorias vinculadas`);
       }
-
-      console.log(`✅ Post sincronizado: ${post.title}`);
     }
 
-    console.log("🎉 ¡Sincronización completada sin errores!");
+    console.log("\nSincronizacion completada sin errores!");
     await sequelize.close();
-    console.log("🔒 Conexión cerrada.");
+    console.log("Conexion cerrada.");
   } catch (error) {
-    console.error("❌ Error sincronizando los posts:", error);
+    console.error("Error:", error);
     await sequelize.close();
+    process.exit(1);
   }
 }
 

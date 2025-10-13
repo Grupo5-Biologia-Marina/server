@@ -13,7 +13,6 @@ async function syncPosts() {
     await sequelize.authenticate();
     console.log("✅ Conexión establecida con éxito.");
 
-    // Obtenemos todos los posts con imágenes y categorías
     const posts = await PostModel.findAll({
       include: [
         { model: PostImageModel, as: "images" },
@@ -24,7 +23,6 @@ async function syncPosts() {
 
     console.log(`📦 Se encontraron ${posts.length} posts.`);
 
-    // Transformamos los posts para el seeder
     const postsSeed = posts.map((post: any) => ({
       id: post.id,
       userId: post.userId,
@@ -48,28 +46,34 @@ async function syncPosts() {
         credit: img.credit,
         createdAt: img.createdAt,
         updatedAt: img.updatedAt,
-      })),
+      })) || [],
       categories: post.categories?.map((cat: any) => ({
         id: cat.id,
         name: cat.name,
-      })),
+        description: cat.description,
+        img: cat.img,
+      })) || [],
     }));
 
-    // Ruta del JSON de seeders
+    // Ruta corregida: dentro de src/seeders
     const seedFilePath = path.resolve(__dirname, "../src/seeders/postsSeed.json");
+    
+    const seedDir = path.dirname(seedFilePath);
+    if (!fs.existsSync(seedDir)) {
+      fs.mkdirSync(seedDir, { recursive: true });
+    }
 
-    // Guardamos el JSON
     fs.writeFileSync(seedFilePath, JSON.stringify(postsSeed, null, 2));
-    console.log(`✅ Archivo JSON exportado correctamente en: ${seedFilePath}`);
-    console.log("✨ Ahora puedes usar este JSON en tu seeder para sincronizar la DB local sin perder nada.");
+    console.log(`✅ Archivo JSON exportado en: ${seedFilePath}`);
+    console.log("📤 Ahora puedes compartir este archivo con tu equipo via Git.");
 
     await sequelize.close();
     console.log("🔒 Conexión cerrada.");
   } catch (error) {
-    console.error("❌ Error sincronizando los posts:", error);
+    console.error("❌ Error:", error);
     await sequelize.close();
+    process.exit(1);
   }
 }
 
-// Ejecutamos
 syncPosts();
