@@ -1,10 +1,22 @@
+// server/scripts/syncPostsSeeder.ts
 import "dotenv/config";
 import fs from "fs";
 import path from "path";
 import sequelize from "../../src/database/db_connection";
-import PostModel from "../../src/models/PostModel";
+import PostModel, { PostAttributes, PostCreationAttributes } from "../../src/models/PostModel";
 import PostImageModel from "../../src/models/PostImageModel";
 import CategoryModel from "../../src/models/CategoryModel";
+import UserModel from "../../src/models/UserModel";
+
+// Añadimos los métodos que TypeScript no detecta automáticamente
+declare module "../../src/models/PostModel" {
+  interface PostModel {
+    createImage(image: Partial<PostImageModel>): Promise<PostImageModel>;
+    setCategories(ids: number[]): Promise<void>;
+    images?: PostImageModel[];
+    categories?: CategoryModel[];
+  }
+}
 
 async function syncPostsSeeder() {
   try {
@@ -12,68 +24,57 @@ async function syncPostsSeeder() {
     await sequelize.authenticate();
     console.log("✅ Conexión establecida con éxito.");
 
-    // Ruta al JSON generado con syncPosts.ts
-    const jsonPath = path.resolve(__dirname, "../src/seeders/postsSeed.json");
+    // Cargamos todos los posts con sus relaciones
+    const posts = await PostModel.findAll({
+      include: [
+        { model: PostImageModel, as: "images" },
+        { model: UserModel, as: "user", attributes: ["id", "username", "role"] },
+        { model: CategoryModel, as: "categories", through: { attributes: [] } },
+      ],
+    });
 
-    if (!fs.existsSync(jsonPath)) {
-      console.error("❌ No se encontró el archivo postsSeed.json. Ejecuta primero syncPosts.ts");
-      process.exit(1);
-    }
+    console.log(`📦 Se encontraron ${posts.length} posts.`);
 
-    const postsData = JSON.parse(fs.readFileSync(jsonPath, "utf-8"));
-    console.log(`📦 Importando ${postsData.length} posts...`);
+    // Leemos el JSON que generamos antes
+    const seedFilePath = path.resolve(__dirname, "../src/seeders/postsSeed.json");
+    const postsSeed = JSON.parse(fs.readFileSync(seedFilePath, "utf-8"));
 
-    for (const post of postsData) {
-      // Buscamos si el post ya existe
-      const [dbPost] = await PostModel.upsert({
-        id: post.id,
-        userId: post.userId,
-        title: post.title,
-        content: post.content,
-        credits: post.credits,
-        createdAt: new Date(post.createdAt),
-        updatedAt: new Date(post.updatedAt),
+    for (const postData of postsSeed) {
+      // Creamos el post si no existe
+      const [dbPost] = await PostModel.findOrCreate({
+        where: { id: postData.id },
+        defaults: {
+          userId: postData.userId,
+          title: postData.title,
+          content: postData.content,
+          credits: postData.credits,
+          createdAt: new Date(postData.createdAt),
+          updatedAt: new Date(postData.updatedAt),
+        },
       });
 
-      // Guardar imágenes si hay
-      if (post.images?.length) {
-        for (const img of post.images) {
-          await PostImageModel.upsert({
-            id: img.id,
-            postId: dbPost.id,
+      // Guardamos imágenes
+      if (postData.images?.length) {
+        for (const img of postData.images) {
+          await dbPost.createImage({
             url: img.url,
             caption: img.caption,
             credit: img.credit,
-            createdAt: img.createdAt ? new Date(img.createdAt) : new Date(),
-            updatedAt: img.updatedAt ? new Date(img.updatedAt) : new Date(),
+            createdAt: img.createdAt ? new Date(img.createdAt) : undefined,
+            updatedAt: img.updatedAt ? new Date(img.updatedAt) : undefined,
           });
         }
       }
 
-      // Vincular categorías si existen
-      if (post.categories?.length) {
-        const categoryIds: number[] = [];
-
-        for (const cat of post.categories) {
-          const [category] = await CategoryModel.findOrCreate({
-            where: { id: cat.id },
-            defaults: {
-              name: cat.name,
-              description: cat.description || null,
-              img: cat.img || null,
-            },
-          });
-          categoryIds.push(category.id);
-        }
-
-        // Forzamos el tipo para que TS no se queje
-        await (dbPost as any).setCategories(categoryIds);
+      // Guardamos categorías
+      if (postData.categories?.length) {
+        const categoryIds = postData.categories.map((cat: any) => cat.id);
+        await dbPost.setCategories(categoryIds); // mantiene existentes y añade nuevas
       }
-
-      console.log(`✅ Post sincronizado: ${post.title}`);
     }
 
-    console.log("🎉 ¡Sincronización completada sin errores!");
+    console.log("✨ Posts sincronizados correctamente en la DB local.");
+
     await sequelize.close();
     console.log("🔒 Conexión cerrada.");
   } catch (error) {
@@ -82,4 +83,5 @@ async function syncPostsSeeder() {
   }
 }
 
+// Ejecutamos
 syncPostsSeeder();
