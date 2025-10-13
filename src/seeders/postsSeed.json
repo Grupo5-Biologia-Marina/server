@@ -12,8 +12,8 @@
     "credits": null,
     "createdAt": "2025-10-10T22:15:56.000Z",
     "updatedAt": "2025-10-10T22:15:56.000Z",
-    "categories": [],
-    "images": []
+    "images": [],
+    "categories": []
   },
   {
     "id": 2,
@@ -28,14 +28,18 @@
     "credits": "https://www.nationalgeographic.com.es/mundo-animal/hallan-extrano-tiburon-nodriza-color-naranja-caribe-causa-hecho-unico-historia-marina_26067",
     "createdAt": "2025-10-10T22:49:07.000Z",
     "updatedAt": "2025-10-10T22:49:07.000Z",
-    "categories": [],
     "images": [
       {
+        "id": 1,
+        "postId": 2,
         "url": "https://res.cloudinary.com/dkm0ahny1/image/upload/v1760136548/hgv4t0eep5tzvinp7yvk.png",
         "caption": null,
-        "credit": null
+        "credit": null,
+        "createdAt": "2025-10-10T22:49:07.000Z",
+        "updatedAt": "2025-10-10T22:49:07.000Z"
       }
-    ]
+    ],
+    "categories": []
   },
   {
     "id": 3,
@@ -50,8 +54,8 @@
     "credits": "https://www.csiro.au/en/news/All/Articles/2025/October/New-species-of-shark-and-crab",
     "createdAt": "2025-10-10T23:07:20.000Z",
     "updatedAt": "2025-10-10T23:07:20.000Z",
-    "categories": [],
-    "images": []
+    "images": [],
+    "categories": []
   },
   {
     "id": 4,
@@ -66,8 +70,8 @@
     "credits": "https://oceancensus.org/press-release-the-ocean-census-discovers-over-800-new-marine-species/",
     "createdAt": "2025-10-10T23:07:20.000Z",
     "updatedAt": "2025-10-10T23:07:20.000Z",
-    "categories": [],
-    "images": []
+    "images": [],
+    "categories": []
   },
   {
     "id": 5,
@@ -82,8 +86,8 @@
     "credits": "https://www.scientificamerican.com/article/strange-deep-sea-animals-discovered-in-underwater-argentine-canyon/",
     "createdAt": "2025-10-10T23:07:20.000Z",
     "updatedAt": "2025-10-10T23:07:20.000Z",
-    "categories": [],
-    "images": []
+    "images": [],
+    "categories": []
   },
   {
     "id": 6,
@@ -98,8 +102,8 @@
     "credits": "https://en.wikipedia.org/wiki/Bathylepeta_wadatsumi",
     "createdAt": "2025-10-10T23:07:20.000Z",
     "updatedAt": "2025-10-10T23:07:20.000Z",
-    "categories": [],
-    "images": []
+    "images": [],
+    "categories": []
   },
   {
     "id": 7,
@@ -114,8 +118,8 @@
     "credits": "https://schmidtocean.org/first-high-tech-exploration-of-argentinas-mar-del-plata-canyon-inspires-millions/",
     "createdAt": "2025-10-10T23:07:20.000Z",
     "updatedAt": "2025-10-10T23:07:20.000Z",
-    "categories": [],
-    "images": []
+    "images": [],
+    "categories": []
   },
   {
     "id": 8,
@@ -130,8 +134,8 @@
     "credits": "https://www.reuters.com/business/environment/vibrant-oasis-chemical-eating-creatures-found-deep-pacific-2025-07-30/",
     "createdAt": "2025-10-10T23:07:20.000Z",
     "updatedAt": "2025-10-10T23:07:20.000Z",
-    "categories": [],
-    "images": []
+    "images": [],
+    "categories": []
   },
   {
     "id": 9,
@@ -146,8 +150,8 @@
     "credits": "https://www.theguardian.com/environment/2025/jul/24/ancient-alien-brittle-stars-linked-to-relatives-across-the-globe-by-a-deep-sea-evolutionary-superhighway",
     "createdAt": "2025-10-10T23:07:20.000Z",
     "updatedAt": "2025-10-10T23:07:20.000Z",
-    "categories": [],
-    "images": []
+    "images": [],
+    "categories": []
   },
   {
     "id": 10,
@@ -162,8 +166,8 @@
     "credits": "https://astrobiology.com/2025/03/life-thrives-in-the-deepest-ocean-new-discoveries-from-the-mariana-trench.html",
     "createdAt": "2025-10-10T23:07:20.000Z",
     "updatedAt": "2025-10-10T23:07:20.000Z",
-    "categories": [],
-    "images": []
+    "images": [],
+    "categories": []
   },
   {
     "id": 11,
@@ -178,8 +182,8 @@
     "credits": "https://www.theguardian.com/world/2025/oct/08/new-zealand-oceans-warming-34-per-cent-faster-than-global-average?utm_source=chatgpt.com",
     "createdAt": "2025-10-10T23:07:20.000Z",
     "updatedAt": "2025-10-10T23:07:20.000Z",
-    "categories": [],
-    "images": []
+    "images": [],
+    "categories": []
   },
   {
     "id": 12,
@@ -194,8 +198,8 @@
     "credits": "https://en.wikipedia.org/wiki/CONTRASTS_Expedition",
     "createdAt": "2025-10-10T23:07:20.000Z",
     "updatedAt": "2025-10-10T23:07:20.000Z",
-    "categories": [],
-    "images": []
+    "images": [],
+    "categories": []
   },
   {
     "id": 13,
@@ -210,8 +214,8 @@
     "credits": "https://phys.org/news/2025-03-mariana-trench-lifeforms-flourishing-deep.html",
     "createdAt": "2025-10-10T23:07:20.000Z",
     "updatedAt": "2025-10-10T23:07:20.000Z",
-    "categories": [],
-    "images": []
+    "images": [],
+    "categories": []
   },
   {
     "id": 14,
@@ -226,8 +230,8 @@
     "credits": "https://phys.org/news/2025-02-alvin-ocean-depths.html",
     "createdAt": "2025-10-10T23:07:20.000Z",
     "updatedAt": "2025-10-10T23:07:20.000Z",
-    "categories": [],
-    "images": []
+    "images": [],
+    "categories": []
   },
   {
     "id": 15,
@@ -242,8 +246,8 @@
     "credits": "https://schmidtocean.org/four-new-seamounts-discovered-in-the-high-seas/",
     "createdAt": "2025-10-10T23:07:20.000Z",
     "updatedAt": "2025-10-10T23:07:20.000Z",
-    "categories": [],
-    "images": []
+    "images": [],
+    "categories": []
   },
   {
     "id": 16,
@@ -258,8 +262,8 @@
     "credits": "https://www.theguardian.com/environment/2025/jul/31/scientists-map-antarctic-seafloor-canyons-to-help-predict-climate-change",
     "createdAt": "2025-10-10T23:07:20.000Z",
     "updatedAt": "2025-10-10T23:07:20.000Z",
-    "categories": [],
-    "images": []
+    "images": [],
+    "categories": []
   },
   {
     "id": 17,
@@ -274,8 +278,8 @@
     "credits": "https://www.sciencedaily.com/releases/2024/01/240113143637.htm",
     "createdAt": "2025-10-10T23:07:20.000Z",
     "updatedAt": "2025-10-10T23:07:20.000Z",
-    "categories": [],
-    "images": []
+    "images": [],
+    "categories": []
   },
   {
     "id": 18,
@@ -290,8 +294,8 @@
     "credits": "https://www.theguardian.com/environment/2025/oct/07/marine-heatwaves-more-frequent-uk-irish-coasts-experts-say",
     "createdAt": "2025-10-10T23:07:20.000Z",
     "updatedAt": "2025-10-10T23:07:20.000Z",
-    "categories": [],
-    "images": []
+    "images": [],
+    "categories": []
   },
   {
     "id": 19,
@@ -306,8 +310,8 @@
     "credits": "https://www.theguardian.com/environment/2025/sep/24/worlds-oceans-fail-key-health-check-as-acidity-crosses-critical-threshold-for-marine-life",
     "createdAt": "2025-10-10T23:07:20.000Z",
     "updatedAt": "2025-10-10T23:07:20.000Z",
-    "categories": [],
-    "images": []
+    "images": [],
+    "categories": []
   },
   {
     "id": 20,
@@ -322,8 +326,8 @@
     "credits": "https://www.nsf.gov/news/researchers-discover-microplastics-all-ocean-depths",
     "createdAt": "2025-10-10T23:07:20.000Z",
     "updatedAt": "2025-10-10T23:07:20.000Z",
-    "categories": [],
-    "images": []
+    "images": [],
+    "categories": []
   },
   {
     "id": 21,
@@ -338,8 +342,8 @@
     "credits": "https://newsroom.heart.org/news/living-near-an-ocean-polluted-by-microplastics-may-increase-cardiometabolic-disease-risk",
     "createdAt": "2025-10-10T23:07:20.000Z",
     "updatedAt": "2025-10-10T23:07:20.000Z",
-    "categories": [],
-    "images": []
+    "images": [],
+    "categories": []
   },
   {
     "id": 22,
@@ -354,8 +358,8 @@
     "credits": "https://www.livescience.com/planet-earth/rivers-oceans/96-percent-of-oceans-worldwide-experienced-extreme-heatwaves-in-2023-new-study-finds",
     "createdAt": "2025-10-10T23:07:20.000Z",
     "updatedAt": "2025-10-10T23:07:20.000Z",
-    "categories": [],
-    "images": []
+    "images": [],
+    "categories": []
   },
   {
     "id": 23,
@@ -370,8 +374,8 @@
     "credits": "https://www.theguardian.com/world/2025/oct/08/new-zealand-oceans-warming-34-per-cent-faster-than-global-average?utm_source=chatgpt.com",
     "createdAt": "2025-10-10T23:07:20.000Z",
     "updatedAt": "2025-10-10T23:07:20.000Z",
-    "categories": [],
-    "images": []
+    "images": [],
+    "categories": []
   },
   {
     "id": 24,
@@ -386,8 +390,8 @@
     "credits": "https://www.theguardian.com/environment/2025/jun/05/marine-heatwave-found-to-have-engulfed-area-of-ocean-five-times-the-size-of-australia",
     "createdAt": "2025-10-10T23:07:20.000Z",
     "updatedAt": "2025-10-10T23:07:20.000Z",
-    "categories": [],
-    "images": []
+    "images": [],
+    "categories": []
   },
   {
     "id": 25,
@@ -402,8 +406,8 @@
     "credits": "https://www.washingtonpost.com/world/interactive/2025/pacific-tuna-climate-change-tuvalu/",
     "createdAt": "2025-10-10T23:07:20.000Z",
     "updatedAt": "2025-10-10T23:07:20.000Z",
-    "categories": [],
-    "images": []
+    "images": [],
+    "categories": []
   },
   {
     "id": 26,
@@ -418,8 +422,8 @@
     "credits": "https://www.lemonde.fr/en/environment/article/2025/05/08/melting-sea-ice-alters-color-of-arctic-and-antarctic-oceans_6741053_114.html",
     "createdAt": "2025-10-10T23:07:20.000Z",
     "updatedAt": "2025-10-10T23:07:20.000Z",
-    "categories": [],
-    "images": []
+    "images": [],
+    "categories": []
   },
   {
     "id": 27,
@@ -434,8 +438,8 @@
     "credits": "https://en.wikipedia.org/wiki/Southeast_Asian_coral_reefs",
     "createdAt": "2025-10-10T23:07:20.000Z",
     "updatedAt": "2025-10-10T23:07:20.000Z",
-    "categories": [],
-    "images": []
+    "images": [],
+    "categories": []
   },
   {
     "id": 28,
@@ -450,17 +454,21 @@
     "credits": "https://www.nationalgeographic.com.es/mundo-animal/hallan-extrano-tiburon-nodriza-color-naranja-caribe-causa-hecho-unico-historia-marina_26067",
     "createdAt": "2025-10-10T23:19:43.000Z",
     "updatedAt": "2025-10-10T23:19:43.000Z",
+    "images": [
+      {
+        "id": 2,
+        "postId": 28,
+        "url": "https://res.cloudinary.com/dkm0ahny1/image/upload/v1760138383/o6qjyrzxrrjch4111da6.png",
+        "caption": null,
+        "credit": null,
+        "createdAt": "2025-10-10T23:19:43.000Z",
+        "updatedAt": "2025-10-10T23:19:43.000Z"
+      }
+    ],
     "categories": [
       {
         "id": 1,
         "name": "🐠 Vida Marina"
-      }
-    ],
-    "images": [
-      {
-        "url": "https://res.cloudinary.com/dkm0ahny1/image/upload/v1760138383/o6qjyrzxrrjch4111da6.png",
-        "caption": null,
-        "credit": null
       }
     ]
   },
@@ -477,8 +485,8 @@
     "credits": "https://www.csiro.au/en/news/All/Articles/2025/October/New-species-of-shark-and-crab",
     "createdAt": "2025-10-11T10:28:49.000Z",
     "updatedAt": "2025-10-11T10:28:49.000Z",
-    "categories": [],
-    "images": []
+    "images": [],
+    "categories": []
   },
   {
     "id": 30,
@@ -493,8 +501,8 @@
     "credits": "https://oceancensus.org/press-release-the-ocean-census-discovers-over-800-new-marine-species/",
     "createdAt": "2025-10-11T10:28:49.000Z",
     "updatedAt": "2025-10-11T10:28:49.000Z",
-    "categories": [],
-    "images": []
+    "images": [],
+    "categories": []
   },
   {
     "id": 31,
@@ -509,8 +517,8 @@
     "credits": "https://www.scientificamerican.com/article/strange-deep-sea-animals-discovered-in-underwater-argentine-canyon/",
     "createdAt": "2025-10-11T10:28:49.000Z",
     "updatedAt": "2025-10-11T10:28:49.000Z",
-    "categories": [],
-    "images": []
+    "images": [],
+    "categories": []
   },
   {
     "id": 32,
@@ -525,8 +533,8 @@
     "credits": "https://en.wikipedia.org/wiki/Bathylepeta_wadatsumi",
     "createdAt": "2025-10-11T10:28:49.000Z",
     "updatedAt": "2025-10-11T10:28:49.000Z",
-    "categories": [],
-    "images": []
+    "images": [],
+    "categories": []
   },
   {
     "id": 33,
@@ -541,8 +549,8 @@
     "credits": "https://schmidtocean.org/first-high-tech-exploration-of-argentinas-mar-del-plata-canyon-inspires-millions/",
     "createdAt": "2025-10-11T10:28:49.000Z",
     "updatedAt": "2025-10-11T10:28:49.000Z",
-    "categories": [],
-    "images": []
+    "images": [],
+    "categories": []
   },
   {
     "id": 34,
@@ -557,8 +565,8 @@
     "credits": "https://www.reuters.com/business/environment/vibrant-oasis-chemical-eating-creatures-found-deep-pacific-2025-07-30/",
     "createdAt": "2025-10-11T10:28:49.000Z",
     "updatedAt": "2025-10-11T10:28:49.000Z",
-    "categories": [],
-    "images": []
+    "images": [],
+    "categories": []
   },
   {
     "id": 35,
@@ -573,8 +581,8 @@
     "credits": "https://www.theguardian.com/environment/2025/jul/24/ancient-alien-brittle-stars-linked-to-relatives-across-the-globe-by-a-deep-sea-evolutionary-superhighway",
     "createdAt": "2025-10-11T10:28:49.000Z",
     "updatedAt": "2025-10-11T10:28:49.000Z",
-    "categories": [],
-    "images": []
+    "images": [],
+    "categories": []
   },
   {
     "id": 36,
@@ -589,8 +597,8 @@
     "credits": "https://astrobiology.com/2025/03/life-thrives-in-the-deepest-ocean-new-discoveries-from-the-mariana-trench.html",
     "createdAt": "2025-10-11T10:28:49.000Z",
     "updatedAt": "2025-10-11T10:28:49.000Z",
-    "categories": [],
-    "images": []
+    "images": [],
+    "categories": []
   },
   {
     "id": 37,
@@ -605,8 +613,8 @@
     "credits": "https://www.theguardian.com/world/2025/oct/08/new-zealand-oceans-warming-34-per-cent-faster-than-global-average?utm_source=chatgpt.com",
     "createdAt": "2025-10-11T10:28:49.000Z",
     "updatedAt": "2025-10-11T10:28:49.000Z",
-    "categories": [],
-    "images": []
+    "images": [],
+    "categories": []
   },
   {
     "id": 38,
@@ -621,8 +629,8 @@
     "credits": "https://en.wikipedia.org/wiki/CONTRASTS_Expedition",
     "createdAt": "2025-10-11T10:28:49.000Z",
     "updatedAt": "2025-10-11T10:28:49.000Z",
-    "categories": [],
-    "images": []
+    "images": [],
+    "categories": []
   },
   {
     "id": 39,
@@ -637,8 +645,8 @@
     "credits": "https://phys.org/news/2025-03-mariana-trench-lifeforms-flourishing-deep.html",
     "createdAt": "2025-10-11T10:28:49.000Z",
     "updatedAt": "2025-10-11T10:28:49.000Z",
-    "categories": [],
-    "images": []
+    "images": [],
+    "categories": []
   },
   {
     "id": 40,
@@ -653,8 +661,8 @@
     "credits": "https://phys.org/news/2025-02-alvin-ocean-depths.html",
     "createdAt": "2025-10-11T10:28:49.000Z",
     "updatedAt": "2025-10-11T10:28:49.000Z",
-    "categories": [],
-    "images": []
+    "images": [],
+    "categories": []
   },
   {
     "id": 41,
@@ -669,8 +677,8 @@
     "credits": "https://schmidtocean.org/four-new-seamounts-discovered-in-the-high-seas/",
     "createdAt": "2025-10-11T10:28:49.000Z",
     "updatedAt": "2025-10-11T10:28:49.000Z",
-    "categories": [],
-    "images": []
+    "images": [],
+    "categories": []
   },
   {
     "id": 42,
@@ -685,8 +693,8 @@
     "credits": "https://www.theguardian.com/environment/2025/jul/31/scientists-map-antarctic-seafloor-canyons-to-help-predict-climate-change",
     "createdAt": "2025-10-11T10:28:49.000Z",
     "updatedAt": "2025-10-11T10:28:49.000Z",
-    "categories": [],
-    "images": []
+    "images": [],
+    "categories": []
   },
   {
     "id": 43,
@@ -701,8 +709,8 @@
     "credits": "https://www.sciencedaily.com/releases/2024/01/240113143637.htm",
     "createdAt": "2025-10-11T10:28:49.000Z",
     "updatedAt": "2025-10-11T10:28:49.000Z",
-    "categories": [],
-    "images": []
+    "images": [],
+    "categories": []
   },
   {
     "id": 44,
@@ -717,8 +725,8 @@
     "credits": "https://www.theguardian.com/environment/2025/oct/07/marine-heatwaves-more-frequent-uk-irish-coasts-experts-say",
     "createdAt": "2025-10-11T10:28:49.000Z",
     "updatedAt": "2025-10-11T10:28:49.000Z",
-    "categories": [],
-    "images": []
+    "images": [],
+    "categories": []
   },
   {
     "id": 45,
@@ -733,8 +741,8 @@
     "credits": "https://www.theguardian.com/environment/2025/sep/24/worlds-oceans-fail-key-health-check-as-acidity-crosses-critical-threshold-for-marine-life",
     "createdAt": "2025-10-11T10:28:49.000Z",
     "updatedAt": "2025-10-11T10:28:49.000Z",
-    "categories": [],
-    "images": []
+    "images": [],
+    "categories": []
   },
   {
     "id": 46,
@@ -749,8 +757,8 @@
     "credits": "https://www.nsf.gov/news/researchers-discover-microplastics-all-ocean-depths",
     "createdAt": "2025-10-11T10:28:49.000Z",
     "updatedAt": "2025-10-11T10:28:49.000Z",
-    "categories": [],
-    "images": []
+    "images": [],
+    "categories": []
   },
   {
     "id": 47,
@@ -765,8 +773,8 @@
     "credits": "https://newsroom.heart.org/news/living-near-an-ocean-polluted-by-microplastics-may-increase-cardiometabolic-disease-risk",
     "createdAt": "2025-10-11T10:28:49.000Z",
     "updatedAt": "2025-10-11T10:28:49.000Z",
-    "categories": [],
-    "images": []
+    "images": [],
+    "categories": []
   },
   {
     "id": 48,
@@ -781,8 +789,8 @@
     "credits": "https://www.livescience.com/planet-earth/rivers-oceans/96-percent-of-oceans-worldwide-experienced-extreme-heatwaves-in-2023-new-study-finds",
     "createdAt": "2025-10-11T10:28:49.000Z",
     "updatedAt": "2025-10-11T10:28:49.000Z",
-    "categories": [],
-    "images": []
+    "images": [],
+    "categories": []
   },
   {
     "id": 49,
@@ -797,8 +805,8 @@
     "credits": "https://www.theguardian.com/world/2025/oct/08/new-zealand-oceans-warming-34-per-cent-faster-than-global-average?utm_source=chatgpt.com",
     "createdAt": "2025-10-11T10:28:49.000Z",
     "updatedAt": "2025-10-11T10:28:49.000Z",
-    "categories": [],
-    "images": []
+    "images": [],
+    "categories": []
   },
   {
     "id": 50,
@@ -813,8 +821,8 @@
     "credits": "https://www.theguardian.com/environment/2025/jun/05/marine-heatwave-found-to-have-engulfed-area-of-ocean-five-times-the-size-of-australia",
     "createdAt": "2025-10-11T10:28:49.000Z",
     "updatedAt": "2025-10-11T10:28:49.000Z",
-    "categories": [],
-    "images": []
+    "images": [],
+    "categories": []
   },
   {
     "id": 51,
@@ -829,8 +837,8 @@
     "credits": "https://www.washingtonpost.com/world/interactive/2025/pacific-tuna-climate-change-tuvalu/",
     "createdAt": "2025-10-11T10:28:49.000Z",
     "updatedAt": "2025-10-11T10:28:49.000Z",
-    "categories": [],
-    "images": []
+    "images": [],
+    "categories": []
   },
   {
     "id": 52,
@@ -845,8 +853,8 @@
     "credits": "https://www.lemonde.fr/en/environment/article/2025/05/08/melting-sea-ice-alters-color-of-arctic-and-antarctic-oceans_6741053_114.html",
     "createdAt": "2025-10-11T10:28:49.000Z",
     "updatedAt": "2025-10-11T10:28:49.000Z",
-    "categories": [],
-    "images": []
+    "images": [],
+    "categories": []
   },
   {
     "id": 53,
@@ -861,8 +869,8 @@
     "credits": "https://en.wikipedia.org/wiki/Southeast_Asian_coral_reefs",
     "createdAt": "2025-10-11T10:28:49.000Z",
     "updatedAt": "2025-10-11T10:28:49.000Z",
-    "categories": [],
-    "images": []
+    "images": [],
+    "categories": []
   },
   {
     "id": 54,
@@ -877,17 +885,21 @@
     "credits": "https://as.com/actualidad/ciencia/cientificos-descubren-un-ecosistema-maritimo-nunca-visto-hasta-ahora-no-estan-completamente-aislados-n/",
     "createdAt": "2025-10-11T14:59:55.000Z",
     "updatedAt": "2025-10-11T14:59:55.000Z",
+    "images": [
+      {
+        "id": 3,
+        "postId": 54,
+        "url": "https://res.cloudinary.com/dkm0ahny1/image/upload/v1760194795/wmgd4hj4fj5ttyq294hd.png",
+        "caption": null,
+        "credit": null,
+        "createdAt": "2025-10-11T14:59:55.000Z",
+        "updatedAt": "2025-10-11T14:59:55.000Z"
+      }
+    ],
     "categories": [
       {
         "id": 2,
         "name": "🌊 Ecosistemas Oceánicos"
-      }
-    ],
-    "images": [
-      {
-        "url": "https://res.cloudinary.com/dkm0ahny1/image/upload/v1760194795/wmgd4hj4fj5ttyq294hd.png",
-        "caption": null,
-        "credit": null
       }
     ]
   },
@@ -904,17 +916,21 @@
     "credits": "https://www.informacion.es/medio-ambiente/2025/08/21/sorpendente-hallazgo-orcas-acercan-humanos-119437490.html",
     "createdAt": "2025-10-11T15:45:54.000Z",
     "updatedAt": "2025-10-11T15:45:54.000Z",
+    "images": [
+      {
+        "id": 4,
+        "postId": 55,
+        "url": "https://res.cloudinary.com/dkm0ahny1/image/upload/v1760197554/rokn8uayqkoyz29tqakb.png",
+        "caption": null,
+        "credit": null,
+        "createdAt": "2025-10-11T15:45:54.000Z",
+        "updatedAt": "2025-10-11T15:45:54.000Z"
+      }
+    ],
     "categories": [
       {
         "id": 1,
         "name": "🐠 Vida Marina"
-      }
-    ],
-    "images": [
-      {
-        "url": "https://res.cloudinary.com/dkm0ahny1/image/upload/v1760197554/rokn8uayqkoyz29tqakb.png",
-        "caption": null,
-        "credit": null
       }
     ]
   },
@@ -931,17 +947,21 @@
     "credits": "https://www.pasionporelmar.com/es/noticia/descubren-en-menorca-el-tercer-nido-de-tortuga-marina-de-la-temporada-en-baleares/6611",
     "createdAt": "2025-10-11T15:50:06.000Z",
     "updatedAt": "2025-10-11T15:50:06.000Z",
+    "images": [
+      {
+        "id": 5,
+        "postId": 56,
+        "url": "https://res.cloudinary.com/dkm0ahny1/image/upload/v1760197806/x3cz09a0be6pizddnemf.png",
+        "caption": null,
+        "credit": null,
+        "createdAt": "2025-10-11T15:50:07.000Z",
+        "updatedAt": "2025-10-11T15:50:07.000Z"
+      }
+    ],
     "categories": [
       {
         "id": 1,
         "name": "🐠 Vida Marina"
-      }
-    ],
-    "images": [
-      {
-        "url": "https://res.cloudinary.com/dkm0ahny1/image/upload/v1760197806/x3cz09a0be6pizddnemf.png",
-        "caption": null,
-        "credit": null
       }
     ]
   },
@@ -958,17 +978,21 @@
     "credits": "https://www.informacion.es/medio-ambiente/2025/08/21/sorpendente-hallazgo-orcas-acercan-humanos-119437490.html",
     "createdAt": "2025-10-11T15:53:42.000Z",
     "updatedAt": "2025-10-11T15:53:42.000Z",
+    "images": [
+      {
+        "id": 6,
+        "postId": 57,
+        "url": "https://res.cloudinary.com/dkm0ahny1/image/upload/v1760198021/bnidzf1v8bsgnnqhmbi1.png",
+        "caption": null,
+        "credit": null,
+        "createdAt": "2025-10-11T15:53:42.000Z",
+        "updatedAt": "2025-10-11T15:53:42.000Z"
+      }
+    ],
     "categories": [
       {
         "id": 1,
         "name": "🐠 Vida Marina"
-      }
-    ],
-    "images": [
-      {
-        "url": "https://res.cloudinary.com/dkm0ahny1/image/upload/v1760198021/bnidzf1v8bsgnnqhmbi1.png",
-        "caption": null,
-        "credit": null
       }
     ]
   },
@@ -985,17 +1009,21 @@
     "credits": "https://es.gizmodo.com/mas-de-100-millones-de-edificios-podrian-quedar-bajo-el-agua-el-mapa-que-revela-como-el-mar-reescribira-las-costas-del-mundo-2000197430",
     "createdAt": "2025-10-11T16:01:48.000Z",
     "updatedAt": "2025-10-11T16:01:48.000Z",
+    "images": [
+      {
+        "id": 7,
+        "postId": 58,
+        "url": "https://res.cloudinary.com/dkm0ahny1/image/upload/v1760198507/c77ry4lol4jkfilctqee.png",
+        "caption": null,
+        "credit": null,
+        "createdAt": "2025-10-11T16:01:48.000Z",
+        "updatedAt": "2025-10-11T16:01:48.000Z"
+      }
+    ],
     "categories": [
       {
         "id": 4,
         "name": "⚠️ Problemas y Amenazas"
-      }
-    ],
-    "images": [
-      {
-        "url": "https://res.cloudinary.com/dkm0ahny1/image/upload/v1760198507/c77ry4lol4jkfilctqee.png",
-        "caption": null,
-        "credit": null
       }
     ]
   },
@@ -1012,17 +1040,21 @@
     "credits": "https://www.nationalgeographic.com.es/mundo-animal/que-ha-pasado-diablo-negro-hallado-tenerife-hablamos-sus-descubridores_24219",
     "createdAt": "2025-10-11T16:07:07.000Z",
     "updatedAt": "2025-10-11T16:07:07.000Z",
+    "images": [
+      {
+        "id": 8,
+        "postId": 59,
+        "url": "https://res.cloudinary.com/dkm0ahny1/image/upload/v1760198827/wnun2bfrqhcm9hfruxws.png",
+        "caption": null,
+        "credit": null,
+        "createdAt": "2025-10-11T16:07:08.000Z",
+        "updatedAt": "2025-10-11T16:07:08.000Z"
+      }
+    ],
     "categories": [
       {
         "id": 1,
         "name": "🐠 Vida Marina"
-      }
-    ],
-    "images": [
-      {
-        "url": "https://res.cloudinary.com/dkm0ahny1/image/upload/v1760198827/wnun2bfrqhcm9hfruxws.png",
-        "caption": null,
-        "credit": null
       }
     ]
   },
@@ -1039,17 +1071,21 @@
     "credits": "https://www.elviajerofisgon.com/experiencias/eleuthera-todo-lo-que-debes-conocer-sobre-la-isla-que-divide-dos-oceanos/",
     "createdAt": "2025-10-11T16:11:56.000Z",
     "updatedAt": "2025-10-11T16:11:56.000Z",
+    "images": [
+      {
+        "id": 9,
+        "postId": 60,
+        "url": "https://res.cloudinary.com/dkm0ahny1/image/upload/v1760199116/ktpenmyuzdingjl0xupg.png",
+        "caption": null,
+        "credit": null,
+        "createdAt": "2025-10-11T16:11:56.000Z",
+        "updatedAt": "2025-10-11T16:11:56.000Z"
+      }
+    ],
     "categories": [
       {
         "id": 5,
         "name": "🌍 Regiones y Océanos del Mundo"
-      }
-    ],
-    "images": [
-      {
-        "url": "https://res.cloudinary.com/dkm0ahny1/image/upload/v1760199116/ktpenmyuzdingjl0xupg.png",
-        "caption": null,
-        "credit": null
       }
     ]
   },
@@ -1066,17 +1102,21 @@
     "credits": "https://quo.eldiario.es/naturaleza/g38829/los-10-paisajes-oceanicos-mas-bellos-del-mundo",
     "createdAt": "2025-10-11T16:19:44.000Z",
     "updatedAt": "2025-10-11T16:19:44.000Z",
+    "images": [
+      {
+        "id": 10,
+        "postId": 61,
+        "url": "https://res.cloudinary.com/dkm0ahny1/image/upload/v1760199584/fcclrj1a2xwafs8yploh.png",
+        "caption": null,
+        "credit": null,
+        "createdAt": "2025-10-11T16:19:44.000Z",
+        "updatedAt": "2025-10-11T16:19:44.000Z"
+      }
+    ],
     "categories": [
       {
         "id": 5,
         "name": "🌍 Regiones y Océanos del Mundo"
-      }
-    ],
-    "images": [
-      {
-        "url": "https://res.cloudinary.com/dkm0ahny1/image/upload/v1760199584/fcclrj1a2xwafs8yploh.png",
-        "caption": null,
-        "credit": null
       }
     ]
   },
@@ -1093,17 +1133,21 @@
     "credits": "https://quo.eldiario.es/naturaleza/g38829/los-10-paisajes-oceanicos-mas-bellos-del-mundo",
     "createdAt": "2025-10-11T16:23:20.000Z",
     "updatedAt": "2025-10-11T16:23:20.000Z",
+    "images": [
+      {
+        "id": 11,
+        "postId": 62,
+        "url": "https://res.cloudinary.com/dkm0ahny1/image/upload/v1760199800/m3n88ndrwmifk8ri4tkg.png",
+        "caption": null,
+        "credit": null,
+        "createdAt": "2025-10-11T16:23:20.000Z",
+        "updatedAt": "2025-10-11T16:23:20.000Z"
+      }
+    ],
     "categories": [
       {
         "id": 5,
         "name": "🌍 Regiones y Océanos del Mundo"
-      }
-    ],
-    "images": [
-      {
-        "url": "https://res.cloudinary.com/dkm0ahny1/image/upload/v1760199800/m3n88ndrwmifk8ri4tkg.png",
-        "caption": null,
-        "credit": null
       }
     ]
   },
@@ -1120,17 +1164,21 @@
     "credits": "https://quo.eldiario.es/naturaleza/g38829/los-10-paisajes-oceanicos-mas-bellos-del-mundo",
     "createdAt": "2025-10-11T16:27:10.000Z",
     "updatedAt": "2025-10-11T16:27:10.000Z",
+    "images": [
+      {
+        "id": 12,
+        "postId": 63,
+        "url": "https://res.cloudinary.com/dkm0ahny1/image/upload/v1760200030/jvv6qvd4awccontdvhaw.png",
+        "caption": null,
+        "credit": null,
+        "createdAt": "2025-10-11T16:27:10.000Z",
+        "updatedAt": "2025-10-11T16:27:10.000Z"
+      }
+    ],
     "categories": [
       {
         "id": 5,
         "name": "🌍 Regiones y Océanos del Mundo"
-      }
-    ],
-    "images": [
-      {
-        "url": "https://res.cloudinary.com/dkm0ahny1/image/upload/v1760200030/jvv6qvd4awccontdvhaw.png",
-        "caption": null,
-        "credit": null
       }
     ]
   },
@@ -1147,17 +1195,21 @@
     "credits": "https://es.weforum.org/stories/2024/02/como-la-tecnologia-de-exploracion-del-fondo-marino-podria-transformar-la-vida-sobre-el-agua/",
     "createdAt": "2025-10-11T16:32:58.000Z",
     "updatedAt": "2025-10-11T16:32:58.000Z",
+    "images": [
+      {
+        "id": 13,
+        "postId": 64,
+        "url": "https://res.cloudinary.com/dkm0ahny1/image/upload/v1760200377/xvtk3pjsggtni2caalyn.png",
+        "caption": null,
+        "credit": null,
+        "createdAt": "2025-10-11T16:32:58.000Z",
+        "updatedAt": "2025-10-11T16:32:58.000Z"
+      }
+    ],
     "categories": [
       {
         "id": 3,
         "name": "🔬 Ciencia y Exploración"
-      }
-    ],
-    "images": [
-      {
-        "url": "https://res.cloudinary.com/dkm0ahny1/image/upload/v1760200377/xvtk3pjsggtni2caalyn.png",
-        "caption": null,
-        "credit": null
       }
     ]
   },
@@ -1174,17 +1226,21 @@
     "credits": "https://elpais.com/america-futura/2025-08-01/la-expedicion-submarina-argentina-que-se-ha-hecho-viral-con-sus-transmisiones-en-vivo.html",
     "createdAt": "2025-10-12T09:07:25.000Z",
     "updatedAt": "2025-10-12T09:07:25.000Z",
+    "images": [
+      {
+        "id": 14,
+        "postId": 65,
+        "url": "https://res.cloudinary.com/dkm0ahny1/image/upload/v1760260044/iysm9shwluzhlvlwoyl2.png",
+        "caption": null,
+        "credit": null,
+        "createdAt": "2025-10-12T09:07:25.000Z",
+        "updatedAt": "2025-10-12T09:07:25.000Z"
+      }
+    ],
     "categories": [
       {
         "id": 3,
         "name": "🔬 Ciencia y Exploración"
-      }
-    ],
-    "images": [
-      {
-        "url": "https://res.cloudinary.com/dkm0ahny1/image/upload/v1760260044/iysm9shwluzhlvlwoyl2.png",
-        "caption": null,
-        "credit": null
       }
     ]
   },
@@ -1201,17 +1257,21 @@
     "credits": "https://oceandecade.org/es/news/oceanx-and-oceanquest-conclude-seminal-around-africa-expedition/",
     "createdAt": "2025-10-12T09:16:45.000Z",
     "updatedAt": "2025-10-12T09:16:45.000Z",
+    "images": [
+      {
+        "id": 15,
+        "postId": 66,
+        "url": "https://res.cloudinary.com/dkm0ahny1/image/upload/v1760260604/joroyccswumvx9ksxf0q.png",
+        "caption": null,
+        "credit": null,
+        "createdAt": "2025-10-12T09:16:45.000Z",
+        "updatedAt": "2025-10-12T09:16:45.000Z"
+      }
+    ],
     "categories": [
       {
         "id": 3,
         "name": "🔬 Ciencia y Exploración"
-      }
-    ],
-    "images": [
-      {
-        "url": "https://res.cloudinary.com/dkm0ahny1/image/upload/v1760260604/joroyccswumvx9ksxf0q.png",
-        "caption": null,
-        "credit": null
       }
     ]
   },
@@ -1228,17 +1288,21 @@
     "credits": "https://quo.eldiario.es/naturaleza/g38829/los-10-paisajes-oceanicos-mas-bellos-del-mundo",
     "createdAt": "2025-10-12T09:25:19.000Z",
     "updatedAt": "2025-10-12T09:25:19.000Z",
+    "images": [
+      {
+        "id": 16,
+        "postId": 67,
+        "url": "https://res.cloudinary.com/dkm0ahny1/image/upload/v1760261118/h1bvm8jbxr5k7b9ez2sn.png",
+        "caption": null,
+        "credit": null,
+        "createdAt": "2025-10-12T09:25:19.000Z",
+        "updatedAt": "2025-10-12T09:25:19.000Z"
+      }
+    ],
     "categories": [
       {
         "id": 5,
         "name": "🌍 Regiones y Océanos del Mundo"
-      }
-    ],
-    "images": [
-      {
-        "url": "https://res.cloudinary.com/dkm0ahny1/image/upload/v1760261118/h1bvm8jbxr5k7b9ez2sn.png",
-        "caption": null,
-        "credit": null
       }
     ]
   },
@@ -1255,17 +1319,21 @@
     "credits": "https://quo.eldiario.es/naturaleza/g38829/los-10-paisajes-oceanicos-mas-bellos-del-mundo",
     "createdAt": "2025-10-12T09:32:47.000Z",
     "updatedAt": "2025-10-12T09:32:47.000Z",
+    "images": [
+      {
+        "id": 17,
+        "postId": 68,
+        "url": "https://res.cloudinary.com/dkm0ahny1/image/upload/v1760261566/y7ptsww7kwmsibhuopsh.png",
+        "caption": null,
+        "credit": null,
+        "createdAt": "2025-10-12T09:32:47.000Z",
+        "updatedAt": "2025-10-12T09:32:47.000Z"
+      }
+    ],
     "categories": [
       {
         "id": 5,
         "name": "🌍 Regiones y Océanos del Mundo"
-      }
-    ],
-    "images": [
-      {
-        "url": "https://res.cloudinary.com/dkm0ahny1/image/upload/v1760261566/y7ptsww7kwmsibhuopsh.png",
-        "caption": null,
-        "credit": null
       }
     ]
   },
@@ -1282,17 +1350,21 @@
     "credits": "https://cadenaser.com/nacional/hype/2025/03/16/un-nuevo-descubrimiento-alerta-de-las-fuerzas-ocultas-que-podrian-haber-bajado-el-nivel-del-mar-en-32-metros-cadena-ser/",
     "createdAt": "2025-10-12T09:41:47.000Z",
     "updatedAt": "2025-10-12T09:41:47.000Z",
+    "images": [
+      {
+        "id": 18,
+        "postId": 69,
+        "url": "https://res.cloudinary.com/dkm0ahny1/image/upload/v1760262106/qpu8bnfndux9t2lbyjut.png",
+        "caption": null,
+        "credit": null,
+        "createdAt": "2025-10-12T09:41:47.000Z",
+        "updatedAt": "2025-10-12T09:41:47.000Z"
+      }
+    ],
     "categories": [
       {
         "id": 4,
         "name": "⚠️ Problemas y Amenazas"
-      }
-    ],
-    "images": [
-      {
-        "url": "https://res.cloudinary.com/dkm0ahny1/image/upload/v1760262106/qpu8bnfndux9t2lbyjut.png",
-        "caption": null,
-        "credit": null
       }
     ]
   },
@@ -1309,6 +1381,17 @@
     "credits": "https://oceandecade.org/es/news/partner-news/the-ocean-census-discovers-over-800-new-marine-species/",
     "createdAt": "2025-10-12T09:47:52.000Z",
     "updatedAt": "2025-10-12T09:47:52.000Z",
+    "images": [
+      {
+        "id": 19,
+        "postId": 70,
+        "url": "https://res.cloudinary.com/dkm0ahny1/image/upload/v1760262472/yx9zonsvthpdjg8e2veg.png",
+        "caption": null,
+        "credit": null,
+        "createdAt": "2025-10-12T09:47:52.000Z",
+        "updatedAt": "2025-10-12T09:47:52.000Z"
+      }
+    ],
     "categories": [
       {
         "id": 1,
@@ -1317,13 +1400,6 @@
       {
         "id": 2,
         "name": "🌊 Ecosistemas Oceánicos"
-      }
-    ],
-    "images": [
-      {
-        "url": "https://res.cloudinary.com/dkm0ahny1/image/upload/v1760262472/yx9zonsvthpdjg8e2veg.png",
-        "caption": null,
-        "credit": null
       }
     ]
   },
@@ -1340,6 +1416,17 @@
     "credits": "https://cnnespanol.cnn.com/2025/08/12/ciencia/ecosistema-marino-fosa-hadal-animales-metano-trax",
     "createdAt": "2025-10-12T09:49:46.000Z",
     "updatedAt": "2025-10-12T09:49:46.000Z",
+    "images": [
+      {
+        "id": 20,
+        "postId": 71,
+        "url": "https://res.cloudinary.com/dkm0ahny1/image/upload/v1760262585/minu1hq5upqday2lghnl.png",
+        "caption": null,
+        "credit": null,
+        "createdAt": "2025-10-12T09:49:46.000Z",
+        "updatedAt": "2025-10-12T09:49:46.000Z"
+      }
+    ],
     "categories": [
       {
         "id": 1,
@@ -1352,13 +1439,6 @@
       {
         "id": 3,
         "name": "🔬 Ciencia y Exploración"
-      }
-    ],
-    "images": [
-      {
-        "url": "https://res.cloudinary.com/dkm0ahny1/image/upload/v1760262585/minu1hq5upqday2lghnl.png",
-        "caption": null,
-        "credit": null
       }
     ]
   },
@@ -1375,6 +1455,17 @@
     "credits": "https://www.larazon.es/ciencia/cientificos-advierten-inquietante-descubrimiento-profundidades-mar-mediterraneo-p7m_2025040767f40ef8eec2d300014c8462.html",
     "createdAt": "2025-10-12T10:19:14.000Z",
     "updatedAt": "2025-10-12T10:19:14.000Z",
+    "images": [
+      {
+        "id": 21,
+        "postId": 72,
+        "url": "https://res.cloudinary.com/dkm0ahny1/image/upload/v1760264353/qcpvn4i01lt6diafuiae.png",
+        "caption": null,
+        "credit": null,
+        "createdAt": "2025-10-12T10:19:14.000Z",
+        "updatedAt": "2025-10-12T10:19:14.000Z"
+      }
+    ],
     "categories": [
       {
         "id": 3,
@@ -1383,13 +1474,6 @@
       {
         "id": 4,
         "name": "⚠️ Problemas y Amenazas"
-      }
-    ],
-    "images": [
-      {
-        "url": "https://res.cloudinary.com/dkm0ahny1/image/upload/v1760264353/qcpvn4i01lt6diafuiae.png",
-        "caption": null,
-        "credit": null
       }
     ]
   }
