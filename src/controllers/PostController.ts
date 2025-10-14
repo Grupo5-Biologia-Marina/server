@@ -18,7 +18,7 @@ export const createPost = async (req: AuthenticatedRequest, res: Response): Prom
     }
 
     const postData: PostCreateInput = req.body;
-    
+
     // ✅ Extraer las propiedades de postData
     const { userId, title, content, credits, categories, images } = postData;
 
@@ -192,7 +192,7 @@ export const deletePost = async (req: AuthenticatedRequest, res: Response): Prom
     }
 
     // Admin puede borrar cualquier post, user solo el suyo
-    if (req.user.role !== 'admin' && post.userId !== parseInt(req.user.id)) {
+    if (req.user.role !== 'admin' && post.userId !== Number(req.user.id)) {
       res.status(403).json({ success: false, message: 'Forbidden: no puedes borrar este post' });
       return;
     }
@@ -234,8 +234,8 @@ export const updatePost = async (req: AuthenticatedRequest, res: Response): Prom
     }
 
     // Admin puede actualizar cualquier post, user solo el suyo
-    if (req.user.role !== 'admin' && post.userId !== parseInt(req.user.id)) {
-      res.status(403).json({ success: false, message: 'Forbidden: no puedes editar este post' });
+    if (req.user.role !== 'admin' && post.userId !== +req.user.id) {
+      res.status(403).json({ success: false, message: 'Forbidden: no puedes actualizar este post' });
       return;
     }
 
