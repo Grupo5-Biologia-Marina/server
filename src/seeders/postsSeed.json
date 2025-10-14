@@ -400,32 +400,6 @@
     "categories": []
   },
   {
-    "id": 28,
-    "userId": 1,
-    "user": {
-      "id": 1,
-      "username": "admin",
-      "role": "admin"
-    },
-    "title": "prueba 3",
-    "content": "se ha editado",
-    "credits": "",
-    "createdAt": "2025-10-10T12:22:16.000Z",
-    "updatedAt": "2025-10-13T12:11:18.000Z",
-    "images": [
-      {
-        "id": 2,
-        "postId": 28,
-        "url": "https://res.cloudinary.com/dkm0ahny1/image/upload/v1760098931/ftkprfthpjrmae4sayx7.png",
-        "caption": null,
-        "credit": null,
-        "createdAt": "2025-10-10T12:22:16.000Z",
-        "updatedAt": "2025-10-10T12:22:16.000Z"
-      }
-    ],
-    "categories": []
-  },
-  {
     "id": 29,
     "userId": 1,
     "user": {
@@ -468,7 +442,9 @@
     "categories": [
       {
         "id": 1,
-        "name": "🐠 Vida Marina"
+        "name": "🐠 Vida Marina",
+        "description": "Descubre las criaturas fascinantes que habitan los océanos, desde corales y medusas hasta tiburones y ballenas.",
+        "img": "https://res.cloudinary.com/dkm0ahny1/image/upload/v1760082986/marine-life_plsxer.png"
       }
     ]
   },
@@ -489,28 +465,9 @@
     "categories": [
       {
         "id": 2,
-        "name": "🌊 Ecosistemas Oceánicos"
-      }
-    ]
-  },
-  {
-    "id": 32,
-    "userId": 3,
-    "user": {
-      "id": 3,
-      "username": "luisasilvamartinez1999@gmail.com",
-      "role": "user"
-    },
-    "title": "prueba 2 botoens",
-    "content": "prueba",
-    "credits": "",
-    "createdAt": "2025-10-13T12:40:29.000Z",
-    "updatedAt": "2025-10-13T12:40:29.000Z",
-    "images": [],
-    "categories": [
-      {
-        "id": 2,
-        "name": "🌊 Ecosistemas Oceánicos"
+        "name": "🌊 Ecosistemas Oceánicos",
+        "description": "Explora los ecosistemas marinos: arrecifes, abismos, costas y sus delicados equilibrios naturales.",
+        "img": "https://res.cloudinary.com/dkm0ahny1/image/upload/v1760082986/ocean-ecosystems_gcdz5g.png"
       }
     ]
   }
