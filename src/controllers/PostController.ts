@@ -175,6 +175,36 @@ export const getPostById = async (req: Request, res: Response): Promise<void> =>
   }
 };
 
+// GET ver posts por UserId
+export const getPostsByUserId = async (req: Request, res: Response): Promise<void> => {
+  try {
+    const { userId } = req.params;
+
+    if (!userId) {
+      res.status(400).json({ message: "Falta el ID del usuario" });
+      return;
+    }
+
+    const posts = await PostModel.findAll({
+      where: { userId },
+      include: [
+        {
+          model: UserModel,
+          as: "user",
+          attributes: ["id", "username", "email"],
+        },
+      ],
+      order: [["createdAt", "DESC"]],
+    });
+
+    res.status(200).json(posts);
+  } catch (error) {
+    console.error("Error al obtener las publicaciones del usuario:", error);
+    res.status(500).json({ message: "Error al obtener las publicaciones del usuario" });
+  }
+};
+
+
 export const deletePost = async (req: AuthenticatedRequest, res: Response): Promise<void> => {
   try {
     const { id } = req.params;
