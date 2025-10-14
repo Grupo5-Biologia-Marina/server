@@ -7,11 +7,11 @@
       "username": "admin",
       "role": "admin"
     },
-    "title": "Nuevo tiburón linterna y cangrejo porcelana descubiertos en el mar profundo frente a Australia",
-    "content": "En una expedición liderada por el CSIRO en 2022, se identificaron dos especies nuevas: un tiburón linterna de Australia Occidental (Etmopterus westraliensis) y un cangrejo porcelana (Porcellanella brevidentata). El tiburón fue hallado a unos 610 m de profundidad y el cangrejo vive en simbiosis con corales blandos.",
-    "credits": "https://www.csiro.au/en/news/All/Articles/2025/October/New-species-of-shark-and-crab",
-    "createdAt": "2025-10-10T10:17:51.000Z",
-    "updatedAt": "2025-10-10T10:17:51.000Z",
+    "title": "Test",
+    "content": "Test content",
+    "credits": null,
+    "createdAt": "2025-10-10T22:15:56.000Z",
+    "updatedAt": "2025-10-10T22:15:56.000Z",
     "images": [],
     "categories": []
   },
@@ -23,12 +23,22 @@
       "username": "admin",
       "role": "admin"
     },
-    "title": "Más de 800 nuevas especies marinas descubiertas por el Ocean Census",
-    "content": "El proyecto global Ocean Census anunció el descubrimiento de 866 nuevas especies marinas, incluidos tiburones, corales, esponjas, crustáceos y más, en profundidades que van de 1 a 4.990 metros.",
-    "credits": "https://oceancensus.org/press-release-the-ocean-census-discovers-over-800-new-marine-species/",
-    "createdAt": "2025-10-10T10:17:51.000Z",
-    "updatedAt": "2025-10-10T10:17:51.000Z",
-    "images": [],
+    "title": "¡Descubren un tiburón nodriza naranja en el Caribe!",
+    "content": "En un hallazgo sorprendente en las aguas del Caribe costarricense, cerca del Parque Nacional Tortuguero, biólogos marinos y pescadores documentaron un tiburón nodriza de color naranja brillante, con ojos totalmente blancos. Este ejemplar, de aproximadamente dos metros de longitud, fue capturado a 37 metros de profundidad durante una expedición de pesca deportiva y luego liberado al mar.\n\nLa inusual coloración se debe a una condición genética conocida como xantocromismo, que genera un exceso de pigmentos amarillos-anaranjados en la piel. Además, la ausencia de pigmento en los ojos indica una posible combinación con albinismo, un fenómeno extremadamente raro conocido como albino-xantocromismo.\n\nEste descubrimiento es especialmente relevante porque es el primer caso documentado de xantocromismo en tiburones nodriza del Caribe. Aunque aún no se han realizado análisis genéticos para determinar la causa exacta, este hallazgo aporta información valiosa sobre la diversidad genética y fenotípica de estas poblaciones.\n\nEl tiburón nodriza naranja se convierte así en un recordatorio de la riqueza y la variedad de la vida marina, y de lo mucho que aún nos queda por descubrir en los océanos.",
+    "credits": "https://www.nationalgeographic.com.es/mundo-animal/hallan-extrano-tiburon-nodriza-color-naranja-caribe-causa-hecho-unico-historia-marina_26067",
+    "createdAt": "2025-10-10T22:49:07.000Z",
+    "updatedAt": "2025-10-10T22:49:07.000Z",
+    "images": [
+      {
+        "id": 1,
+        "postId": 2,
+        "url": "https://res.cloudinary.com/dkm0ahny1/image/upload/v1760136548/hgv4t0eep5tzvinp7yvk.png",
+        "caption": null,
+        "credit": null,
+        "createdAt": "2025-10-10T22:49:07.000Z",
+        "updatedAt": "2025-10-10T22:49:07.000Z"
+      }
+    ],
     "categories": []
   },
   {
@@ -39,11 +49,11 @@
       "username": "admin",
       "role": "admin"
     },
-    "title": "Extrañas formas de vida descubiertas en el cañón Mar del Plata: langostas rosadas y calamares translúcidos",
-    "content": "En el cañón submarino frente a Argentina, exploraciones ROV revelaron decenas de posibles especies nuevas, entre las cuales se observan langostas de color pastel, calamares de apariencia inusual y otras criaturas abisales.",
-    "credits": "https://www.scientificamerican.com/article/strange-deep-sea-animals-discovered-in-underwater-argentine-canyon/",
-    "createdAt": "2025-10-10T10:17:51.000Z",
-    "updatedAt": "2025-10-10T10:17:51.000Z",
+    "title": "Nuevo tiburón linterna y cangrejo porcelana descubiertos en el mar profundo frente a Australia",
+    "content": "En una expedición liderada por el CSIRO en 2022, se identificaron dos especies nuevas: un tiburón linterna de Australia Occidental (Etmopterus westraliensis) y un cangrejo porcelana (Porcellanella brevidentata). El tiburón fue hallado a unos 610 m de profundidad y el cangrejo vive en simbiosis con corales blandos.",
+    "credits": "https://www.csiro.au/en/news/All/Articles/2025/October/New-species-of-shark-and-crab",
+    "createdAt": "2025-10-10T23:07:20.000Z",
+    "updatedAt": "2025-10-10T23:07:20.000Z",
     "images": [],
     "categories": []
   },
@@ -55,11 +65,11 @@
       "username": "admin",
       "role": "admin"
     },
-    "title": "La limática más profunda descrita hasta ahora: Bathylepeta wadatsumi",
-    "content": "Se descubrió una nueva especie de limática (molusco) viviendo a 5.922 metros de profundidad en el Pacífico noroeste. Este hallazgo marca el récord de la limática verdadera que más profundo se ha registrado hasta la fecha.",
-    "credits": "https://en.wikipedia.org/wiki/Bathylepeta_wadatsumi",
-    "createdAt": "2025-10-10T10:17:51.000Z",
-    "updatedAt": "2025-10-10T10:17:51.000Z",
+    "title": "Más de 800 nuevas especies marinas descubiertas por el Ocean Census",
+    "content": "El proyecto global Ocean Census anunció el descubrimiento de 866 nuevas especies marinas, incluidos tiburones, corales, esponjas, crustáceos y más, en profundidades que van de 1 a 4.990 metros.",
+    "credits": "https://oceancensus.org/press-release-the-ocean-census-discovers-over-800-new-marine-species/",
+    "createdAt": "2025-10-10T23:07:20.000Z",
+    "updatedAt": "2025-10-10T23:07:20.000Z",
     "images": [],
     "categories": []
   },
@@ -71,11 +81,11 @@
       "username": "admin",
       "role": "admin"
     },
-    "title": "Esponjas, corales y decenas de especies nuevas descubiertas en Mar del Plata con tecnología de punta",
-    "content": "En una investigación con tecnología avanzada en el cañón de Mar del Plata, científicos sospechan haber encontrado más de 40 especies nuevas — incluyendo coral rojo del género Anthomastus, esponjas, equinodermos y otros organismos de aguas profundas.",
-    "credits": "https://schmidtocean.org/first-high-tech-exploration-of-argentinas-mar-del-plata-canyon-inspires-millions/",
-    "createdAt": "2025-10-10T10:17:51.000Z",
-    "updatedAt": "2025-10-10T10:17:51.000Z",
+    "title": "Extrañas formas de vida descubiertas en el cañón Mar del Plata: langostas rosadas y calamares translúcidos",
+    "content": "En el cañón submarino frente a Argentina, exploraciones ROV revelaron decenas de posibles especies nuevas, entre las cuales se observan langostas de color pastel, calamares de apariencia inusual y otras criaturas abisales.",
+    "credits": "https://www.scientificamerican.com/article/strange-deep-sea-animals-discovered-in-underwater-argentine-canyon/",
+    "createdAt": "2025-10-10T23:07:20.000Z",
+    "updatedAt": "2025-10-10T23:07:20.000Z",
     "images": [],
     "categories": []
   },
@@ -87,11 +97,11 @@
       "username": "admin",
       "role": "admin"
     },
-    "title": "Oasis quimiosintéticos hallados en lo profundo del Pacífico",
-    "content": "En las fosas de Kuril-Kamchatka y Aleutianas, un equipo científico ha descubierto ecosistemas vivos basados en quimiosíntesis hasta los 9.533 metros de profundidad. Estas comunidades, que incluyen gusanos tubícolas, almejas blancas y otros organismos, se alimentan de químicos como sulfuros e hidrocarburos, en ausencia total de luz.",
-    "credits": "https://www.reuters.com/business/environment/vibrant-oasis-chemical-eating-creatures-found-deep-pacific-2025-07-30/",
-    "createdAt": "2025-10-10T10:17:51.000Z",
-    "updatedAt": "2025-10-10T10:17:51.000Z",
+    "title": "La limática más profunda descrita hasta ahora: Bathylepeta wadatsumi",
+    "content": "Se descubrió una nueva especie de limática (molusco) viviendo a 5.922 metros de profundidad en el Pacífico noroeste. Este hallazgo marca el récord de la limática verdadera que más profundo se ha registrado hasta la fecha.",
+    "credits": "https://en.wikipedia.org/wiki/Bathylepeta_wadatsumi",
+    "createdAt": "2025-10-10T23:07:20.000Z",
+    "updatedAt": "2025-10-10T23:07:20.000Z",
     "images": [],
     "categories": []
   },
@@ -103,11 +113,11 @@
       "username": "admin",
       "role": "admin"
     },
-    "title": "Conexiones evolutivas globales entre ecosistemas marinos profundos mediante “autopistas” del fondo oceánico",
-    "content": "Un estudio que analizó estrellas frágiles (“brittle stars”) recolectadas en todo el mundo —desde latitudes tropicales a polares, y desde aguas poco profundas hasta más de 3.500 metros de profundidad— detectó que especies muy distantes tienen parentescos cercanos. Esto sugiere que hay corrientes oceánicas profundas que actúan como vías de dispersión evolutiva que conectan ecosistemas marinos globales.",
-    "credits": "https://www.theguardian.com/environment/2025/jul/24/ancient-alien-brittle-stars-linked-to-relatives-across-the-globe-by-a-deep-sea-evolutionary-superhighway",
-    "createdAt": "2025-10-10T10:17:51.000Z",
-    "updatedAt": "2025-10-10T10:17:51.000Z",
+    "title": "Esponjas, corales y decenas de especies nuevas descubiertas en Mar del Plata con tecnología de punta",
+    "content": "En una investigación con tecnología avanzada en el cañón de Mar del Plata, científicos sospechan haber encontrado más de 40 especies nuevas — incluyendo coral rojo del género Anthomastus, esponjas, equinodermos y otros organismos de aguas profundas.",
+    "credits": "https://schmidtocean.org/first-high-tech-exploration-of-argentinas-mar-del-plata-canyon-inspires-millions/",
+    "createdAt": "2025-10-10T23:07:20.000Z",
+    "updatedAt": "2025-10-10T23:07:20.000Z",
     "images": [],
     "categories": []
   },
@@ -119,11 +129,11 @@
       "username": "admin",
       "role": "admin"
     },
-    "title": "Zona hadal de la Fosa de las Marianas: diversidad microbiológica extraordinaria",
-    "content": "Proyecto MEER revela que en la zona hadal (más de 6.000 metros de profundidad) de la Fosa de las Marianas existe una biodiversidad microbiana enorme e inexplorada. Se identificaron miles de genomas nuevos, en su mayoría desconocidos hasta ahora, con adaptaciones genéticas para resistir presiones extremas, temperaturas bajas y escasez de nutrientes.",
-    "credits": "https://astrobiology.com/2025/03/life-thrives-in-the-deepest-ocean-new-discoveries-from-the-mariana-trench.html",
-    "createdAt": "2025-10-10T10:17:51.000Z",
-    "updatedAt": "2025-10-10T10:17:51.000Z",
+    "title": "Oasis quimiosintéticos hallados en lo profundo del Pacífico",
+    "content": "En las fosas de Kuril-Kamchatka y Aleutianas, un equipo científico ha descubierto ecosistemas vivos basados en quimiosíntesis hasta los 9.533 metros de profundidad. Estas comunidades, que incluyen gusanos tubícolas, almejas blancas y otros organismos, se alimentan de químicos como sulfuros e hidrocarburos, en ausencia total de luz.",
+    "credits": "https://www.reuters.com/business/environment/vibrant-oasis-chemical-eating-creatures-found-deep-pacific-2025-07-30/",
+    "createdAt": "2025-10-10T23:07:20.000Z",
+    "updatedAt": "2025-10-10T23:07:20.000Z",
     "images": [],
     "categories": []
   },
@@ -135,11 +145,11 @@
       "username": "admin",
       "role": "admin"
     },
-    "title": "El calentamiento de los océanos de Nueva Zelanda va 34 % más rápido que la media global",
-    "content": "Un informe del Ministerio de Medio Ambiente de Nueva Zelanda muestra que las aguas oceánicas en esa región se están calentando a un ritmo un 34 % superior al promedio global. Esto provoca cambios en corrientes oceánicas, ecosistemas costeros y marinos, y supone riesgos para hábitats, especies, industrias pesqueras y comunidades costeras.",
-    "credits": "https://www.theguardian.com/world/2025/oct/08/new-zealand-oceans-warming-34-per-cent-faster-than-global-average?utm_source=chatgpt.com",
-    "createdAt": "2025-10-10T10:17:51.000Z",
-    "updatedAt": "2025-10-10T10:17:51.000Z",
+    "title": "Conexiones evolutivas globales entre ecosistemas marinos profundos mediante “autopistas” del fondo oceánico",
+    "content": "Un estudio que analizó estrellas frágiles (“brittle stars”) recolectadas en todo el mundo —desde latitudes tropicales a polares, y desde aguas poco profundas hasta más de 3.500 metros de profundidad— detectó que especies muy distantes tienen parentescos cercanos. Esto sugiere que hay corrientes oceánicas profundas que actúan como vías de dispersión evolutiva que conectan ecosistemas marinos globales.",
+    "credits": "https://www.theguardian.com/environment/2025/jul/24/ancient-alien-brittle-stars-linked-to-relatives-across-the-globe-by-a-deep-sea-evolutionary-superhighway",
+    "createdAt": "2025-10-10T23:07:20.000Z",
+    "updatedAt": "2025-10-10T23:07:20.000Z",
     "images": [],
     "categories": []
   },
@@ -151,11 +161,11 @@
       "username": "admin",
       "role": "admin"
     },
-    "title": "Expedición CONTRASTS: nuevos datos sobre derretimiento del hielo en el Ártico y efectos sobre ecosistemas marinos",
-    "content": "La expedición Contrasts (julio-septiembre 2025) estudió hielos marinos de diferentes tipos (nuevo, multianual) en el Ártico Central para entender mejor cómo responden estos hielos al cambio climático, y cómo ese cambio afecta los ecosistemas marinos que dependen de ellos, incluyendo especies adaptadas al hielo, corrientes, nutrientes y redes tróficas.",
-    "credits": "https://en.wikipedia.org/wiki/CONTRASTS_Expedition",
-    "createdAt": "2025-10-10T10:17:51.000Z",
-    "updatedAt": "2025-10-10T10:17:51.000Z",
+    "title": "Zona hadal de la Fosa de las Marianas: diversidad microbiológica extraordinaria",
+    "content": "Proyecto MEER revela que en la zona hadal (más de 6.000 metros de profundidad) de la Fosa de las Marianas existe una biodiversidad microbiana enorme e inexplorada. Se identificaron miles de genomas nuevos, en su mayoría desconocidos hasta ahora, con adaptaciones genéticas para resistir presiones extremas, temperaturas bajas y escasez de nutrientes.",
+    "credits": "https://astrobiology.com/2025/03/life-thrives-in-the-deepest-ocean-new-discoveries-from-the-mariana-trench.html",
+    "createdAt": "2025-10-10T23:07:20.000Z",
+    "updatedAt": "2025-10-10T23:07:20.000Z",
     "images": [],
     "categories": []
   },
@@ -167,11 +177,11 @@
       "username": "admin",
       "role": "admin"
     },
-    "title": "Miles de especies microbianas halladas en la región más profunda del océano (Fosa de las Marianas)",
-    "content": "En una serie de 33 inmersiones realizadas por el sumergible Fendouzhe, investigadores recolectaron muestras de sedimentos y agua en profundidades entre 6.000 y 10.900 metros en la Fosa de las Marianas. Identificaron unas 7.564 especies microbianas, de las cuales ~89,4 % no habían sido reportadas previamente, incluyendo virus y procariontes con adaptaciones genéticas para resistir alta presión, temperaturas bajísimas y escasez de nutrientes.",
-    "credits": "https://phys.org/news/2025-03-mariana-trench-lifeforms-flourishing-deep.html",
-    "createdAt": "2025-10-10T10:17:51.000Z",
-    "updatedAt": "2025-10-10T10:17:51.000Z",
+    "title": "El calentamiento de los océanos de Nueva Zelanda va 34 % más rápido que la media global",
+    "content": "Un informe del Ministerio de Medio Ambiente de Nueva Zelanda muestra que las aguas oceánicas en esa región se están calentando a un ritmo un 34 % superior al promedio global. Esto provoca cambios en corrientes oceánicas, ecosistemas costeros y marinos, y supone riesgos para hábitats, especies, industrias pesqueras y comunidades costeras.",
+    "credits": "https://www.theguardian.com/world/2025/oct/08/new-zealand-oceans-warming-34-per-cent-faster-than-global-average?utm_source=chatgpt.com",
+    "createdAt": "2025-10-10T23:07:20.000Z",
+    "updatedAt": "2025-10-10T23:07:20.000Z",
     "images": [],
     "categories": []
   },
@@ -183,11 +193,11 @@
       "username": "admin",
       "role": "admin"
     },
-    "title": "Submarino Alvin mejora para alcanzar profundidades nunca antes exploradas por él (~6.500 metros)",
-    "content": "El ya legendario vehículo habitado Alvin ha sido sometido a una mejora significativa que le permite ahora alcanzar los 6.500 metros de profundidad, superando su límite anterior de aproximadamente 4.500 metros. Esto aumenta enormemente el rango del fondo oceánico que puede ser observado directamente por seres humanos, lo que abre nuevas oportunidades para explorar hábitats, geología y biología profunda que antes estaban fuera de alcance.",
-    "credits": "https://phys.org/news/2025-02-alvin-ocean-depths.html",
-    "createdAt": "2025-10-10T10:17:51.000Z",
-    "updatedAt": "2025-10-10T10:17:51.000Z",
+    "title": "Expedición CONTRASTS: nuevos datos sobre derretimiento del hielo en el Ártico y efectos sobre ecosistemas marinos",
+    "content": "La expedición Contrasts (julio-septiembre 2025) estudió hielos marinos de diferentes tipos (nuevo, multianual) en el Ártico Central para entender mejor cómo responden estos hielos al cambio climático, y cómo ese cambio afecta los ecosistemas marinos que dependen de ellos, incluyendo especies adaptadas al hielo, corrientes, nutrientes y redes tróficas.",
+    "credits": "https://en.wikipedia.org/wiki/CONTRASTS_Expedition",
+    "createdAt": "2025-10-10T23:07:20.000Z",
+    "updatedAt": "2025-10-10T23:07:20.000Z",
     "images": [],
     "categories": []
   },
@@ -199,11 +209,11 @@
       "username": "admin",
       "role": "admin"
     },
-    "title": "Cuatro nuevos montes submarinos descubiertos en aguas internacionales entre Costa Rica y Chile",
-    "content": "Durante un tránsito de mapeo realizado por el buque Falkor (too) del Schmidt Ocean Institute, se identificaron cuatro montes submarinos en aguas internacionales, con alturas que varían entre los ~1.591 metros hasta ~2.681 metros, siendo el más grande de ellos de 2.681 metros de altura, y localizado a ~1.150 metros bajo la superficie del mar.",
-    "credits": "https://schmidtocean.org/four-new-seamounts-discovered-in-the-high-seas/",
-    "createdAt": "2025-10-10T10:17:51.000Z",
-    "updatedAt": "2025-10-10T10:17:51.000Z",
+    "title": "Miles de especies microbianas halladas en la región más profunda del océano (Fosa de las Marianas)",
+    "content": "En una serie de 33 inmersiones realizadas por el sumergible Fendouzhe, investigadores recolectaron muestras de sedimentos y agua en profundidades entre 6.000 y 10.900 metros en la Fosa de las Marianas. Identificaron unas 7.564 especies microbianas, de las cuales ~89,4 % no habían sido reportadas previamente, incluyendo virus y procariontes con adaptaciones genéticas para resistir alta presión, temperaturas bajísimas y escasez de nutrientes.",
+    "credits": "https://phys.org/news/2025-03-mariana-trench-lifeforms-flourishing-deep.html",
+    "createdAt": "2025-10-10T23:07:20.000Z",
+    "updatedAt": "2025-10-10T23:07:20.000Z",
     "images": [],
     "categories": []
   },
@@ -215,11 +225,11 @@
       "username": "admin",
       "role": "admin"
     },
-    "title": "Mapeo de cientos de cañones submarinos antárticos para entender el cambio climático",
-    "content": "Científicos de la Universidad de Barcelona y del University College Cork han cartografiado 332 redes de cañones submarinos en la Antártida usando datos de batimetría de alta resolución. Algunos de estos cañones tienen profundidades mayores a 4.000 metros. Estos vallones tienen impacto sobre la circulación oceánica, el transporte de sedimentos, el comportamiento de las plataformas de hielo, y por tanto sobre dinámicas de cambio climático y elevación del nivel del mar.",
-    "credits": "https://www.theguardian.com/environment/2025/jul/31/scientists-map-antarctic-seafloor-canyons-to-help-predict-climate-change",
-    "createdAt": "2025-10-10T10:17:51.000Z",
-    "updatedAt": "2025-10-10T10:17:51.000Z",
+    "title": "Submarino Alvin mejora para alcanzar profundidades nunca antes exploradas por él (~6.500 metros)",
+    "content": "El ya legendario vehículo habitado Alvin ha sido sometido a una mejora significativa que le permite ahora alcanzar los 6.500 metros de profundidad, superando su límite anterior de aproximadamente 4.500 metros. Esto aumenta enormemente el rango del fondo oceánico que puede ser observado directamente por seres humanos, lo que abre nuevas oportunidades para explorar hábitats, geología y biología profunda que antes estaban fuera de alcance.",
+    "credits": "https://phys.org/news/2025-02-alvin-ocean-depths.html",
+    "createdAt": "2025-10-10T23:07:20.000Z",
+    "updatedAt": "2025-10-10T23:07:20.000Z",
     "images": [],
     "categories": []
   },
@@ -231,11 +241,11 @@
       "username": "admin",
       "role": "admin"
     },
-    "title": "Red de interacciones microbianas del océano revelada más allá de la superficie",
-    "content": "Un estudio liderado por el Institut de Ciències del Mar (CSIC, Barcelona) mostró que las interacciones entre microorganismos oceánicos (bacterias, archaea, picoeucariotas) cambian mucho según la profundidad y la región geográfica. Se encontró que mientras algunas asociaciones microbianas son globales a ciertas profundidades, un alto porcentaje son específicas de regiones y profundidades, siendo las zonas profundas (como la bathipelágica) donde hay menos asociaciones globales y más particularidad regional.",
-    "credits": "https://www.sciencedaily.com/releases/2024/01/240113143637.htm",
-    "createdAt": "2025-10-10T10:17:51.000Z",
-    "updatedAt": "2025-10-10T10:17:51.000Z",
+    "title": "Cuatro nuevos montes submarinos descubiertos en aguas internacionales entre Costa Rica y Chile",
+    "content": "Durante un tránsito de mapeo realizado por el buque Falkor (too) del Schmidt Ocean Institute, se identificaron cuatro montes submarinos en aguas internacionales, con alturas que varían entre los ~1.591 metros hasta ~2.681 metros, siendo el más grande de ellos de 2.681 metros de altura, y localizado a ~1.150 metros bajo la superficie del mar.",
+    "credits": "https://schmidtocean.org/four-new-seamounts-discovered-in-the-high-seas/",
+    "createdAt": "2025-10-10T23:07:20.000Z",
+    "updatedAt": "2025-10-10T23:07:20.000Z",
     "images": [],
     "categories": []
   },
@@ -247,11 +257,11 @@
       "username": "admin",
       "role": "admin"
     },
-    "title": "Ondas de calor marinas cada vez más frecuentes en costas de Reino Unido e Irlanda",
-    "content": "Un estudio reciente indica que las olas de calor marinas (episodios donde la temperatura del mar se eleva mucho sobre lo normal) se han vuelto mucho más probables en las costas británicas e irlandesas. Por ejemplo, en el Mar de Irlanda (Celtic Sea) la probabilidad de tales eventos pasó de ~3,8 % en 1993 a ~13,8 %. Estos eventos afectan ecosistemas marinos, reproducción de especies, salud de algas, coral, etc.",
-    "credits": "https://www.theguardian.com/environment/2025/oct/07/marine-heatwaves-more-frequent-uk-irish-coasts-experts-say",
-    "createdAt": "2025-10-10T10:17:51.000Z",
-    "updatedAt": "2025-10-10T10:17:51.000Z",
+    "title": "Mapeo de cientos de cañones submarinos antárticos para entender el cambio climático",
+    "content": "Científicos de la Universidad de Barcelona y del University College Cork han cartografiado 332 redes de cañones submarinos en la Antártida usando datos de batimetría de alta resolución. Algunos de estos cañones tienen profundidades mayores a 4.000 metros. Estos vallones tienen impacto sobre la circulación oceánica, el transporte de sedimentos, el comportamiento de las plataformas de hielo, y por tanto sobre dinámicas de cambio climático y elevación del nivel del mar.",
+    "credits": "https://www.theguardian.com/environment/2025/jul/31/scientists-map-antarctic-seafloor-canyons-to-help-predict-climate-change",
+    "createdAt": "2025-10-10T23:07:20.000Z",
+    "updatedAt": "2025-10-10T23:07:20.000Z",
     "images": [],
     "categories": []
   },
@@ -263,11 +273,11 @@
       "username": "admin",
       "role": "admin"
     },
-    "title": "Acidez oceánica ha cruzado umbral crítico global para la vida marina",
-    "content": "Informe del Potsdam Institute for Climate Impact Research muestra que los océanos del mundo han superado un umbral crítico de acidez. Desde la era preindustrial, el pH del océano superficial ha bajado (~0,1 unidades), lo que implica ~30-40 % más acidez. Esto debilita organismos que necesitan carbonato de calcio (corales, conchas, esqueletos), y amenaza cadenas alimenticias marinas y ecosistemas costeros.",
-    "credits": "https://www.theguardian.com/environment/2025/sep/24/worlds-oceans-fail-key-health-check-as-acidity-crosses-critical-threshold-for-marine-life",
-    "createdAt": "2025-10-10T10:17:51.000Z",
-    "updatedAt": "2025-10-10T10:17:51.000Z",
+    "title": "Red de interacciones microbianas del océano revelada más allá de la superficie",
+    "content": "Un estudio liderado por el Institut de Ciències del Mar (CSIC, Barcelona) mostró que las interacciones entre microorganismos oceánicos (bacterias, archaea, picoeucariotas) cambian mucho según la profundidad y la región geográfica. Se encontró que mientras algunas asociaciones microbianas son globales a ciertas profundidades, un alto porcentaje son específicas de regiones y profundidades, siendo las zonas profundas (como la bathipelágica) donde hay menos asociaciones globales y más particularidad regional.",
+    "credits": "https://www.sciencedaily.com/releases/2024/01/240113143637.htm",
+    "createdAt": "2025-10-10T23:07:20.000Z",
+    "updatedAt": "2025-10-10T23:07:20.000Z",
     "images": [],
     "categories": []
   },
@@ -279,11 +289,11 @@
       "username": "admin",
       "role": "admin"
     },
-    "title": "Microplásticos presentes en todas las profundidades del océano",
-    "content": "Estudio apoyado por la National Science Foundation muestra que microplásticos (fragmentos de plástico muy pequeños) no solo flotan en la superficie, sino que están presentes hasta en zonas abisales, incluso en la Fosa de las Marianas. Esto supone que la contaminación plástica se infiltra toda la cadena alimentaria marina, y podría tener impactos en especies, salud humana y economía pesquera.",
-    "credits": "https://www.nsf.gov/news/researchers-discover-microplastics-all-ocean-depths",
-    "createdAt": "2025-10-10T10:17:51.000Z",
-    "updatedAt": "2025-10-10T10:17:51.000Z",
+    "title": "Ondas de calor marinas cada vez más frecuentes en costas de Reino Unido e Irlanda",
+    "content": "Un estudio reciente indica que las olas de calor marinas (episodios donde la temperatura del mar se eleva mucho sobre lo normal) se han vuelto mucho más probables en las costas británicas e irlandesas. Por ejemplo, en el Mar de Irlanda (Celtic Sea) la probabilidad de tales eventos pasó de ~3,8 % en 1993 a ~13,8 %. Estos eventos afectan ecosistemas marinos, reproducción de especies, salud de algas, coral, etc.",
+    "credits": "https://www.theguardian.com/environment/2025/oct/07/marine-heatwaves-more-frequent-uk-irish-coasts-experts-say",
+    "createdAt": "2025-10-10T23:07:20.000Z",
+    "updatedAt": "2025-10-10T23:07:20.000Z",
     "images": [],
     "categories": []
   },
@@ -295,11 +305,11 @@
       "username": "admin",
       "role": "admin"
     },
-    "title": "Riesgos para la salud humana vinculados a microplásticos costeros",
-    "content": "Investigaciones indican que personas que viven cerca de costas con niveles muy altos de microplásticos tienen mayores tasas de enfermedades metabólicas como diabetes tipo 2, enfermedades coronarias y accidentes cerebrovasculares, en comparación con quienes viven cerca de aguas menos contaminadas. Esto sugiere que la contaminación plástica no es solo ambiental, también un problema de salud pública.",
-    "credits": "https://newsroom.heart.org/news/living-near-an-ocean-polluted-by-microplastics-may-increase-cardiometabolic-disease-risk",
-    "createdAt": "2025-10-10T10:17:51.000Z",
-    "updatedAt": "2025-10-10T10:17:51.000Z",
+    "title": "Acidez oceánica ha cruzado umbral crítico global para la vida marina",
+    "content": "Informe del Potsdam Institute for Climate Impact Research muestra que los océanos del mundo han superado un umbral crítico de acidez. Desde la era preindustrial, el pH del océano superficial ha bajado (~0,1 unidades), lo que implica ~30-40 % más acidez. Esto debilita organismos que necesitan carbonato de calcio (corales, conchas, esqueletos), y amenaza cadenas alimenticias marinas y ecosistemas costeros.",
+    "credits": "https://www.theguardian.com/environment/2025/sep/24/worlds-oceans-fail-key-health-check-as-acidity-crosses-critical-threshold-for-marine-life",
+    "createdAt": "2025-10-10T23:07:20.000Z",
+    "updatedAt": "2025-10-10T23:07:20.000Z",
     "images": [],
     "categories": []
   },
@@ -311,11 +321,11 @@
       "username": "admin",
       "role": "admin"
     },
-    "title": "Temperaturas oceánicas globales afectan al 96 % de los mares con olas de calor extremas en 2023",
-    "content": "Un estudio publicado en Science encontró que durante 2023 el 96 % de los océanos experimentaron olas de calor extremas, más intensas y prolongadas que el promedio histórico. Estas condiciones alteran el ecosistema: coral, fauna marina, productividad primaria, etc.",
-    "credits": "https://www.livescience.com/planet-earth/rivers-oceans/96-percent-of-oceans-worldwide-experienced-extreme-heatwaves-in-2023-new-study-finds",
-    "createdAt": "2025-10-10T10:17:51.000Z",
-    "updatedAt": "2025-10-10T10:17:51.000Z",
+    "title": "Microplásticos presentes en todas las profundidades del océano",
+    "content": "Estudio apoyado por la National Science Foundation muestra que microplásticos (fragmentos de plástico muy pequeños) no solo flotan en la superficie, sino que están presentes hasta en zonas abisales, incluso en la Fosa de las Marianas. Esto supone que la contaminación plástica se infiltra toda la cadena alimentaria marina, y podría tener impactos en especies, salud humana y economía pesquera.",
+    "credits": "https://www.nsf.gov/news/researchers-discover-microplastics-all-ocean-depths",
+    "createdAt": "2025-10-10T23:07:20.000Z",
+    "updatedAt": "2025-10-10T23:07:20.000Z",
     "images": [],
     "categories": []
   },
@@ -327,11 +337,11 @@
       "username": "admin",
       "role": "admin"
     },
-    "title": "Los océanos de Nueva Zelanda se calientan un 34 % más rápido que el promedio mundial",
-    "content": "Según un informe del gobierno de Nueva Zelanda, las aguas marinas del país están aumentando su temperatura a una tasa un 34 % superior al promedio global. Esto está provocando olas marinas de calor más frecuentes, acidificación, impacto en ecosistemas costeros, y consecuencias económicas y para la infraestructura.",
-    "credits": "https://www.theguardian.com/world/2025/oct/08/new-zealand-oceans-warming-34-per-cent-faster-than-global-average?utm_source=chatgpt.com",
-    "createdAt": "2025-10-10T10:17:51.000Z",
-    "updatedAt": "2025-10-10T10:17:51.000Z",
+    "title": "Riesgos para la salud humana vinculados a microplásticos costeros",
+    "content": "Investigaciones indican que personas que viven cerca de costas con niveles muy altos de microplásticos tienen mayores tasas de enfermedades metabólicas como diabetes tipo 2, enfermedades coronarias y accidentes cerebrovasculares, en comparación con quienes viven cerca de aguas menos contaminadas. Esto sugiere que la contaminación plástica no es solo ambiental, también un problema de salud pública.",
+    "credits": "https://newsroom.heart.org/news/living-near-an-ocean-polluted-by-microplastics-may-increase-cardiometabolic-disease-risk",
+    "createdAt": "2025-10-10T23:07:20.000Z",
+    "updatedAt": "2025-10-10T23:07:20.000Z",
     "images": [],
     "categories": []
   },
@@ -343,11 +353,11 @@
       "username": "admin",
       "role": "admin"
     },
-    "title": "Olas de calor marinas gigantes en el sudeste asiático y el Pacífico",
-    "content": "En 2024, una ola de calor marino afectó ~40 millones de km² de océano en el Sudeste Asiático y Pacífico, un área cinco veces mayor que Australia. La anomalía térmica, junto con otros factores como acidificación y niveles elevados del mar, dañó ecosistemas como arrecifes de coral, y afectó tanto a la biodiversidad como a comunidades humanas costeras.",
-    "credits": "https://www.theguardian.com/environment/2025/jun/05/marine-heatwave-found-to-have-engulfed-area-of-ocean-five-times-the-size-of-australia",
-    "createdAt": "2025-10-10T10:17:51.000Z",
-    "updatedAt": "2025-10-10T10:17:51.000Z",
+    "title": "Temperaturas oceánicas globales afectan al 96 % de los mares con olas de calor extremas en 2023",
+    "content": "Un estudio publicado en Science encontró que durante 2023 el 96 % de los océanos experimentaron olas de calor extremas, más intensas y prolongadas que el promedio histórico. Estas condiciones alteran el ecosistema: coral, fauna marina, productividad primaria, etc.",
+    "credits": "https://www.livescience.com/planet-earth/rivers-oceans/96-percent-of-oceans-worldwide-experienced-extreme-heatwaves-in-2023-new-study-finds",
+    "createdAt": "2025-10-10T23:07:20.000Z",
+    "updatedAt": "2025-10-10T23:07:20.000Z",
     "images": [],
     "categories": []
   },
@@ -359,11 +369,11 @@
       "username": "admin",
       "role": "admin"
     },
-    "title": "Desplazamiento de poblaciones de atún en el Pacífico: impacto en Tuvalu y otras islas",
-    "content": "El calentamiento de los océanos está empujando las poblaciones de atún lejos de las aguas tradicionales de Tuvalu y otras naciones isleñas del Pacífico. Esto está reduciendo los capturas locales y afectando ingresos que dependen de las licencias de pesca, con proyecciones de pérdidas de hasta el 25 % de la pesca de atún para 2050 si continúa la tendencia.",
-    "credits": "https://www.washingtonpost.com/world/interactive/2025/pacific-tuna-climate-change-tuvalu/",
-    "createdAt": "2025-10-10T10:17:51.000Z",
-    "updatedAt": "2025-10-10T10:17:51.000Z",
+    "title": "Los océanos de Nueva Zelanda se calientan un 34 % más rápido que el promedio mundial",
+    "content": "Según un informe del gobierno de Nueva Zelanda, las aguas marinas del país están aumentando su temperatura a una tasa un 34 % superior al promedio global. Esto está provocando olas marinas de calor más frecuentes, acidificación, impacto en ecosistemas costeros, y consecuencias económicas y para la infraestructura.",
+    "credits": "https://www.theguardian.com/world/2025/oct/08/new-zealand-oceans-warming-34-per-cent-faster-than-global-average?utm_source=chatgpt.com",
+    "createdAt": "2025-10-10T23:07:20.000Z",
+    "updatedAt": "2025-10-10T23:07:20.000Z",
     "images": [],
     "categories": []
   },
@@ -375,11 +385,11 @@
       "username": "admin",
       "role": "admin"
     },
-    "title": "Partes del Ártico y Antártida alteradas por derretimiento de hielo y cambio de color del océano",
-    "content": "En regiones polares, el derretimiento del hielo marino está modificando la cantidad y tipo de luz que penetra en el océano. Con menos hielo reflejando la luz, más luz azul alcanza el agua, lo que está cambiando la comunidad de algas y fitoplancton. Esto puede afectar a toda la cadena alimenticia oceánica, así como al ciclo del carbono.",
-    "credits": "https://www.lemonde.fr/en/environment/article/2025/05/08/melting-sea-ice-alters-color-of-arctic-and-antarctic-oceans_6741053_114.html",
-    "createdAt": "2025-10-10T10:17:51.000Z",
-    "updatedAt": "2025-10-10T10:17:51.000Z",
+    "title": "Olas de calor marinas gigantes en el sudeste asiático y el Pacífico",
+    "content": "En 2024, una ola de calor marino afectó ~40 millones de km² de océano en el Sudeste Asiático y Pacífico, un área cinco veces mayor que Australia. La anomalía térmica, junto con otros factores como acidificación y niveles elevados del mar, dañó ecosistemas como arrecifes de coral, y afectó tanto a la biodiversidad como a comunidades humanas costeras.",
+    "credits": "https://www.theguardian.com/environment/2025/jun/05/marine-heatwave-found-to-have-engulfed-area-of-ocean-five-times-the-size-of-australia",
+    "createdAt": "2025-10-10T23:07:20.000Z",
+    "updatedAt": "2025-10-10T23:07:20.000Z",
     "images": [],
     "categories": []
   },
@@ -391,12 +401,70 @@
       "username": "admin",
       "role": "admin"
     },
+    "title": "Desplazamiento de poblaciones de atún en el Pacífico: impacto en Tuvalu y otras islas",
+    "content": "El calentamiento de los océanos está empujando las poblaciones de atún lejos de las aguas tradicionales de Tuvalu y otras naciones isleñas del Pacífico. Esto está reduciendo los capturas locales y afectando ingresos que dependen de las licencias de pesca, con proyecciones de pérdidas de hasta el 25 % de la pesca de atún para 2050 si continúa la tendencia.",
+    "credits": "https://www.washingtonpost.com/world/interactive/2025/pacific-tuna-climate-change-tuvalu/",
+    "createdAt": "2025-10-10T23:07:20.000Z",
+    "updatedAt": "2025-10-10T23:07:20.000Z",
+    "images": [],
+    "categories": []
+  },
+  {
+    "id": 26,
+    "userId": 1,
+    "user": {
+      "id": 1,
+      "username": "admin",
+      "role": "admin"
+    },
+    "title": "Partes del Ártico y Antártida alteradas por derretimiento de hielo y cambio de color del océano",
+    "content": "En regiones polares, el derretimiento del hielo marino está modificando la cantidad y tipo de luz que penetra en el océano. Con menos hielo reflejando la luz, más luz azul alcanza el agua, lo que está cambiando la comunidad de algas y fitoplancton. Esto puede afectar a toda la cadena alimenticia oceánica, así como al ciclo del carbono.",
+    "credits": "https://www.lemonde.fr/en/environment/article/2025/05/08/melting-sea-ice-alters-color-of-arctic-and-antarctic-oceans_6741053_114.html",
+    "createdAt": "2025-10-10T23:07:20.000Z",
+    "updatedAt": "2025-10-10T23:07:20.000Z",
+    "images": [],
+    "categories": []
+  },
+  {
+    "id": 27,
+    "userId": 1,
+    "user": {
+      "id": 1,
+      "username": "admin",
+      "role": "admin"
+    },
     "title": "Los arrecifes de coral del Sudeste Asiático muy amenazados por pesca destructiva y contaminación costera",
     "content": "En el Sudeste Asiático, más del 50 % de los arrecifes de coral están bajo amenaza alta o muy alta. Las causas principales incluyen sobrepesca, pesca destructiva (como con explosivos o cianuro), sedimentación por deforestación o actividades agrícolas y contaminación desde la tierra.",
     "credits": "https://en.wikipedia.org/wiki/Southeast_Asian_coral_reefs",
-    "createdAt": "2025-10-10T10:17:51.000Z",
-    "updatedAt": "2025-10-10T10:17:51.000Z",
+    "createdAt": "2025-10-10T23:07:20.000Z",
+    "updatedAt": "2025-10-10T23:07:20.000Z",
     "images": [],
+    "categories": []
+  },
+  {
+    "id": 28,
+    "userId": 1,
+    "user": {
+      "id": 1,
+      "username": "admin",
+      "role": "admin"
+    },
+    "title": "prueba 3",
+    "content": "se ha editado",
+    "credits": "",
+    "createdAt": "2025-10-10T12:22:16.000Z",
+    "updatedAt": "2025-10-13T12:11:18.000Z",
+    "images": [
+      {
+        "id": 2,
+        "postId": 28,
+        "url": "https://res.cloudinary.com/dkm0ahny1/image/upload/v1760098931/ftkprfthpjrmae4sayx7.png",
+        "caption": null,
+        "credit": null,
+        "createdAt": "2025-10-10T12:22:16.000Z",
+        "updatedAt": "2025-10-10T12:22:16.000Z"
+      }
+    ],
     "categories": []
   },
   {
@@ -407,22 +475,12 @@
       "username": "admin",
       "role": "admin"
     },
-    "title": "prueba 4 ",
-    "content": "kdksf.fs",
-    "credits": "",
-    "createdAt": "2025-10-10T12:38:49.000Z",
-    "updatedAt": "2025-10-10T12:38:49.000Z",
-    "images": [
-      {
-        "id": 3,
-        "postId": 29,
-        "url": "https://res.cloudinary.com/dkm0ahny1/image/upload/v1760099925/n7cocesbknrv4fercdli.png",
-        "caption": null,
-        "credit": null,
-        "createdAt": "2025-10-10T12:38:49.000Z",
-        "updatedAt": "2025-10-10T12:38:49.000Z"
-      }
-    ],
+    "title": "Nuevo tiburón linterna y cangrejo porcelana descubiertos en el mar profundo frente a Australia",
+    "content": "En una expedición liderada por el CSIRO en 2022, se identificaron dos especies nuevas: un tiburón linterna de Australia Occidental (Etmopterus westraliensis) y un cangrejo porcelana (Porcellanella brevidentata). El tiburón fue hallado a unos 610 m de profundidad y el cangrejo vive en simbiosis con corales blandos.",
+    "credits": "https://www.csiro.au/en/news/All/Articles/2025/October/New-species-of-shark-and-crab",
+    "createdAt": "2025-10-11T10:28:49.000Z",
+    "updatedAt": "2025-10-11T10:28:49.000Z",
+    "images": [],
     "categories": []
   },
   {
@@ -433,12 +491,439 @@
       "username": "admin",
       "role": "admin"
     },
-    "title": "Holaaaa",
-    "content": "holaaa",
-    "credits": "",
-    "createdAt": "2025-10-13T10:50:41.000Z",
-    "updatedAt": "2025-10-13T10:50:41.000Z",
+    "title": "Más de 800 nuevas especies marinas descubiertas por el Ocean Census",
+    "content": "El proyecto global Ocean Census anunció el descubrimiento de 866 nuevas especies marinas, incluidos tiburones, corales, esponjas, crustáceos y más, en profundidades que van de 1 a 4.990 metros.",
+    "credits": "https://oceancensus.org/press-release-the-ocean-census-discovers-over-800-new-marine-species/",
+    "createdAt": "2025-10-11T10:28:49.000Z",
+    "updatedAt": "2025-10-11T10:28:49.000Z",
     "images": [],
+    "categories": []
+  },
+  {
+    "id": 31,
+    "userId": 1,
+    "user": {
+      "id": 1,
+      "username": "admin",
+      "role": "admin"
+    },
+    "title": "Extrañas formas de vida descubiertas en el cañón Mar del Plata: langostas rosadas y calamares translúcidos",
+    "content": "En el cañón submarino frente a Argentina, exploraciones ROV revelaron decenas de posibles especies nuevas, entre las cuales se observan langostas de color pastel, calamares de apariencia inusual y otras criaturas abisales.",
+    "credits": "https://www.scientificamerican.com/article/strange-deep-sea-animals-discovered-in-underwater-argentine-canyon/",
+    "createdAt": "2025-10-11T10:28:49.000Z",
+    "updatedAt": "2025-10-11T10:28:49.000Z",
+    "images": [],
+    "categories": []
+  },
+  {
+    "id": 32,
+    "userId": 1,
+    "user": {
+      "id": 1,
+      "username": "admin",
+      "role": "admin"
+    },
+    "title": "La limática más profunda descrita hasta ahora: Bathylepeta wadatsumi",
+    "content": "Se descubrió una nueva especie de limática (molusco) viviendo a 5.922 metros de profundidad en el Pacífico noroeste. Este hallazgo marca el récord de la limática verdadera que más profundo se ha registrado hasta la fecha.",
+    "credits": "https://en.wikipedia.org/wiki/Bathylepeta_wadatsumi",
+    "createdAt": "2025-10-11T10:28:49.000Z",
+    "updatedAt": "2025-10-11T10:28:49.000Z",
+    "images": [],
+    "categories": []
+  },
+  {
+    "id": 33,
+    "userId": 1,
+    "user": {
+      "id": 1,
+      "username": "admin",
+      "role": "admin"
+    },
+    "title": "Esponjas, corales y decenas de especies nuevas descubiertas en Mar del Plata con tecnología de punta",
+    "content": "En una investigación con tecnología avanzada en el cañón de Mar del Plata, científicos sospechan haber encontrado más de 40 especies nuevas — incluyendo coral rojo del género Anthomastus, esponjas, equinodermos y otros organismos de aguas profundas.",
+    "credits": "https://schmidtocean.org/first-high-tech-exploration-of-argentinas-mar-del-plata-canyon-inspires-millions/",
+    "createdAt": "2025-10-11T10:28:49.000Z",
+    "updatedAt": "2025-10-11T10:28:49.000Z",
+    "images": [],
+    "categories": []
+  },
+  {
+    "id": 34,
+    "userId": 1,
+    "user": {
+      "id": 1,
+      "username": "admin",
+      "role": "admin"
+    },
+    "title": "Oasis quimiosintéticos hallados en lo profundo del Pacífico",
+    "content": "En las fosas de Kuril-Kamchatka y Aleutianas, un equipo científico ha descubierto ecosistemas vivos basados en quimiosíntesis hasta los 9.533 metros de profundidad. Estas comunidades, que incluyen gusanos tubícolas, almejas blancas y otros organismos, se alimentan de químicos como sulfuros e hidrocarburos, en ausencia total de luz.",
+    "credits": "https://www.reuters.com/business/environment/vibrant-oasis-chemical-eating-creatures-found-deep-pacific-2025-07-30/",
+    "createdAt": "2025-10-11T10:28:49.000Z",
+    "updatedAt": "2025-10-11T10:28:49.000Z",
+    "images": [],
+    "categories": []
+  },
+  {
+    "id": 35,
+    "userId": 1,
+    "user": {
+      "id": 1,
+      "username": "admin",
+      "role": "admin"
+    },
+    "title": "Conexiones evolutivas globales entre ecosistemas marinos profundos mediante “autopistas” del fondo oceánico",
+    "content": "Un estudio que analizó estrellas frágiles (“brittle stars”) recolectadas en todo el mundo —desde latitudes tropicales a polares, y desde aguas poco profundas hasta más de 3.500 metros de profundidad— detectó que especies muy distantes tienen parentescos cercanos. Esto sugiere que hay corrientes oceánicas profundas que actúan como vías de dispersión evolutiva que conectan ecosistemas marinos globales.",
+    "credits": "https://www.theguardian.com/environment/2025/jul/24/ancient-alien-brittle-stars-linked-to-relatives-across-the-globe-by-a-deep-sea-evolutionary-superhighway",
+    "createdAt": "2025-10-11T10:28:49.000Z",
+    "updatedAt": "2025-10-11T10:28:49.000Z",
+    "images": [],
+    "categories": []
+  },
+  {
+    "id": 36,
+    "userId": 1,
+    "user": {
+      "id": 1,
+      "username": "admin",
+      "role": "admin"
+    },
+    "title": "Zona hadal de la Fosa de las Marianas: diversidad microbiológica extraordinaria",
+    "content": "Proyecto MEER revela que en la zona hadal (más de 6.000 metros de profundidad) de la Fosa de las Marianas existe una biodiversidad microbiana enorme e inexplorada. Se identificaron miles de genomas nuevos, en su mayoría desconocidos hasta ahora, con adaptaciones genéticas para resistir presiones extremas, temperaturas bajas y escasez de nutrientes.",
+    "credits": "https://astrobiology.com/2025/03/life-thrives-in-the-deepest-ocean-new-discoveries-from-the-mariana-trench.html",
+    "createdAt": "2025-10-11T10:28:49.000Z",
+    "updatedAt": "2025-10-11T10:28:49.000Z",
+    "images": [],
+    "categories": []
+  },
+  {
+    "id": 37,
+    "userId": 1,
+    "user": {
+      "id": 1,
+      "username": "admin",
+      "role": "admin"
+    },
+    "title": "El calentamiento de los océanos de Nueva Zelanda va 34 % más rápido que la media global",
+    "content": "Un informe del Ministerio de Medio Ambiente de Nueva Zelanda muestra que las aguas oceánicas en esa región se están calentando a un ritmo un 34 % superior al promedio global. Esto provoca cambios en corrientes oceánicas, ecosistemas costeros y marinos, y supone riesgos para hábitats, especies, industrias pesqueras y comunidades costeras.",
+    "credits": "https://www.theguardian.com/world/2025/oct/08/new-zealand-oceans-warming-34-per-cent-faster-than-global-average?utm_source=chatgpt.com",
+    "createdAt": "2025-10-11T10:28:49.000Z",
+    "updatedAt": "2025-10-11T10:28:49.000Z",
+    "images": [],
+    "categories": []
+  },
+  {
+    "id": 38,
+    "userId": 1,
+    "user": {
+      "id": 1,
+      "username": "admin",
+      "role": "admin"
+    },
+    "title": "Expedición CONTRASTS: nuevos datos sobre derretimiento del hielo en el Ártico y efectos sobre ecosistemas marinos",
+    "content": "La expedición Contrasts (julio-septiembre 2025) estudió hielos marinos de diferentes tipos (nuevo, multianual) en el Ártico Central para entender mejor cómo responden estos hielos al cambio climático, y cómo ese cambio afecta los ecosistemas marinos que dependen de ellos, incluyendo especies adaptadas al hielo, corrientes, nutrientes y redes tróficas.",
+    "credits": "https://en.wikipedia.org/wiki/CONTRASTS_Expedition",
+    "createdAt": "2025-10-11T10:28:49.000Z",
+    "updatedAt": "2025-10-11T10:28:49.000Z",
+    "images": [],
+    "categories": []
+  },
+  {
+    "id": 39,
+    "userId": 1,
+    "user": {
+      "id": 1,
+      "username": "admin",
+      "role": "admin"
+    },
+    "title": "Miles de especies microbianas halladas en la región más profunda del océano (Fosa de las Marianas)",
+    "content": "En una serie de 33 inmersiones realizadas por el sumergible Fendouzhe, investigadores recolectaron muestras de sedimentos y agua en profundidades entre 6.000 y 10.900 metros en la Fosa de las Marianas. Identificaron unas 7.564 especies microbianas, de las cuales ~89,4 % no habían sido reportadas previamente, incluyendo virus y procariontes con adaptaciones genéticas para resistir alta presión, temperaturas bajísimas y escasez de nutrientes.",
+    "credits": "https://phys.org/news/2025-03-mariana-trench-lifeforms-flourishing-deep.html",
+    "createdAt": "2025-10-11T10:28:49.000Z",
+    "updatedAt": "2025-10-11T10:28:49.000Z",
+    "images": [],
+    "categories": []
+  },
+  {
+    "id": 40,
+    "userId": 1,
+    "user": {
+      "id": 1,
+      "username": "admin",
+      "role": "admin"
+    },
+    "title": "Submarino Alvin mejora para alcanzar profundidades nunca antes exploradas por él (~6.500 metros)",
+    "content": "El ya legendario vehículo habitado Alvin ha sido sometido a una mejora significativa que le permite ahora alcanzar los 6.500 metros de profundidad, superando su límite anterior de aproximadamente 4.500 metros. Esto aumenta enormemente el rango del fondo oceánico que puede ser observado directamente por seres humanos, lo que abre nuevas oportunidades para explorar hábitats, geología y biología profunda que antes estaban fuera de alcance.",
+    "credits": "https://phys.org/news/2025-02-alvin-ocean-depths.html",
+    "createdAt": "2025-10-11T10:28:49.000Z",
+    "updatedAt": "2025-10-11T10:28:49.000Z",
+    "images": [],
+    "categories": []
+  },
+  {
+    "id": 41,
+    "userId": 1,
+    "user": {
+      "id": 1,
+      "username": "admin",
+      "role": "admin"
+    },
+    "title": "Cuatro nuevos montes submarinos descubiertos en aguas internacionales entre Costa Rica y Chile",
+    "content": "Durante un tránsito de mapeo realizado por el buque Falkor (too) del Schmidt Ocean Institute, se identificaron cuatro montes submarinos en aguas internacionales, con alturas que varían entre los ~1.591 metros hasta ~2.681 metros, siendo el más grande de ellos de 2.681 metros de altura, y localizado a ~1.150 metros bajo la superficie del mar.",
+    "credits": "https://schmidtocean.org/four-new-seamounts-discovered-in-the-high-seas/",
+    "createdAt": "2025-10-11T10:28:49.000Z",
+    "updatedAt": "2025-10-11T10:28:49.000Z",
+    "images": [],
+    "categories": []
+  },
+  {
+    "id": 42,
+    "userId": 1,
+    "user": {
+      "id": 1,
+      "username": "admin",
+      "role": "admin"
+    },
+    "title": "Mapeo de cientos de cañones submarinos antárticos para entender el cambio climático",
+    "content": "Científicos de la Universidad de Barcelona y del University College Cork han cartografiado 332 redes de cañones submarinos en la Antártida usando datos de batimetría de alta resolución. Algunos de estos cañones tienen profundidades mayores a 4.000 metros. Estos vallones tienen impacto sobre la circulación oceánica, el transporte de sedimentos, el comportamiento de las plataformas de hielo, y por tanto sobre dinámicas de cambio climático y elevación del nivel del mar.",
+    "credits": "https://www.theguardian.com/environment/2025/jul/31/scientists-map-antarctic-seafloor-canyons-to-help-predict-climate-change",
+    "createdAt": "2025-10-11T10:28:49.000Z",
+    "updatedAt": "2025-10-11T10:28:49.000Z",
+    "images": [],
+    "categories": []
+  },
+  {
+    "id": 43,
+    "userId": 1,
+    "user": {
+      "id": 1,
+      "username": "admin",
+      "role": "admin"
+    },
+    "title": "Red de interacciones microbianas del océano revelada más allá de la superficie",
+    "content": "Un estudio liderado por el Institut de Ciències del Mar (CSIC, Barcelona) mostró que las interacciones entre microorganismos oceánicos (bacterias, archaea, picoeucariotas) cambian mucho según la profundidad y la región geográfica. Se encontró que mientras algunas asociaciones microbianas son globales a ciertas profundidades, un alto porcentaje son específicas de regiones y profundidades, siendo las zonas profundas (como la bathipelágica) donde hay menos asociaciones globales y más particularidad regional.",
+    "credits": "https://www.sciencedaily.com/releases/2024/01/240113143637.htm",
+    "createdAt": "2025-10-11T10:28:49.000Z",
+    "updatedAt": "2025-10-11T10:28:49.000Z",
+    "images": [],
+    "categories": []
+  },
+  {
+    "id": 44,
+    "userId": 1,
+    "user": {
+      "id": 1,
+      "username": "admin",
+      "role": "admin"
+    },
+    "title": "Ondas de calor marinas cada vez más frecuentes en costas de Reino Unido e Irlanda",
+    "content": "Un estudio reciente indica que las olas de calor marinas (episodios donde la temperatura del mar se eleva mucho sobre lo normal) se han vuelto mucho más probables en las costas británicas e irlandesas. Por ejemplo, en el Mar de Irlanda (Celtic Sea) la probabilidad de tales eventos pasó de ~3,8 % en 1993 a ~13,8 %. Estos eventos afectan ecosistemas marinos, reproducción de especies, salud de algas, coral, etc.",
+    "credits": "https://www.theguardian.com/environment/2025/oct/07/marine-heatwaves-more-frequent-uk-irish-coasts-experts-say",
+    "createdAt": "2025-10-11T10:28:49.000Z",
+    "updatedAt": "2025-10-11T10:28:49.000Z",
+    "images": [],
+    "categories": []
+  },
+  {
+    "id": 45,
+    "userId": 1,
+    "user": {
+      "id": 1,
+      "username": "admin",
+      "role": "admin"
+    },
+    "title": "Acidez oceánica ha cruzado umbral crítico global para la vida marina",
+    "content": "Informe del Potsdam Institute for Climate Impact Research muestra que los océanos del mundo han superado un umbral crítico de acidez. Desde la era preindustrial, el pH del océano superficial ha bajado (~0,1 unidades), lo que implica ~30-40 % más acidez. Esto debilita organismos que necesitan carbonato de calcio (corales, conchas, esqueletos), y amenaza cadenas alimenticias marinas y ecosistemas costeros.",
+    "credits": "https://www.theguardian.com/environment/2025/sep/24/worlds-oceans-fail-key-health-check-as-acidity-crosses-critical-threshold-for-marine-life",
+    "createdAt": "2025-10-11T10:28:49.000Z",
+    "updatedAt": "2025-10-11T10:28:49.000Z",
+    "images": [],
+    "categories": []
+  },
+  {
+    "id": 46,
+    "userId": 1,
+    "user": {
+      "id": 1,
+      "username": "admin",
+      "role": "admin"
+    },
+    "title": "Microplásticos presentes en todas las profundidades del océano",
+    "content": "Estudio apoyado por la National Science Foundation muestra que microplásticos (fragmentos de plástico muy pequeños) no solo flotan en la superficie, sino que están presentes hasta en zonas abisales, incluso en la Fosa de las Marianas. Esto supone que la contaminación plástica se infiltra toda la cadena alimentaria marina, y podría tener impactos en especies, salud humana y economía pesquera.",
+    "credits": "https://www.nsf.gov/news/researchers-discover-microplastics-all-ocean-depths",
+    "createdAt": "2025-10-11T10:28:49.000Z",
+    "updatedAt": "2025-10-11T10:28:49.000Z",
+    "images": [],
+    "categories": []
+  },
+  {
+    "id": 47,
+    "userId": 1,
+    "user": {
+      "id": 1,
+      "username": "admin",
+      "role": "admin"
+    },
+    "title": "Riesgos para la salud humana vinculados a microplásticos costeros",
+    "content": "Investigaciones indican que personas que viven cerca de costas con niveles muy altos de microplásticos tienen mayores tasas de enfermedades metabólicas como diabetes tipo 2, enfermedades coronarias y accidentes cerebrovasculares, en comparación con quienes viven cerca de aguas menos contaminadas. Esto sugiere que la contaminación plástica no es solo ambiental, también un problema de salud pública.",
+    "credits": "https://newsroom.heart.org/news/living-near-an-ocean-polluted-by-microplastics-may-increase-cardiometabolic-disease-risk",
+    "createdAt": "2025-10-11T10:28:49.000Z",
+    "updatedAt": "2025-10-11T10:28:49.000Z",
+    "images": [],
+    "categories": []
+  },
+  {
+    "id": 48,
+    "userId": 1,
+    "user": {
+      "id": 1,
+      "username": "admin",
+      "role": "admin"
+    },
+    "title": "Temperaturas oceánicas globales afectan al 96 % de los mares con olas de calor extremas en 2023",
+    "content": "Un estudio publicado en Science encontró que durante 2023 el 96 % de los océanos experimentaron olas de calor extremas, más intensas y prolongadas que el promedio histórico. Estas condiciones alteran el ecosistema: coral, fauna marina, productividad primaria, etc.",
+    "credits": "https://www.livescience.com/planet-earth/rivers-oceans/96-percent-of-oceans-worldwide-experienced-extreme-heatwaves-in-2023-new-study-finds",
+    "createdAt": "2025-10-11T10:28:49.000Z",
+    "updatedAt": "2025-10-11T10:28:49.000Z",
+    "images": [],
+    "categories": []
+  },
+  {
+    "id": 49,
+    "userId": 1,
+    "user": {
+      "id": 1,
+      "username": "admin",
+      "role": "admin"
+    },
+    "title": "Los océanos de Nueva Zelanda se calientan un 34 % más rápido que el promedio mundial",
+    "content": "Según un informe del gobierno de Nueva Zelanda, las aguas marinas del país están aumentando su temperatura a una tasa un 34 % superior al promedio global. Esto está provocando olas marinas de calor más frecuentes, acidificación, impacto en ecosistemas costeros, y consecuencias económicas y para la infraestructura.",
+    "credits": "https://www.theguardian.com/world/2025/oct/08/new-zealand-oceans-warming-34-per-cent-faster-than-global-average?utm_source=chatgpt.com",
+    "createdAt": "2025-10-11T10:28:49.000Z",
+    "updatedAt": "2025-10-11T10:28:49.000Z",
+    "images": [],
+    "categories": []
+  },
+  {
+    "id": 50,
+    "userId": 1,
+    "user": {
+      "id": 1,
+      "username": "admin",
+      "role": "admin"
+    },
+    "title": "Olas de calor marinas gigantes en el sudeste asiático y el Pacífico",
+    "content": "En 2024, una ola de calor marino afectó ~40 millones de km² de océano en el Sudeste Asiático y Pacífico, un área cinco veces mayor que Australia. La anomalía térmica, junto con otros factores como acidificación y niveles elevados del mar, dañó ecosistemas como arrecifes de coral, y afectó tanto a la biodiversidad como a comunidades humanas costeras.",
+    "credits": "https://www.theguardian.com/environment/2025/jun/05/marine-heatwave-found-to-have-engulfed-area-of-ocean-five-times-the-size-of-australia",
+    "createdAt": "2025-10-11T10:28:49.000Z",
+    "updatedAt": "2025-10-11T10:28:49.000Z",
+    "images": [],
+    "categories": []
+  },
+  {
+    "id": 51,
+    "userId": 1,
+    "user": {
+      "id": 1,
+      "username": "admin",
+      "role": "admin"
+    },
+    "title": "Desplazamiento de poblaciones de atún en el Pacífico: impacto en Tuvalu y otras islas",
+    "content": "El calentamiento de los océanos está empujando las poblaciones de atún lejos de las aguas tradicionales de Tuvalu y otras naciones isleñas del Pacífico. Esto está reduciendo los capturas locales y afectando ingresos que dependen de las licencias de pesca, con proyecciones de pérdidas de hasta el 25 % de la pesca de atún para 2050 si continúa la tendencia.",
+    "credits": "https://www.washingtonpost.com/world/interactive/2025/pacific-tuna-climate-change-tuvalu/",
+    "createdAt": "2025-10-11T10:28:49.000Z",
+    "updatedAt": "2025-10-11T10:28:49.000Z",
+    "images": [],
+    "categories": []
+  },
+  {
+    "id": 52,
+    "userId": 1,
+    "user": {
+      "id": 1,
+      "username": "admin",
+      "role": "admin"
+    },
+    "title": "Partes del Ártico y Antártida alteradas por derretimiento de hielo y cambio de color del océano",
+    "content": "En regiones polares, el derretimiento del hielo marino está modificando la cantidad y tipo de luz que penetra en el océano. Con menos hielo reflejando la luz, más luz azul alcanza el agua, lo que está cambiando la comunidad de algas y fitoplancton. Esto puede afectar a toda la cadena alimenticia oceánica, así como al ciclo del carbono.",
+    "credits": "https://www.lemonde.fr/en/environment/article/2025/05/08/melting-sea-ice-alters-color-of-arctic-and-antarctic-oceans_6741053_114.html",
+    "createdAt": "2025-10-11T10:28:49.000Z",
+    "updatedAt": "2025-10-11T10:28:49.000Z",
+    "images": [],
+    "categories": []
+  },
+  {
+    "id": 53,
+    "userId": 1,
+    "user": {
+      "id": 1,
+      "username": "admin",
+      "role": "admin"
+    },
+    "title": "Los arrecifes de coral del Sudeste Asiático muy amenazados por pesca destructiva y contaminación costera",
+    "content": "En el Sudeste Asiático, más del 50 % de los arrecifes de coral están bajo amenaza alta o muy alta. Las causas principales incluyen sobrepesca, pesca destructiva (como con explosivos o cianuro), sedimentación por deforestación o actividades agrícolas y contaminación desde la tierra.",
+    "credits": "https://en.wikipedia.org/wiki/Southeast_Asian_coral_reefs",
+    "createdAt": "2025-10-11T10:28:49.000Z",
+    "updatedAt": "2025-10-11T10:28:49.000Z",
+    "images": [],
+    "categories": []
+  },
+  {
+    "id": 54,
+    "userId": 1,
+    "user": {
+      "id": 1,
+      "username": "admin",
+      "role": "admin"
+    },
+    "title": "Descubren un ecosistema secreto a casi 10.000 metros de profundidad en el Pacífico",
+    "content": "Un equipo internacional de científicos ha hecho un hallazgo que podría cambiar nuestra comprensión de los océanos: un ecosistema de quimiosíntesis nunca antes visto, entre 5.800 y 9.500 metros de profundidad en la zona hadal, entre Rusia y Alaska.\n\nEste mundo subacuático está poblado por microbios productores de metano y animales como almejas y gusanos tubícolas, capaces de sobrevivir sin luz solar, alimentándose de compuestos químicos filtrados desde el lecho marino. Como explica la geoquímica Mengran Du, coautora del estudio publicado en Nature: “Aunque pensamos que las fosas oceánicas son entornos extremos, estos organismos pueden vivir felices allí”.\n\nEl hallazgo cubre un tramo de aproximadamente 2.500 kilómetros y demuestra que estos microbios convierten dióxido de carbono en metano, que luego alimenta a los animales cercanos. Esto prueba que estas comunidades no dependen solo de la superficie, sino que generan su propia energía local.\n\nMás allá de lo que conocíamos\n\nAdemás de revelar un ecosistema único, el descubrimiento redefine el papel de las fosas hadales en el ciclo del carbono, ya que podrían almacenar hasta 70 veces más carbono orgánico que el fondo marino promedio. Aunque se encuentran en lugares remotos, estas fosas no están completamente aisladas: se han detectado microplásticos y restos de organismos superficiales incluso a estas profundidades.\n\nEl equipo espera que este hallazgo impulse la cooperación internacional a través del Programa Global de Exploración Hadal, para entender cómo estas especies sobreviven en condiciones extremas y qué función cumplen en la salud del planeta.",
+    "credits": "https://as.com/actualidad/ciencia/cientificos-descubren-un-ecosistema-maritimo-nunca-visto-hasta-ahora-no-estan-completamente-aislados-n/",
+    "createdAt": "2025-10-11T14:59:55.000Z",
+    "updatedAt": "2025-10-11T14:59:55.000Z",
+    "images": [
+      {
+        "id": 3,
+        "postId": 54,
+        "url": "https://res.cloudinary.com/dkm0ahny1/image/upload/v1760194795/wmgd4hj4fj5ttyq294hd.png",
+        "caption": null,
+        "credit": null,
+        "createdAt": "2025-10-11T14:59:55.000Z",
+        "updatedAt": "2025-10-11T14:59:55.000Z"
+      }
+    ],
+    "categories": [
+      {
+        "id": 2,
+        "name": "🌊 Ecosistemas Oceánicos",
+        "description": "Explora los ecosistemas marinos: arrecifes, abismos, costas y sus delicados equilibrios naturales.",
+        "img": "https://res.cloudinary.com/dkm0ahny1/image/upload/v1760082986/ocean-ecosystems_gcdz5g.png"
+      }
+    ]
+  },
+  {
+    "id": 55,
+    "userId": 1,
+    "user": {
+      "id": 1,
+      "username": "admin",
+      "role": "admin"
+    },
+    "title": "Orcas que ‘regalan’ comida a los humanos: un acto de altruismo sorprendente",
+    "content": "Las orcas no dejan de sorprendernos. Investigadores han documentado un comportamiento inusual y fascinante: estos grandes depredadores se acercan a humanos—ya sean buceadores, científicos o turistas—para ofrecerles comida, como peces, medusas, rayas, aves o tortugas muertas.\n\nLo curioso es que las orcas no se limitan a dejar el alimento: esperan unos segundos a ver cómo reaccionan las personas. Si nadie lo recoge, simplemente se lo llevan de nuevo. Este fenómeno, que parece un “regalo”, ha sido observado en al menos 34 ocasiones entre 2004 y 2024, según un estudio publicado en Journal of Comparative Psychology.\n\nUn gesto de cooperación entre especies\n\nLos científicos sugieren que las orcas podrían estar mostrando una forma de altruismo interspecies, algo que hasta ahora se creía exclusivo de humanos y algunos primates. Lo sorprendente es que se ha documentado en distintas partes del mundo, desde Alaska y Noruega hasta Argentina y el Pacífico tropical, lo que indica que no se trata de un comportamiento aislado de una población concreta.\n\nEn la mayoría de los casos, las orcas esperaban la reacción humana, y en algunos ejemplos, incluso repetían la acción varias veces. Un caso curioso en Nueva Zelanda mostró a una orca colocando una raya sobre la cabeza de un humano, como si buscara llamar su atención.\n\nEste comportamiento no parece un simple juego: los animales ofrecidos eran presas valiosas y muchos ejemplares adultos participaron, lo que apunta a un verdadero gesto de generosidad. Cuando los humanos ignoraban el regalo, las orcas se lo llevaban o lo compartían con sus congéneres, demostrando que hay algo más que entretenimiento detrás de este acto.",
+    "credits": "https://www.informacion.es/medio-ambiente/2025/08/21/sorpendente-hallazgo-orcas-acercan-humanos-119437490.html",
+    "createdAt": "2025-10-11T15:45:54.000Z",
+    "updatedAt": "2025-10-11T15:45:54.000Z",
+    "images": [
+      {
+        "id": 4,
+        "postId": 55,
+        "url": "https://res.cloudinary.com/dkm0ahny1/image/upload/v1760197554/rokn8uayqkoyz29tqakb.png",
+        "caption": null,
+        "credit": null,
+        "createdAt": "2025-10-11T15:45:54.000Z",
+        "updatedAt": "2025-10-11T15:45:54.000Z"
+      }
+    ],
     "categories": [
       {
         "id": 1,
@@ -449,25 +934,351 @@
     ]
   },
   {
-    "id": 31,
+    "id": 56,
+    "userId": 1,
+    "user": {
+      "id": 1,
+      "username": "admin",
+      "role": "admin"
+    },
+    "title": "Descubren en Menorca el tercer nido de tortuga marina de la temporada",
+    "content": "La temporada de nidificación de tortugas marinas en las Illes Balears continúa dando buenas noticias. Esta semana se localizó en Cala Calderer, Es Mercadal (Menorca) el tercer nido de la temporada, con un total de 25 crías vivas, 4 huevos por eclosionar y 66 huevos ya eclosionados.\n\nEl hallazgo se produjo tras la alerta del personal del hotel Vestige Son Ermità, que avisó a los técnicos del Centro de Recuperación de Fauna Silvestre de Menorca (COFIB). Tras inspeccionar la zona, se identificaron rastros de crías en la arena y finalmente se localizó el nido.\n\nLas crías vivas fueron trasladadas a las instalaciones del IRFAP-LIMIA, en Mallorca, donde permanecerán alrededor de 10 meses dentro del programa Head Starting antes de ser liberadas en el mar. Los huevos no eclosionados se colocaron en incubadoras artificiales para controlar su evolución.\n\nEl hallazgo confirma que las Illes Balears son una zona de nidificación importante para la especie Caretta caretta en el Mediterráneo occidental, con nidos ya registrados en Mallorca, Ibiza y Menorca. La colaboración de los hoteles y del personal local ha sido clave para garantizar la protección de los nidos en estas playas de difícil acceso.\n\nEl Govern recuerda que la tortuga marina es una especie vulnerable y protegida, por lo que es fundamental avisar al 112 ante cualquier indicio de nidificación. Esta información es vital para conservar la especie y mejorar el conocimiento científico sobre su reproducción en el Mediterráneo.",
+    "credits": "https://www.pasionporelmar.com/es/noticia/descubren-en-menorca-el-tercer-nido-de-tortuga-marina-de-la-temporada-en-baleares/6611",
+    "createdAt": "2025-10-11T15:50:06.000Z",
+    "updatedAt": "2025-10-11T15:50:06.000Z",
+    "images": [
+      {
+        "id": 5,
+        "postId": 56,
+        "url": "https://res.cloudinary.com/dkm0ahny1/image/upload/v1760197806/x3cz09a0be6pizddnemf.png",
+        "caption": null,
+        "credit": null,
+        "createdAt": "2025-10-11T15:50:07.000Z",
+        "updatedAt": "2025-10-11T15:50:07.000Z"
+      }
+    ],
+    "categories": [
+      {
+        "id": 1,
+        "name": "🐠 Vida Marina",
+        "description": "Descubre las criaturas fascinantes que habitan los océanos, desde corales y medusas hasta tiburones y ballenas.",
+        "img": "https://res.cloudinary.com/dkm0ahny1/image/upload/v1760082986/marine-life_plsxer.png"
+      }
+    ]
+  },
+  {
+    "id": 57,
+    "userId": 1,
+    "user": {
+      "id": 1,
+      "username": "admin",
+      "role": "admin"
+    },
+    "title": "Orcas que ‘regalan’ comida a los humanos: un acto de altruismo sorprendente",
+    "content": "Las orcas no dejan de sorprendernos. Investigadores han documentado un comportamiento inusual y fascinante: estos grandes depredadores se acercan a humanos—ya sean buceadores, científicos o turistas—para ofrecerles comida, como peces, medusas, rayas, aves o tortugas muertas.\n\nLo curioso es que las orcas no se limitan a dejar el alimento: esperan unos segundos a ver cómo reaccionan las personas. Si nadie lo recoge, simplemente se lo llevan de nuevo. Este fenómeno, que parece un “regalo”, ha sido observado en al menos 34 ocasiones entre 2004 y 2024, según un estudio publicado en Journal of Comparative Psychology.\n\nUn gesto de cooperación entre especies\n\nLos científicos sugieren que las orcas podrían estar mostrando una forma de altruismo interspecies, algo que hasta ahora se creía exclusivo de humanos y algunos primates. Lo sorprendente es que se ha documentado en distintas partes del mundo, desde Alaska y Noruega hasta Argentina y el Pacífico tropical, lo que indica que no se trata de un comportamiento aislado de una población concreta.\n\nEn la mayoría de los casos, las orcas esperaban la reacción humana, y en algunos ejemplos, incluso repetían la acción varias veces. Un caso curioso en Nueva Zelanda mostró a una orca colocando una raya sobre la cabeza de un humano, como si buscara llamar su atención.\n\nEste comportamiento no parece un simple juego: los animales ofrecidos eran presas valiosas y muchos ejemplares adultos participaron, lo que apunta a un verdadero gesto de generosidad. Cuando los humanos ignoraban el regalo, las orcas se lo llevaban o lo compartían con sus congéneres, demostrando que hay algo más que entretenimiento detrás de este acto.",
+    "credits": "https://www.informacion.es/medio-ambiente/2025/08/21/sorpendente-hallazgo-orcas-acercan-humanos-119437490.html",
+    "createdAt": "2025-10-11T15:53:42.000Z",
+    "updatedAt": "2025-10-11T15:53:42.000Z",
+    "images": [
+      {
+        "id": 6,
+        "postId": 57,
+        "url": "https://res.cloudinary.com/dkm0ahny1/image/upload/v1760198021/bnidzf1v8bsgnnqhmbi1.png",
+        "caption": null,
+        "credit": null,
+        "createdAt": "2025-10-11T15:53:42.000Z",
+        "updatedAt": "2025-10-11T15:53:42.000Z"
+      }
+    ],
+    "categories": [
+      {
+        "id": 1,
+        "name": "🐠 Vida Marina",
+        "description": "Descubre las criaturas fascinantes que habitan los océanos, desde corales y medusas hasta tiburones y ballenas.",
+        "img": "https://res.cloudinary.com/dkm0ahny1/image/upload/v1760082986/marine-life_plsxer.png"
+      }
+    ]
+  },
+  {
+    "id": 58,
+    "userId": 1,
+    "user": {
+      "id": 1,
+      "username": "admin",
+      "role": "admin"
+    },
+    "title": "El mar avanza: más de 100 millones de edificios en riesgo",
+    "content": "Un nuevo estudio de la Universidad McGill alerta de que, si no se reducen drásticamente las emisiones, más de 100 millones de edificios del Sur Global podrían quedar bajo el agua durante los próximos siglos.\n\nSegún la investigación, publicada en npj Urban Sustainability:\n\nCon solo 0,5 m de subida del mar, 3 millones de edificios quedarían expuestos.\n\nCon 5 m, serían 45 millones.\n\nY con 20 m, hasta 136 millones desaparecerían bajo el océano.\n\nLas zonas más vulnerables se encuentran en África, el Sudeste Asiático y el Caribe, donde las ciudades costeras podrían perder hasta el 80% de su infraestructura.\n\nLos científicos advierten que el aumento del nivel del mar es lento, pero imparable, y que cada tonelada de CO₂ emitida hoy decidirá qué ciudades seguirán en pie… y cuáles quedarán bajo el agua.",
+    "credits": "https://es.gizmodo.com/mas-de-100-millones-de-edificios-podrian-quedar-bajo-el-agua-el-mapa-que-revela-como-el-mar-reescribira-las-costas-del-mundo-2000197430",
+    "createdAt": "2025-10-11T16:01:48.000Z",
+    "updatedAt": "2025-10-11T16:01:48.000Z",
+    "images": [
+      {
+        "id": 7,
+        "postId": 58,
+        "url": "https://res.cloudinary.com/dkm0ahny1/image/upload/v1760198507/c77ry4lol4jkfilctqee.png",
+        "caption": null,
+        "credit": null,
+        "createdAt": "2025-10-11T16:01:48.000Z",
+        "updatedAt": "2025-10-11T16:01:48.000Z"
+      }
+    ],
+    "categories": [
+      {
+        "id": 4,
+        "name": "⚠️ Problemas y Amenazas",
+        "description": "Conoce los peligros que enfrentan los mares: contaminación, cambio climático y sobrepesca.",
+        "img": "https://res.cloudinary.com/dkm0ahny1/image/upload/v1760082985/problems-threats_muxnh2.png"
+      }
+    ]
+  },
+  {
+    "id": 59,
+    "userId": 1,
+    "user": {
+      "id": 1,
+      "username": "admin",
+      "role": "admin"
+    },
+    "title": "El misterio del diablo negro hallado en Tenerife",
+    "content": "El hallazgo de un diablo negro o rape abisal (Melanocetus johnsonii) vivo en las aguas superficiales de Tenerife ha dejado a la comunidad científica sin palabras. Este pez, propio de las zonas más profundas del océano —a más de 2.000 metros bajo el mar—, fue encontrado nadando cerca de la superficie, algo prácticamente inédito.\n\nEl descubrimiento fue realizado por el equipo de Condrik-Tenerife, una ONG dedicada al estudio y conservación de tiburones y rayas en Canarias, mientras realizaban una campaña de muestreo marino. “Fue un momento increíble —cuentan los biólogos Laia Valor y Antonio Sabuco—. No esperábamos encontrar una especie tan rara y tan fuera de su entorno”.\n\nPoco después del avistamiento, el ejemplar murió por causas que aún se investigan y fue trasladado al Museo de Naturaleza y Arqueología de Tenerife (MUNA), donde especialistas estudian qué pudo llevarlo a emerger desde las profundidades.\n\n¿Qué hacía tan arriba un pez de las sombras?\n\nLos científicos barajan varias hipótesis: tal vez fue arrastrado por corrientes, subió persiguiendo presas durante una migración vertical, o escapaba de un depredador mayor. Sin embargo, nada se puede confirmar aún.\n\nEl hallazgo, único en su tipo, recuerda cuánto desconocemos del océano y la urgencia de apoyar la investigación marina. Como explican los investigadores:\n\n“El océano guarda secretos que apenas empezamos a descubrir, pero sin recursos y apoyo científico será imposible entender cómo los cambios actuales afectarán a toda la vida del planeta.”",
+    "credits": "https://www.nationalgeographic.com.es/mundo-animal/que-ha-pasado-diablo-negro-hallado-tenerife-hablamos-sus-descubridores_24219",
+    "createdAt": "2025-10-11T16:07:07.000Z",
+    "updatedAt": "2025-10-11T16:07:07.000Z",
+    "images": [
+      {
+        "id": 8,
+        "postId": 59,
+        "url": "https://res.cloudinary.com/dkm0ahny1/image/upload/v1760198827/wnun2bfrqhcm9hfruxws.png",
+        "caption": null,
+        "credit": null,
+        "createdAt": "2025-10-11T16:07:08.000Z",
+        "updatedAt": "2025-10-11T16:07:08.000Z"
+      }
+    ],
+    "categories": [
+      {
+        "id": 1,
+        "name": "🐠 Vida Marina",
+        "description": "Descubre las criaturas fascinantes que habitan los océanos, desde corales y medusas hasta tiburones y ballenas.",
+        "img": "https://res.cloudinary.com/dkm0ahny1/image/upload/v1760082986/marine-life_plsxer.png"
+      }
+    ]
+  },
+  {
+    "id": 60,
+    "userId": 1,
+    "user": {
+      "id": 1,
+      "username": "admin",
+      "role": "admin"
+    },
+    "title": "Eleuthera: la isla donde el Caribe y el Atlántico se dan la mano",
+    "content": "En mitad del archipiélago de las Bahamas, a unos 80 kilómetros al este de Nassau, se encuentra Eleuthera, una isla tan delgada que parece una línea dibujada entre dos mundos: el océano Atlántico y el mar Caribe. Su nombre, que significa libre, no podría ser más apropiado.\n\nCon unos 180 kilómetros de largo, Eleuthera es famosa por su contraste natural: de un lado, las aguas turquesas y tranquilas del Caribe; del otro, las profundas y oscuras del Atlántico. Y el mejor punto para verlo es el Glass Window Bridge, un estrecho puente que une las dos mitades de la isla y desde el que se puede observar cómo dos mares de colores opuestos se encuentran y se mezclan.\n\nEso sí, la naturaleza aquí no perdona. Los huracanes han destruido el puente varias veces, y las olas golpean con fuerza los acantilados, recordando que en Eleuthera la belleza y la fuerza del mar van de la mano.\n\nUn rincón único del planeta donde la frontera entre dos mares se convierte en pura magia.",
+    "credits": "https://www.elviajerofisgon.com/experiencias/eleuthera-todo-lo-que-debes-conocer-sobre-la-isla-que-divide-dos-oceanos/",
+    "createdAt": "2025-10-11T16:11:56.000Z",
+    "updatedAt": "2025-10-11T16:11:56.000Z",
+    "images": [
+      {
+        "id": 9,
+        "postId": 60,
+        "url": "https://res.cloudinary.com/dkm0ahny1/image/upload/v1760199116/ktpenmyuzdingjl0xupg.png",
+        "caption": null,
+        "credit": null,
+        "createdAt": "2025-10-11T16:11:56.000Z",
+        "updatedAt": "2025-10-11T16:11:56.000Z"
+      }
+    ],
+    "categories": [
+      {
+        "id": 5,
+        "name": "🌍 Regiones y Océanos del Mundo",
+        "description": "Explora los océanos del planeta: Atlántico, Pacífico, Índico, Ártico y Antártico.",
+        "img": "https://res.cloudinary.com/dkm0ahny1/image/upload/v1760082989/world-regions_lr5pbp.png"
+      }
+    ]
+  },
+  {
+    "id": 61,
+    "userId": 1,
+    "user": {
+      "id": 1,
+      "username": "admin",
+      "role": "admin"
+    },
+    "title": "Skagen: donde se encuentran dos mares",
+    "content": "En el extremo norte de Dinamarca, la ciudad de Skagen guarda un fenómeno único: en Grenen, su punta arenosa, se puede ver cómo chocan las aguas del Kattegat y el Skagerrak, dos partes del mar del Norte.\n\nEl contraste es visible a simple vista: el Kattegat, más templado y tranquilo, se enfrenta al Skagerrak, profundo y turbulento. Sus aguas no se mezclan del todo porque tienen diferentes densidades y salinidades, creando una línea viva entre ambos mares.\n\nGrenen, además, cambia constantemente de forma: las corrientes marinas han hecho crecer la lengua de arena más de un kilómetro en el último siglo. Y bajo esas aguas, estudios recientes han identificado al Skagerrak como zona de cría del tiburón de Groenlandia, una especie tan misteriosa como longeva.\n\nUn recordatorio perfecto de que, incluso donde los mares se dividen, la vida encuentra su equilibrio.",
+    "credits": "https://quo.eldiario.es/naturaleza/g38829/los-10-paisajes-oceanicos-mas-bellos-del-mundo",
+    "createdAt": "2025-10-11T16:19:44.000Z",
+    "updatedAt": "2025-10-11T16:19:44.000Z",
+    "images": [
+      {
+        "id": 10,
+        "postId": 61,
+        "url": "https://res.cloudinary.com/dkm0ahny1/image/upload/v1760199584/fcclrj1a2xwafs8yploh.png",
+        "caption": null,
+        "credit": null,
+        "createdAt": "2025-10-11T16:19:44.000Z",
+        "updatedAt": "2025-10-11T16:19:44.000Z"
+      }
+    ],
+    "categories": [
+      {
+        "id": 5,
+        "name": "🌍 Regiones y Océanos del Mundo",
+        "description": "Explora los océanos del planeta: Atlántico, Pacífico, Índico, Ártico y Antártico.",
+        "img": "https://res.cloudinary.com/dkm0ahny1/image/upload/v1760082989/world-regions_lr5pbp.png"
+      }
+    ]
+  },
+  {
+    "id": 62,
+    "userId": 1,
+    "user": {
+      "id": 1,
+      "username": "admin",
+      "role": "admin"
+    },
+    "title": "El canal oculto bajo la Gran Barrera de Coral",
+    "content": "Frente a la costa noreste de Australia, en el estado de Queensland, se extiende la majestuosa Gran Barrera de Coral, visible incluso desde el espacio. No solo es el mayor organismo vivo del planeta: también esconde bajo sus aguas un canal submarino colosal que intriga a los científicos.\n\nEste corredor natural, conocido como el “Canal de la Gran Barrera”, recorre parte del arrecife y permite que corrientes profundas de agua fría y rica en nutrientes lleguen hasta la superficie, alimentando su asombrosa biodiversidad.\n\nEn este paraíso viven más de 1.800 especies de peces, 5.000 tipos de moluscos y 125 especies de tiburones, sostenidos por millones de diminutos pólipos de coral que, juntos, forman esta estructura viva única en el mundo.\n\nProtegida por la UNESCO desde 1981, la Gran Barrera de Coral no solo es una maravilla natural, sino también un recordatorio del delicado equilibrio entre la vida y el océano.",
+    "credits": "https://quo.eldiario.es/naturaleza/g38829/los-10-paisajes-oceanicos-mas-bellos-del-mundo",
+    "createdAt": "2025-10-11T16:23:20.000Z",
+    "updatedAt": "2025-10-11T16:23:20.000Z",
+    "images": [
+      {
+        "id": 11,
+        "postId": 62,
+        "url": "https://res.cloudinary.com/dkm0ahny1/image/upload/v1760199800/m3n88ndrwmifk8ri4tkg.png",
+        "caption": null,
+        "credit": null,
+        "createdAt": "2025-10-11T16:23:20.000Z",
+        "updatedAt": "2025-10-11T16:23:20.000Z"
+      }
+    ],
+    "categories": [
+      {
+        "id": 5,
+        "name": "🌍 Regiones y Océanos del Mundo",
+        "description": "Explora los océanos del planeta: Atlántico, Pacífico, Índico, Ártico y Antártico.",
+        "img": "https://res.cloudinary.com/dkm0ahny1/image/upload/v1760082989/world-regions_lr5pbp.png"
+      }
+    ]
+  },
+  {
+    "id": 63,
+    "userId": 1,
+    "user": {
+      "id": 1,
+      "username": "admin",
+      "role": "admin"
+    },
+    "title": "Mauricio y su cascada submarina ilusoria: naturaleza engañosa",
+    "content": "Si alguna vez has visto esas fotos de Mauricio donde parece que el océano cae en picado al vacío, no estás soñando… bueno, sí, pero por un efecto óptico espectacular.\n\n¿Dónde está?\nLa ilusión sucede al suroeste de Mauricio, cerca de la península de Le Morne Brabant, justo en el borde de la plataforma submarina que de pronto se desploma hacia aguas profundas (más de 4.000 metros). \n\n¿Qué es lo que realmente pasa?\n\nNo es una cascada de agua, sino de arena y sedimentos (arena + limo) que las corrientes oceánicas arrastran sobre ese borde submarino. \n\nLos tonos de agua cambian: las aguas poco profundas turquesas contrastan con el azul profundo del océano, lo que refuerza la ilusión visual de una caída dramática. \ntravelfika.com\n\n¿Cómo verlo bien?\n\nLo ideal es desde el aire: helicóptero, avioneta, o incluso con drones. \n\nTambién desde un punto elevado en tierra: la cima del monte Le Morne Brabant, de unos 500 metros de altitud, permite atisbar el fenómeno aunque no con la misma intensidad que desde el cielo. \n\nDato curioso extra\nMauricio se formó por actividad volcánica hace unos 8 millones de años, lo que dejó plataformas marinas poco profundas alrededor de la isla que, de repente, se desploman hacia abismos oceánicos. Esa topografía juega un papel clave para que se forme la ilusión.",
+    "credits": "https://quo.eldiario.es/naturaleza/g38829/los-10-paisajes-oceanicos-mas-bellos-del-mundo",
+    "createdAt": "2025-10-11T16:27:10.000Z",
+    "updatedAt": "2025-10-11T16:27:10.000Z",
+    "images": [
+      {
+        "id": 12,
+        "postId": 63,
+        "url": "https://res.cloudinary.com/dkm0ahny1/image/upload/v1760200030/jvv6qvd4awccontdvhaw.png",
+        "caption": null,
+        "credit": null,
+        "createdAt": "2025-10-11T16:27:10.000Z",
+        "updatedAt": "2025-10-11T16:27:10.000Z"
+      }
+    ],
+    "categories": [
+      {
+        "id": 5,
+        "name": "🌍 Regiones y Océanos del Mundo",
+        "description": "Explora los océanos del planeta: Atlántico, Pacífico, Índico, Ártico y Antártico.",
+        "img": "https://res.cloudinary.com/dkm0ahny1/image/upload/v1760082989/world-regions_lr5pbp.png"
+      }
+    ]
+  },
+  {
+    "id": 64,
+    "userId": 1,
+    "user": {
+      "id": 1,
+      "username": "admin",
+      "role": "admin"
+    },
+    "title": "La nueva era de la exploración oceánica",
+    "content": "Sabemos más de Marte o la Luna que de nuestros propios océanos. Y eso a pesar de que el mar regula el clima, almacena carbono y alimenta a miles de millones de personas. Gran parte del océano profundo sigue siendo un misterio porque es difícil de explorar.\n\nPero la tecnología está cambiando eso. En un hecho histórico, el Foro Económico Mundial y OceanX conectaron en directo a los líderes de Davos con un sumergible a 350 metros de profundidad en las Seychelles. Las señales de vídeo y audio se transmitieron mediante pulsos de luz bajo el agua, llegando hasta la superficie y luego a un satélite para ser vistas en tiempo real.\n\nGracias a esto, podemos observar ecosistemas marinos poco conocidos, desde arrecifes y plancton hasta tiburones, tortugas y dugongos. La información obtenida ayudará a proteger los océanos y a desarrollar una economía azul sostenible.\n\nEl mensaje es claro: explorar y entender el océano ya no es un lujo, es crucial para la vida en la Tierra.",
+    "credits": "https://es.weforum.org/stories/2024/02/como-la-tecnologia-de-exploracion-del-fondo-marino-podria-transformar-la-vida-sobre-el-agua/",
+    "createdAt": "2025-10-11T16:32:58.000Z",
+    "updatedAt": "2025-10-11T16:32:58.000Z",
+    "images": [
+      {
+        "id": 13,
+        "postId": 64,
+        "url": "https://res.cloudinary.com/dkm0ahny1/image/upload/v1760200377/xvtk3pjsggtni2caalyn.png",
+        "caption": null,
+        "credit": null,
+        "createdAt": "2025-10-11T16:32:58.000Z",
+        "updatedAt": "2025-10-11T16:32:58.000Z"
+      }
+    ],
+    "categories": [
+      {
+        "id": 3,
+        "name": "🔬 Ciencia y Exploración",
+        "description": "Acompaña a los científicos en sus investigaciones y descubre cómo se estudia la vida en las profundidades.",
+        "img": "https://res.cloudinary.com/dkm0ahny1/image/upload/v1760082985/science-exploration_avjfbv.png"
+      }
+    ]
+  },
+  {
+    "id": 65,
+    "userId": 6,
+    "user": {
+      "id": 6,
+      "username": "Ady",
+      "role": "user"
+    },
+    "title": "Argentina explora el abismo: una expedición submarina que cautiva al mundo",
+    "content": "Científicos del CONICET y el Schmidt Ocean Institute están explorando el cañón submarino de Mar del Plata, en el Atlántico Sur, a más de 3900 metros de profundidad. La misión, llamada Underwater Oases of Mar del Plata Canyon, se transmite en vivo por YouTube y ya ha reunido a miles de espectadores curiosos por descubrir los secretos del océano argentino.\n\nA bordo del buque Falkor, los investigadores utilizan el robot submarino SuBastian para capturar imágenes, videos y muestras biológicas del fondo marino. Gracias a esta tecnología, están identificando nuevas especies —como esponjas carnívoras y rayas de aguas profundas— y conociendo ecosistemas nunca antes vistos.\n\nLa expedición no solo marca un avance científico histórico, sino que también está inspirando vocaciones. Desde escuelas de Chubut hasta curiosos de todo el mundo, miles de personas siguen las transmisiones en directo, recordándonos que “no se puede conservar lo que no se conoce”.\n\nUna mirada al abismo, un paso hacia el futuro de la ciencia marina.",
+    "credits": "https://elpais.com/america-futura/2025-08-01/la-expedicion-submarina-argentina-que-se-ha-hecho-viral-con-sus-transmisiones-en-vivo.html",
+    "createdAt": "2025-10-12T09:07:25.000Z",
+    "updatedAt": "2025-10-12T09:07:25.000Z",
+    "images": [
+      {
+        "id": 14,
+        "postId": 65,
+        "url": "https://res.cloudinary.com/dkm0ahny1/image/upload/v1760260044/iysm9shwluzhlvlwoyl2.png",
+        "caption": null,
+        "credit": null,
+        "createdAt": "2025-10-12T09:07:25.000Z",
+        "updatedAt": "2025-10-12T09:07:25.000Z"
+      }
+    ],
+    "categories": [
+      {
+        "id": 2,
+        "name": "🌊 Ecosistemas Oceánicos"
+      }
+    ]
+  },
+  {
+    "id": 32,
     "userId": 3,
     "user": {
       "id": 3,
       "username": "luisasilvamartinez1999@gmail.com",
       "role": "user"
     },
-    "title": "Prueba botones",
-    "content": "prueba ",
+    "title": "prueba 2 botoens",
+    "content": "prueba",
     "credits": "",
-    "createdAt": "2025-10-13T12:31:58.000Z",
-    "updatedAt": "2025-10-13T12:31:58.000Z",
+    "createdAt": "2025-10-13T12:40:29.000Z",
+    "updatedAt": "2025-10-13T12:40:29.000Z",
     "images": [],
     "categories": [
       {
         "id": 2,
-        "name": "🌊 Ecosistemas Oceánicos",
-        "description": "Explora los ecosistemas marinos: arrecifes, abismos, costas y sus delicados equilibrios naturales.",
-        "img": "https://res.cloudinary.com/dkm0ahny1/image/upload/v1760082986/ocean-ecosystems_gcdz5g.png"
+        "name": "🌊 Ecosistemas Oceánicos"
       }
     ]
   }
