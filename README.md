@@ -8,12 +8,16 @@ Permite almacenar, gestionar y consultar información sobre nuevas especies, inv
 
 ## 🚀 Tecnologías principales
 
-- Node.js + Express  
-- TypeScript  
-- Sequelize ORM  
-- MySQL....¿(con Docker)?  
-- JWT para autenticación  
-- Bcrypt para encriptación de contraseñas  
+- **Lenguaje:** TypeScript  
+- **Framework:** Express  
+- **Base de datos:** MySQL (Sequelize ORM)  
+- **Autenticación y seguridad:** Bcrypt, JWT, Validator  
+- **Subida de archivos y almacenamiento:** Multer, Cloudinary  
+- **Correo electrónico:** Nodemailer  
+- **Testing:** Jest, Supertest  
+- **Desarrollo y utilidades:** ts-node, ts-node-dev, ESLint, Sequelize-CLI, Dotenv, UUID  
+- **Despliegue:** Railway
+
 
 ---
 
@@ -22,60 +26,132 @@ Permite almacenar, gestionar y consultar información sobre nuevas especies, inv
 ```
 server/
 ├── src/
-│ ├── controllers/ # Controladores de la lógica de negocio
-│ ├── database/ # Configuración y conexión DB
-│ ├── middlewares/ # Middlewares (auth, validaciones, etc.)
-│ ├── migrations/ # Migraciones de Sequelize
-│ ├── models/ # Modelos Sequelize (Users, Posts, Categories…)
-│ ├── routes/ # Definición de rutas
-│ ├── types/ # Definiciones TS (DTOs, interfaces, etc.)
-│ ├── tests/ # Tests unitarios/integración
-│ └── app.ts # Configuración de Express
-├── server.ts # Punto de entrada del servidor
-├── package.json
-├── tsconfig.json
-├── .env
-└── docker-compose.yml
+│ ├── assets/                              # Logo
+│ ├── controllers/                         # Controladores de la lógica de negocio
+│ │   ├── AuthController.ts  
+│ │   ├── CategoryController.ts  
+│ │   ├── PostController.ts  
+│ │   ├── PostImagesController.ts  
+│ │   └── UserController.ts        
+│ ├── database/                             # Configuración y conexión DB
+│ │   ├── config.js 
+│ │   └── db_connection.ts
+│ ├── middlewares/                          # Middlewares (auth, validaciones, etc.)
+│ │   ├── authMiddleware.ts 
+│ │   ├── roleMiddleware.ts 
+│ │   └── validationMiddleware.ts
+│ ├── migrations/                           # Migraciones de Sequelize
+│ │   ├── 001-create-users.js
+│ │   ├── 002-create-posts.js 
+│ │   ├── 003-create-categories.js
+│ │   ├── 004-create-post-categories.js
+│ │   ├── 005-create-post-image.js
+│ │   └── 006-create-likes.js
+│ ├── models/                               # Modelos Sequelize (Users, Posts, Categories…)
+│ │   ├── CategoryModel.ts
+│ │   ├── LikeModel.ts 
+│ │   ├── PostImageModel.ts
+│ │   ├── PostModel.ts
+│ │   └── UserModel.ts
+│ ├── routes/                               # Definición de rutas
+│ │   ├── authRoutes.ts
+│ │   ├── postImagesRoutes.ts 
+│ │   ├── postRoutes.ts
+│ │   └── userRoutes.ts
+│ ├── seeders/                              # Seeders de Sequelize
+│ │   ├── 001-admin-user.js
+│ │   ├── 002-categories.js 
+│ │   ├── 003-admin-posts.js
+│ │   └── 004-admin-posts-categories.js
+│ ├── tests/                                # Tests unitarios/integración
+│ │   ├── auth.test.ts
+│ │   └── posts.test.ts 
+│ ├── types/                                # Definiciones TS (DTOs, interfaces, etc.)
+│ │   ├── auth.ts
+│ │   ├── category.ts
+│ │   └── posts.ts
+│ ├── utils/                                # Configuración de Cloudinary y Mailer
+│ │   ├── cloudinary.ts
+│ │   └── mailer.ts 
+│ ├── validators/                           # Validadores
+│ │   ├── authValidations.ts
+│ │   └── postValidations.ts 
+│ └── app.ts                                # Configuración de Express
+├── .env                                    # Credenciales
+├── .env.example                            # Modelo de .env
+├── .gitignore                              # Archivos que no se suben a GitHub
+├── .sequelizerc                            # Configuración Sequelize
+├── docker-compose.yml                      # Configuración Docker
+├── jest.config.js                          # Configuración Jest
+├── lastdiscover_local.sql                  # Dump de la base de datos local para subir a Railway
+├── package-lock.json                       # Dependencias
+├── package.json                            # Dependencias
+├── README.md                               # Documentación
+├── server.ts                               # Punto de entrada del servidor
+└── tsconfig.json                           # Configuración TypeScript
 
 ```
 ---
 
 ## 🗄️ Modelo de datos
 
+<img src="src/assets/database-schema.png" alt="Esquema de la base de datos" width="600"/>
+
 ### Users
-| Campo      | Tipo               | Extra           |
-|------------|--------------------|-----------------|
-| id         | int unsigned (PK)  | auto_increment  |
-| username   | varchar(50)        | único           |
-| firstname  | varchar(50)        |                 |
-| lastname   | varchar(50)        |                 |
-| email      | varchar(100)       | único           |
-| password   | varchar(255)       |                 |
-| role       | enum(user, admin)  | default: user   |
-| createdAt  | datetime           |                 |
-| updatedAt  | datetime           |                 |
+| Field      | Type               | Extra           | Null   |
+|------------|--------------------|-----------------|--------|
+| id         | int unsigned (PK)  | auto_increment  |no      |
+| username   | varchar(50)        | único           |no      |
+| firstname  | varchar(50)        |                 |yes     |
+| lastname   | varchar(50)        |                 |yes     |
+| email      | varchar(100)       | único           |no      |
+| password   | varchar(255)       |                 |no      |
+| role       | enum(user, admin)  | default: user   |no      |
+| img        | varchar(500)       |                 |yes     |
+| createdAt  | datetime           |                 |no      |
+| updatedAt  | datetime           |                 |no      |
 
 ### Posts
-| Campo      | Tipo               | Extra           |
-|------------|--------------------|-----------------|
-| id         | int unsigned (PK)  | auto_increment  |
-| userId     | int unsigned (FK)  | ref: users.id   |
-| content    | text               |                 |
-| createdAt  | datetime           |                 |
-| updatedAt  | datetime           |                 |
+| Field      | Type               | Extra           | Null   |
+|------------|--------------------|-----------------|--------|
+| id         | int unsigned (PK)  | auto_increment  |no      |
+| userId     | int unsigned (FK)  | ref: users.id   |no      |
+| title      | varchar(255)       |                 |no      |
+| content    | text               |                 |no      |
+| credits    | varchar(500)       |                 |yes     |
+| createdAt  | datetime           |                 |no      |
+| updatedAt  | datetime           |                 |no      |
+
+### Likes (tabla intermedia)
+| Field       | Type              | Extra               | Null   |
+|-------------|-------------------|---------------------|--------|
+| postId      | int unsigned (FK) | ref: posts.id       |no      |
+| userId      | int unsigned (FK) | ref: user.id        |no      |
 
 ### Categories
-| Campo      | Tipo               | Extra           |
-|------------|--------------------|-----------------|
-| id         | int unsigned (PK)  | auto_increment  |
-| name       | varchar(100)       | único           |
-| description| varchar(255)       | nullable        |
+| Field      | Type               | Extra           | Null   |
+|------------|--------------------|-----------------|--------|
+| id         | int unsigned (PK)  | auto_increment  |no      |
+| name       | varchar(100)       | unique          |no      |
+| description| varchar(255)       |                 |yes     |
+| img        | varchar(500)       |                 |yes     |
 
-### Post_Categories (tabla pivote)
-| Campo       | Tipo               | Extra             |
-|-------------|--------------------|-------------------|
-| postId      | int unsigned (FK)  | ref: posts.id     |
-| categoryId  | int unsigned (FK)  | ref: categories.id|
+### Post_Categories (tabla intermedia)
+| Field       | Type              | Extra               | Null   |
+|-------------|-------------------|---------------------|--------|
+| postId      | int unsigned (FK) | ref: posts.id       |no      |
+| categoryId  | int unsigned (FK) | ref: categories.id  |no      |
+
+### Post_Images
+| Field      | Type               | Extra              | Null   |
+|------------|--------------------|--------------------|--------|
+| id         | int unsigned (PK)  | auto_increment     |no      |
+| postId     | int unsigned (FK)  | ref: categories.id |no      |
+| url        | varchar(500)       |                    |no      |
+| caption    | varchar(500)       |                    |yes     |
+| credit     | varchar(500)       |                    |yes     |
+| createdAt  | datetime           |                    |no      |
+| updatedAt  | datetime           |                    |no      |
 
 ---
 
@@ -168,35 +244,114 @@ cd server
 ```
 npm install
 ```
-### Crear archivo .env basado en .env.example
-```
-DB_HOST=localhost
-DB_USER=appuser
-DB_PASSWORD=password
-DB_NAME=lastdiscover
-JWT_SECRET=supersecret
-```
-### Levantar con Docker (MySQL)
-```
-docker-compose up -d
-```
-### Ejecutar migraciones
-```
-npx sequelize-cli db:migrate
-```
-### Iniciar servidor
-```
-npm run dev
-```
+
+### Configuración según entorno:
+
+#### Local (MySQL Workbench)
+1. Crear la base de datos y el usuario:
+    ```
+    CREATE DATABASE lastdiscover_local;
+    CREATE USER 'appuser'@'%' IDENTIFIED BY 'password';
+    GRANT ALL PRIVILEGES ON lastdiscover_local.* TO 'appuser'@'%';
+    FLUSH PRIVILEGES;
+    ```
+2. Crear el .env:
+    ```
+    DB_NAME=lastdiscover_local
+    DB_PORT=3306
+    DB_USER=appuser
+    DB_PASSWORD=password
+    DB_HOST=127.0.0.1
+    JWT_SECRET=supersecret
+    ```
+3. Ejecutar las migraciones y seeds:
+    ```
+   npx sequelize-cli db:migrate
+   npx sequelize-cli db:seed:all
+    ```
+4. *Deshacer migraciones y seeds (en caso necesario, opcional):*
+    ```
+   npx sequelize-cli db:migrate:undo:all
+   npx sequelize-cli db:seed:undo:all
+    ```
+5. Iniciar servidor:
+    ```
+   npx ts-node server.ts
+    ```
+
+#### Local (con Docker)
+1. Levantar Docker:
+    ```
+    docker-compose up -d
+    ```
+2. Crear el .env:
+    ```
+    DB_NAME=lastdiscover
+    DB_PORT=3307
+    DB_USER=appuser
+    DB_PASSWORD=password
+    DB_HOST=127.0.0.1
+    JWT_SECRET=supersecret
+    ```
+3. Verificar contenedores:
+    ```
+   docker ps
+    ```
+4. Ejecutar las migraciones y seeds:
+    ```
+   npx sequelize-cli db:migrate
+   npx sequelize-cli db:seed:all
+    ```
+5. *Deshacer migraciones y seeds (en caso necesario, opcional):*
+    ```
+   npx sequelize-cli db:migrate:undo:all
+   npx sequelize-cli db:seed:undo:all
+    ```
+6. Inspeccionar la base de datos:
+    ```
+   docker exec -it lastdiscover mysql -uappuser -ppassword lastdiscover
+    show databases;
+    use lastdiscover;
+    show tables;
+    describe users;
+    exit;
+    ```
+
+#### Railway desde 0 
+1. Crear un proyecto en Railway tipo MySQL.
+2. Obtener las credenciales de la base de datos del panel de Railway para introducirlas en el .env:
+    ```
+    DB_NAME=
+    USER_DB=
+    PASSWORD_DB=
+    HOST=
+    DB_PORT=
+    DB_DIALECT=mysql
+    MYSQL_PUBLIC_URL=
+    ```
+3. Importar la base de datos desde el dump 'lastdiscover_local.sql':
+    ```
+   mysql -h <host> -P <puerto> -u <usuario> -p <nombre_de_la_db> < lastdiscover_local.sql
+    ```
+4. Iniciar el servidor localmente apuntando a la base de datos de Railway:
+    ```
+   npx railway run npx ts-node server.ts
+    ```
+
+Ejemplo de cómo se ve la base de datos en Railway:
+
+<img src="src/assets/railway-1.png" alt="Tablas de la base de datos en Railway" width="600"/>
+
+<img src="src/assets/railway-2.png" alt="TTabla posts de la base de datos en Railway" width="600"/>
+
 ---
 ## 👩🏻‍💻​ Creadoras
 
-🚢 Aday 🦈 • Irina 🐙 • Julia 🐠 • Luisa 🐬 • Valentina 🐡
+[🚢 Aday 🦈](https://github.com/Aday25) • [Irina 🐙](https://github.com/irinatiron) • [Julia 🐠](https://github.com/juliazmor) • [Luisa 🐬](https://github.com/luisasilva99) • [Valentina 🐡](https://github.com/ValenMontilla7)
+
 
 ---
 
 ## 📌 Notas
 
 Por defecto, el primer usuario creado debería ser admin (configurable).
-
-El proyecto está en fase inicial: endpoints y validaciones pueden cambiar.
