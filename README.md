@@ -26,8 +26,8 @@ Permite almacenar, gestionar y consultar información sobre nuevas especies, inv
 ```
 server/
 ├── src/
-│ ├── assets/                              # Logo
-│ ├── controllers/                         # Controladores de la lógica de negocio
+│ ├── assets/                               # Logo
+│ ├── controllers/                          # Controladores de la lógica de negocio
 │ │   ├── AuthController.ts  
 │ │   ├── CategoryController.ts  
 │ │   ├── PostController.ts  
@@ -170,21 +170,29 @@ server/
 ### Auth
 - `POST /auth/register` → registrar un nuevo usuario.  
 - `POST /auth/login` → autenticar usuario y devolver token.  
+- `POST /auth/logout` → cierra sesión.  
 
 ### Users
 - `GET /users` (admin) → listar usuarios.  
 - `GET /users/:id` → obtener usuario por id.  
+- `PATCH /users/:id` → actualiza la información de un usuario.
+- `PATCH /users/:id/role` (admin) → cambia el rol del usuario.
 
 ### Posts
 - `GET /posts` → listar todos los posts.  
-- `GET /posts/:id` → obtener post por id.  
-- `POST /posts` (admin) → crear post.  
-- `PUT /posts/:id` (admin) → actualizar post.  
-- `DELETE /posts/:id` (admin) → eliminar post.  
+- `GET /posts/:id` → obtener post por id. 
+- `GET /my-posts/`  -> obtiene posts por UserId 
+- `POST /posts` (admin o user autentificado) → crear post.  
+- `PATCH /posts/:id` (admin o user autentificado autor) → actualiza un post  
+- `DELETE /posts/:id` (admin o user autentificado autor) → eliminar post.  
 
 ### Categories
 - `GET /categories` → listar categorías.  
 - `POST /categories` (admin) → crear categoría.  
+
+### Images
+
+- `POST /:postId/images` → añadir una imagen a un post. 
 
 ---
 
