@@ -194,10 +194,10 @@ server/
 ```
 POST /auth/register
 {
-  "username": "adriana",
-  "firstname": "Ady",
-  "lastname": "Coder",
-  "email": "ady@example.com",
+  "username": "Medusa",
+  "firstname": "Ana",
+  "lastname": "Sánchez",
+  "email": "medusa@example.com",
   "password": "supersecret"
 }
 ```
