@@ -70,7 +70,7 @@ server/
 │ │   ├── auth.ts
 │ │   ├── category.ts
 │ │   └── posts.ts
-│ ├── utils/                                # Configuración de Cloudinary y Mailer
+│ ├── utils/                                # Configuración de Cloudinary y Nodemailer
 │ │   ├── cloudinary.ts
 │ │   └── mailer.ts 
 │ ├── validators/                           # Validadores
@@ -208,7 +208,6 @@ POST /auth/register
 
 ### Login
 ```
-
 POST /auth/login
 {
   "email": "ady@example.com",
@@ -218,7 +217,6 @@ POST /auth/login
 
 ### Response
 ```
-
 {
   "success": true,
   "token": "<JWT_TOKEN>"
@@ -227,7 +225,6 @@ POST /auth/login
 
 ### Crear post (admin)
 ```
-
 POST /posts
 Authorization: Bearer <JWT_TOKEN>
 {
@@ -347,6 +344,26 @@ Ejemplo de cómo se ve la base de datos en Railway:
 <img src="src/assets/railway-1.png" alt="Tablas de la base de datos en Railway" width="600"/>
 
 <img src="src/assets/railway-2.png" alt="TTabla posts de la base de datos en Railway" width="600"/>
+
+
+### Configuración común tanto en local como conectando con Railway. Cloudinary y Nodemailer:
+
+Añadir lo siguiente en el .env:
+
+```
+APP_PORT=4000
+
+CLOUDINARY_CLOUD_NAME=dkm0ahny1
+CLOUDINARY_API_KEY=243859817582917
+CLOUDINARY_API_SECRET=0kPQdQlToQzFeEZxv8MDlBH9XPE
+
+JWT_SECRET=1234
+
+EMAIL_USER=el.gran.azul.post@gmail.com
+EMAIL_APP_PASS=xvlotowcpiojllfa
+FRONTEND_URL=http://localhost:5173
+```
+
 
 ---
 ## 👩🏻‍💻​ Creadoras
