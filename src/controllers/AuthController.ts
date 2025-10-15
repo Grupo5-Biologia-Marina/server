@@ -5,7 +5,7 @@ import UserModel from "../models/UserModel";
 import { sendWelcomeEmail } from "../utils/mailer";
 
 // Función para hashear contraseña
-const hashPassword = (password: string): string => {
+export const hashPassword = (password: string): string => {
   const salt = bcrypt.genSaltSync(10);
   return bcrypt.hashSync(password, salt);
 };

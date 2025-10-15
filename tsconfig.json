@@ -1,12 +1,9 @@
 {
   "compilerOptions": {
-    "target": "es2019",
+    "target": "es2016",
     "module": "commonjs",
-    "outDir": "./dist",
-    "rootDir": "./src",
     "strict": true,
     "esModuleInterop": true,
     "skipLibCheck": true
-  },
-  "include": ["src/**/*", "scripts/syncPostsSeeder.ts"]
+  }
 }
