@@ -20,19 +20,27 @@ module.exports = {
         onUpdate: 'CASCADE',
         onDelete: 'CASCADE',
       },
+      title: {
+        type: Sequelize.STRING(255),
+        allowNull: false,
+      },
       content: {
         type: Sequelize.TEXT,
         allowNull: false,
       },
+      credits: {
+        type: Sequelize.STRING(500),
+        allowNull: true,
+      },
       createdAt: {
         type: Sequelize.DATE,
         allowNull: false,
-        defaultValue: Sequelize.NOW,
+        defaultValue: Sequelize.literal('CURRENT_TIMESTAMP'),
       },
       updatedAt: {
         type: Sequelize.DATE,
         allowNull: false,
-        defaultValue: Sequelize.NOW,
+        defaultValue: Sequelize.literal('CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP'),
       },
     }, {
       engine: 'InnoDB'

@@ -1,6 +1,6 @@
 import { DataTypes, Model } from "sequelize";
 import sequelize from "../../src/database/db_connection";
-import crypto from "crypto";
+import LikeModel from "./LikeModel"; 
 
 export class UserModel extends Model {
   declare id: number;
@@ -10,6 +10,7 @@ export class UserModel extends Model {
   declare email: string;
   declare password: string;
   declare role: "user" | "admin";
+  declare img?: string;
 }
 
 UserModel.init(
@@ -47,13 +48,24 @@ UserModel.init(
       allowNull: false,
       defaultValue: "user",
     },
+    img: {
+      type: DataTypes.STRING(500),
+      allowNull: true,
+    },
   },
   {
     sequelize,
     modelName: "User",
     tableName: "users",
-    timestamps: false,
+    timestamps: true,
   }
 );
+
+//  Asociación con likes
+UserModel.hasMany(LikeModel, {
+  foreignKey: "userId",
+  as: "likes",
+  onDelete: "CASCADE",
+});
 
 export default UserModel;

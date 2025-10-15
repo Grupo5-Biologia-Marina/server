@@ -2,11 +2,14 @@ import { DataTypes, Model, Optional } from "sequelize";
 import sequelize from "../database/db_connection";
 import UserModel from "./UserModel";
 import CategoryModel from "./CategoryModel";
+import LikeModel from "./LikeModel";
 
 export interface PostAttributes {
   id: number;
   userId: number;
+  title: string;
   content: string;
+  credits?: string;
   createdAt?: Date;
   updatedAt?: Date;
 }
@@ -18,7 +21,9 @@ export class PostModel extends Model<PostAttributes, PostCreationAttributes>
   implements PostAttributes {
   declare id: number;
   declare userId: number;
+  declare title: string;
   declare content: string;
+  declare credits?: string;
   declare createdAt?: Date;
   declare updatedAt?: Date;
 }
@@ -40,20 +45,31 @@ PostModel.init(
       },
       onUpdate: "CASCADE",
       onDelete: "CASCADE",
+      field: "userId",
+    },
+    title: {
+      type: DataTypes.STRING(255),
+      allowNull: false,
     },
     content: {
       type: DataTypes.TEXT,
       allowNull: false,
     },
+    credits: {
+      type: DataTypes.STRING(500),
+      allowNull: true,
+    },
     createdAt: {
       type: DataTypes.DATE,
       allowNull: false,
       defaultValue: DataTypes.NOW,
+      field: "createdAt",
     },
     updatedAt: {
       type: DataTypes.DATE,
       allowNull: false,
       defaultValue: DataTypes.NOW,
+      field: "updatedAt",
     },
   },
   {
@@ -61,8 +77,6 @@ PostModel.init(
     modelName: "Post",
     tableName: "posts",
     timestamps: true,
-    createdAt: "createdAt",
-    updatedAt: "updatedAt",
   }
 );
 
@@ -74,6 +88,7 @@ PostModel.belongsToMany(CategoryModel, {
   foreignKey: "postId",
   otherKey: "categoryId",
   as: "categories",
+  timestamps: false,
 });
 
 CategoryModel.belongsToMany(PostModel, {
@@ -81,6 +96,19 @@ CategoryModel.belongsToMany(PostModel, {
   foreignKey: "categoryId",
   otherKey: "postId",
   as: "posts",
+  timestamps: false,
+});
+
+// ❤️ Nueva relación con likes
+PostModel.hasMany(LikeModel, {
+  foreignKey: "postId",
+  as: "likes",
+  onDelete: "CASCADE",
+});
+
+LikeModel.belongsTo(PostModel, {
+  foreignKey: "postId",
+  as: "post",
 });
 
 export default PostModel;

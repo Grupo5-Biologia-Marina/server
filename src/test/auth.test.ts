@@ -1,6 +1,6 @@
 import request from "supertest";
 import { app } from "../app";
-import { db_connection } from "../db";
+import db_connection from "../database/db_connection";
 import { Response } from "supertest";
 
 describe("Auth Test - Login", () => {

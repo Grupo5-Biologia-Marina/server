@@ -1,14 +1,25 @@
-// app.ts
 import express from "express";
 import dotenv from "dotenv";
-dotenv.config();
+import cors from "cors";
 import db_connection from "./database/db_connection";
-import UserModel from "./models/UserModel";
+
+import authRoutes from "./routes/authRoutes";
+import userRoutes from "./routes/userRoutes";
+import postRoutes from "./routes/postRoutes";          
+import postImagesRouter from "./routes/postImages";    
+
+dotenv.config();
 
 const app = express();
+
+// Middlewares
+app.use(cors({
+  origin: "http://localhost:5173",
+  credentials: true,
+}));
 app.use(express.json());
 
-/* ───── ENDPOINT DE PRUEBA ───── */
+
 app.get("/health", async (_req, res) => {
   try {
     await db_connection.authenticate();
@@ -19,38 +30,10 @@ app.get("/health", async (_req, res) => {
   }
 });
 
-// ───── ENDPOINT TEMPORAL PARA TESTEAR USER MODEL ─────
-// app.post("/test-user", async (_req, res) => {
-//   try {
-//     const user = await UserModel.create({
-//       username: "testuser",
-//       firstname: "Test",
-//       lastname: "User",
-//       email: "test@example.com",
-//       password: "securepassword",
-//       role: "user",
-//     });
 
-//     res.status(201).json({ success: true, data: user.toJSON() });
-//   } catch (error) {
-//     console.error(error);
-//     res.status(500).json({ success: false, error });
-//   }
-// });
+app.use("/auth", authRoutes);   
+app.use("/users", userRoutes);  
+app.use("/api/posts", postRoutes);         
+app.use("/api/posts", postImagesRouter);
 
-/* ───── RUTAS TEMPORALES (DUMMY) ───── */
-const dummyAuthController = {
-  registerUser: (_req: any, res: any) =>
-    res.json({ message: "TODO: implementar controlador registerUser" }),
-  loginUser: (_req: any, res: any) =>
-    res.json({ message: "TODO: implementar controlador loginUser" }),
-};
-
-app.use(
-  "/auth",
-  express.Router()
-    .post("/register", dummyAuthController.registerUser)
-    .post("/login", dummyAuthController.loginUser)
-);
-
-export { app }; // ✅ exportamos la app
+export { app };
