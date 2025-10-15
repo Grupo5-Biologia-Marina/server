@@ -186,10 +186,6 @@ server/
 - `PATCH /posts/:id` (admin o user autentificado autor) → actualiza un post  
 - `DELETE /posts/:id` (admin o user autentificado autor) → eliminar post.  
 
-### Categories
-- `GET /categories` → listar categorías.  
-- `POST /categories` (admin) → crear categoría.  
-
 ### Images
 
 - `POST /:postId/images` → añadir una imagen a un post. 
