@@ -51,6 +51,11 @@ export const createPost = async (req: AuthenticatedRequest, res: Response): Prom
     const fullPost = await PostModel.findByPk(postId, {
       include: [
         {
+          model: UserModel,
+          as: 'user',
+          attributes: ['id', 'username']
+        },
+        {
           model: CategoryModel,
           as: 'categories',
           through: { attributes: [] }
@@ -91,7 +96,7 @@ export const createPost = async (req: AuthenticatedRequest, res: Response): Prom
 
 export const getPosts = async (req: Request, res: Response): Promise<void> => {
   try {
-    // 🔍 Obtener posts con categorías e imágenes usando Sequelize
+    // 🔍 Obtener posts con categorías, imágenes y usuario
     const posts = await PostModel.findAll({
       include: [
         {
@@ -104,8 +109,14 @@ export const getPosts = async (req: Request, res: Response): Promise<void> => {
           model: PostImageModel,
           as: 'images',
           attributes: ['id', 'url', 'caption', 'credit']
+        },
+        {
+          model: UserModel,
+          as: 'user',
+          attributes: ['id', 'username']
         }
-      ]
+      ],
+      order: [['createdAt', 'DESC']],
     });
 
     const response: ApiResponse<any[]> = {
@@ -124,6 +135,7 @@ export const getPosts = async (req: Request, res: Response): Promise<void> => {
     });
   }
 };
+
 
 export const getPostById = async (req: Request, res: Response): Promise<void> => {
   try {
@@ -287,7 +299,7 @@ export const updatePost = async (req: AuthenticatedRequest, res: Response): Prom
     // 2️⃣ Actualizar categorías (siempre si se envían)
     if (categories !== undefined && Array.isArray(categories)) {
       console.log('📂 Actualizando categorías:', categories);
-      
+
       if (categories.length > 0) {
         const categoryInstances = await CategoryModel.findAll({
           where: {
@@ -309,20 +321,20 @@ export const updatePost = async (req: AuthenticatedRequest, res: Response): Prom
     // 3️⃣ Actualizar imágenes (siempre si se envían)
     if (images !== undefined && Array.isArray(images)) {
       console.log('🖼️ Actualizando imágenes. Total:', images.length);
-      
+
       // Eliminar TODAS las imágenes antiguas primero
       const deletedCount = await PostImageModel.destroy({
         where: { postId: Number(id) }
       });
-      
+
       console.log('🗑️ Imágenes eliminadas:', deletedCount);
 
       // Crear las nuevas imágenes (si hay)
       if (images.length > 0) {
         for (const imageUrl of images) {
-          await PostImageModel.create({ 
-            postId: Number(id), 
-            url: imageUrl 
+          await PostImageModel.create({
+            postId: Number(id),
+            url: imageUrl
           });
         }
         console.log('✅ Nuevas imágenes creadas:', images.length);
