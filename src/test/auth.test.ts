@@ -9,17 +9,21 @@ describe("Auth Test - Login", () => {
     beforeAll(async () => {
         await db_connection.authenticate();
         await UserModel.create({
-            username: "userTest",
-            email: "user@test.com",
+            username: "user-test",
+            email: "userTest@test.com",
             password: hashPassword("123456")
         })
     });
+    afterAll(async () =>{
+        await UserModel.destroy({where: {email: "userTest@test.com"}})
+        await db_connection.close()
+    })
 
     describe("POST /login", () => {
         let response: Response;
 
         const credentials = {
-            email: "user@test.com",
+            email: "userTest@test.com",
             password: "123456",
         };
 
