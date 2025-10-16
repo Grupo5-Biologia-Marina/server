@@ -4,13 +4,10 @@
   "main": "dist/app.js",
   "license": "MIT",
   "scripts": {
-    "build": "tsc",
-    "start": "node dist/app.js",
-    "dev": "ts-node-dev --respawn --transpile-only src/app.ts",
-    "test": "jest --watchAll --no-cache --detectOpenHandles --passWithNoTests",
-    "test:watch": "jest --watch",
-    "lint": "eslint . --ext .ts",
-    "export:posts": "ts-node scripts/exportPostsToJSON.ts"
+   "test": "jest --testPathIgnorePatterns=\"src/database|src/models\" --forceExit --detectOpenHandles --no-cache",
+    "test:watch": "jest --testPathIgnorePatterns=\"src/database|src/models\" --watchAll --forceExit --detectOpenHandles --no-cache",
+    "test:auth": "jest src/test/auth-register.test.ts src/test/auth-login.test.ts src/test/jwt-token.test.ts --forceExit --detectOpenHandles --no-cache",
+    "test:clean": "jest --clearCache && jest --testPathIgnorePatterns=\"src/database|src/models\" --forceExit --detectOpenHandles --no-cache"
   },
   "dependencies": {
     "bcrypt": "^6.0.0",
@@ -21,7 +18,7 @@
     "express-validator": "^7.2.1",
     "jsonwebtoken": "^9.0.2",
     "multer": "^2.0.2",
-    "mysql2": "^3.15.1",
+    "mysql2": "^3.15.2",
     "nodemailer": "^7.0.9",
     "sequelize": "^6.37.7",
     "uuid": "^13.0.0",
@@ -45,7 +42,7 @@
     "railway": "^2.0.17",
     "sequelize-cli": "^6.6.3",
     "supertest": "^7.1.4",
-    "ts-jest": "^29.4.5",
+    "ts-jest": "^29.4.4",
     "ts-node": "^10.9.2",
     "ts-node-dev": "^2.0.0",
     "typescript": "^5.9.3"

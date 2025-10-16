@@ -1,0 +1,868 @@
+{
+  "SequelizeMeta": [
+    {
+      "name": "001-create-users.js"
+    },
+    {
+      "name": "002-create-posts.js"
+    },
+    {
+      "name": "003-create-categories.js"
+    },
+    {
+      "name": "004-create-post-categories.js"
+    },
+    {
+      "name": "005-create-post-image.js"
+    },
+    {
+      "name": "006-create-likes.js"
+    }
+  ],
+  "categories": [
+    {
+      "id": 1,
+      "name": "🐠 Vida Marina",
+      "description": "Descubre las criaturas fascinantes que habitan los océanos, desde corales y medusas hasta tiburones y ballenas.",
+      "img": "https://res.cloudinary.com/dkm0ahny1/image/upload/v1760082986/marine-life_plsxer.png"
+    },
+    {
+      "id": 2,
+      "name": "🌊 Ecosistemas Oceánicos",
+      "description": "Explora los ecosistemas marinos: arrecifes, abismos, costas y sus delicados equilibrios naturales.",
+      "img": "https://res.cloudinary.com/dkm0ahny1/image/upload/v1760082986/ocean-ecosystems_gcdz5g.png"
+    },
+    {
+      "id": 3,
+      "name": "🔬 Ciencia y Exploración",
+      "description": "Acompaña a los científicos en sus investigaciones y descubre cómo se estudia la vida en las profundidades.",
+      "img": "https://res.cloudinary.com/dkm0ahny1/image/upload/v1760082985/science-exploration_avjfbv.png"
+    },
+    {
+      "id": 4,
+      "name": "⚠️ Problemas y Amenazas",
+      "description": "Conoce los peligros que enfrentan los mares: contaminación, cambio climático y sobrepesca.",
+      "img": "https://res.cloudinary.com/dkm0ahny1/image/upload/v1760082985/problems-threats_muxnh2.png"
+    },
+    {
+      "id": 5,
+      "name": "🌍 Regiones y Océanos del Mundo",
+      "description": "Explora los océanos del planeta: Atlántico, Pacífico, Índico, Ártico y Antártico.",
+      "img": "https://res.cloudinary.com/dkm0ahny1/image/upload/v1760082989/world-regions_lr5pbp.png"
+    }
+  ],
+  "likes": [
+    {
+      "userId": 1,
+      "postId": 1
+    },
+    {
+      "userId": 2,
+      "postId": 1
+    },
+    {
+      "userId": 2,
+      "postId": 2
+    },
+    {
+      "userId": 4,
+      "postId": 2
+    },
+    {
+      "userId": 1,
+      "postId": 3
+    },
+    {
+      "userId": 2,
+      "postId": 3
+    },
+    {
+      "userId": 4,
+      "postId": 3
+    },
+    {
+      "userId": 1,
+      "postId": 4
+    },
+    {
+      "userId": 2,
+      "postId": 4
+    },
+    {
+      "userId": 4,
+      "postId": 4
+    },
+    {
+      "userId": 2,
+      "postId": 5
+    },
+    {
+      "userId": 4,
+      "postId": 5
+    },
+    {
+      "userId": 4,
+      "postId": 6
+    },
+    {
+      "userId": 4,
+      "postId": 7
+    },
+    {
+      "userId": 4,
+      "postId": 8
+    },
+    {
+      "userId": 4,
+      "postId": 9
+    },
+    {
+      "userId": 4,
+      "postId": 11
+    },
+    {
+      "userId": 4,
+      "postId": 12
+    },
+    {
+      "userId": 2,
+      "postId": 14
+    },
+    {
+      "userId": 1,
+      "postId": 15
+    },
+    {
+      "userId": 2,
+      "postId": 15
+    },
+    {
+      "userId": 2,
+      "postId": 16
+    },
+    {
+      "userId": 1,
+      "postId": 19
+    },
+    {
+      "userId": 2,
+      "postId": 19
+    },
+    {
+      "userId": 4,
+      "postId": 20
+    },
+    {
+      "userId": 1,
+      "postId": 22
+    },
+    {
+      "userId": 4,
+      "postId": 23
+    },
+    {
+      "userId": 2,
+      "postId": 24
+    },
+    {
+      "userId": 4,
+      "postId": 25
+    },
+    {
+      "userId": 2,
+      "postId": 28
+    },
+    {
+      "userId": 4,
+      "postId": 28
+    },
+    {
+      "userId": 1,
+      "postId": 29
+    },
+    {
+      "userId": 2,
+      "postId": 29
+    },
+    {
+      "userId": 4,
+      "postId": 29
+    },
+    {
+      "userId": 1,
+      "postId": 73
+    },
+    {
+      "userId": 2,
+      "postId": 73
+    },
+    {
+      "userId": 2,
+      "postId": 74
+    },
+    {
+      "userId": 4,
+      "postId": 74
+    }
+  ],
+  "post_categories": [
+    {
+      "postId": 1,
+      "categoryId": 1
+    },
+    {
+      "postId": 2,
+      "categoryId": 1
+    },
+    {
+      "postId": 3,
+      "categoryId": 1
+    },
+    {
+      "postId": 4,
+      "categoryId": 1
+    },
+    {
+      "postId": 5,
+      "categoryId": 1
+    },
+    {
+      "postId": 28,
+      "categoryId": 1
+    },
+    {
+      "postId": 6,
+      "categoryId": 2
+    },
+    {
+      "postId": 7,
+      "categoryId": 2
+    },
+    {
+      "postId": 8,
+      "categoryId": 2
+    },
+    {
+      "postId": 9,
+      "categoryId": 2
+    },
+    {
+      "postId": 10,
+      "categoryId": 2
+    },
+    {
+      "postId": 11,
+      "categoryId": 3
+    },
+    {
+      "postId": 12,
+      "categoryId": 3
+    },
+    {
+      "postId": 13,
+      "categoryId": 3
+    },
+    {
+      "postId": 14,
+      "categoryId": 3
+    },
+    {
+      "postId": 15,
+      "categoryId": 3
+    },
+    {
+      "postId": 28,
+      "categoryId": 3
+    },
+    {
+      "postId": 16,
+      "categoryId": 4
+    },
+    {
+      "postId": 17,
+      "categoryId": 4
+    },
+    {
+      "postId": 18,
+      "categoryId": 4
+    },
+    {
+      "postId": 19,
+      "categoryId": 4
+    },
+    {
+      "postId": 20,
+      "categoryId": 4
+    },
+    {
+      "postId": 22,
+      "categoryId": 5
+    },
+    {
+      "postId": 23,
+      "categoryId": 5
+    },
+    {
+      "postId": 24,
+      "categoryId": 5
+    },
+    {
+      "postId": 25,
+      "categoryId": 5
+    },
+    {
+      "postId": 73,
+      "categoryId": 5
+    },
+    {
+      "postId": 74,
+      "categoryId": 5
+    }
+  ],
+  "post_images": [
+    {
+      "id": 1,
+      "postId": 2,
+      "url": "https://res.cloudinary.com/dkm0ahny1/image/upload/v1760510623/2-Guitar-Shark_Rhinobatos-sp.-The-Nippon-Foundation-Nekton-Ocean-Census-_-Sergey-Bogorodsky-_-2025_pychlz.jpg",
+      "caption": null,
+      "credit": null,
+      "createdAt": "2025-10-15T08:45:00.000Z",
+      "updatedAt": "2025-10-15T08:45:00.000Z"
+    },
+    {
+      "id": 2,
+      "postId": 28,
+      "url": "https://res.cloudinary.com/dkm0ahny1/image/upload/v1760459986/m9miyzk2wjvms2xeauby.png",
+      "caption": null,
+      "credit": null,
+      "createdAt": "2025-10-14T16:39:47.000Z",
+      "updatedAt": "2025-10-14T16:39:47.000Z"
+    },
+    {
+      "id": 3,
+      "postId": 29,
+      "url": "https://res.cloudinary.com/dkm0ahny1/image/upload/v1760460658/micnimrkwmiakospmsxw.png",
+      "caption": null,
+      "credit": null,
+      "createdAt": "2025-10-14T16:50:59.000Z",
+      "updatedAt": "2025-10-14T16:50:59.000Z"
+    },
+    {
+      "id": 4,
+      "postId": 1,
+      "url": "https://res.cloudinary.com/dkm0ahny1/image/upload/v1760511058/IN2022V09New-speciesPorcelain-crab-Porcellanella-brevidentataCSIROCindy-Bessey_mvfyax.jpg",
+      "caption": null,
+      "credit": null,
+      "createdAt": "2025-10-14T18:50:59.000Z",
+      "updatedAt": "2025-10-14T18:50:59.000Z"
+    },
+    {
+      "id": 5,
+      "postId": 3,
+      "url": "https://res.cloudinary.com/dkm0ahny1/image/upload/v1760511175/glass-squid_oxevif.webp",
+      "caption": null,
+      "credit": null,
+      "createdAt": "2025-10-14T18:50:59.000Z",
+      "updatedAt": "2025-10-14T18:50:59.000Z"
+    },
+    {
+      "id": 6,
+      "postId": 4,
+      "url": "https://res.cloudinary.com/dkm0ahny1/image/upload/v1760511265/Bathylepeta_wadatsumi_2_ilwnhw.jpg",
+      "caption": null,
+      "credit": null,
+      "createdAt": "2025-10-15T08:55:00.000Z",
+      "updatedAt": "2025-10-15T08:55:00.000Z"
+    },
+    {
+      "id": 7,
+      "postId": 5,
+      "url": "https://res.cloudinary.com/dkm0ahny1/image/upload/v1760511358/FKt250712-S0812-20250726T182941Z-340-scicam-PatrickStar-scaled_vy5hkq.jpg",
+      "caption": null,
+      "credit": null,
+      "createdAt": "2025-10-15T10:55:00.000Z",
+      "updatedAt": "2025-10-15T10:55:00.000Z"
+    },
+    {
+      "id": 8,
+      "postId": 6,
+      "url": "https://res.cloudinary.com/dkm0ahny1/image/upload/v1760512005/Screenshot_2025-10-15_at_08.59.12_uc2eqk.png",
+      "caption": null,
+      "credit": null,
+      "createdAt": "2025-10-15T12:55:00.000Z",
+      "updatedAt": "2025-10-15T12:55:00.000Z"
+    },
+    {
+      "id": 9,
+      "postId": 8,
+      "url": "https://res.cloudinary.com/dkm0ahny1/image/upload/v1760512113/Life-Thrives-In-The-Deepest-Ocean_t2mfmh.jpg",
+      "caption": null,
+      "credit": null,
+      "createdAt": "2025-10-15T12:55:00.000Z",
+      "updatedAt": "2025-10-15T12:55:00.000Z"
+    },
+    {
+      "id": 10,
+      "postId": 9,
+      "url": "https://res.cloudinary.com/dkm0ahny1/image/upload/v1760512205/Screenshot_2025-10-15_at_09.09.26_b2umkl.png",
+      "caption": null,
+      "credit": null,
+      "createdAt": "2025-10-15T14:55:00.000Z",
+      "updatedAt": "2025-10-15T14:55:00.000Z"
+    },
+    {
+      "id": 11,
+      "postId": 10,
+      "url": "https://res.cloudinary.com/dkm0ahny1/image/upload/v1760512433/RV_Polarstern_during_CONTRASTS_kvx1io.jpg",
+      "caption": null,
+      "credit": null,
+      "createdAt": "2025-10-15T09:55:00.000Z",
+      "updatedAt": "2025-10-15T09:55:00.000Z"
+    },
+    {
+      "id": 12,
+      "postId": 11,
+      "url": "https://res.cloudinary.com/dkm0ahny1/image/upload/v1760512624/life-found-flourishing_rl55nz.jpg",
+      "caption": null,
+      "credit": null,
+      "createdAt": "2025-10-15T11:55:00.000Z",
+      "updatedAt": "2025-10-15T11:55:00.000Z"
+    },
+    {
+      "id": 13,
+      "postId": 12,
+      "url": "https://res.cloudinary.com/dkm0ahny1/image/upload/v1760513224/an-upgraded-alvin-puts_i5ykku.jpg",
+      "caption": null,
+      "credit": null,
+      "createdAt": "2025-10-15T13:55:00.000Z",
+      "updatedAt": "2025-10-15T13:55:00.000Z"
+    },
+    {
+      "id": 14,
+      "postId": 13,
+      "url": "https://res.cloudinary.com/dkm0ahny1/image/upload/v1760513298/FKt231218_Seamount_4_2681m_hi_res-1-scaled_fg8frw.jpg",
+      "caption": null,
+      "credit": null,
+      "createdAt": "2025-10-15T15:55:00.000Z",
+      "updatedAt": "2025-10-15T15:55:00.000Z"
+    },
+    {
+      "id": 15,
+      "postId": 73,
+      "url": "https://res.cloudinary.com/dkm0ahny1/image/upload/v1760513456/okto4amhiew3blktq43a.png",
+      "caption": null,
+      "credit": null,
+      "createdAt": "2025-10-15T07:30:57.000Z",
+      "updatedAt": "2025-10-15T07:30:57.000Z"
+    },
+    {
+      "id": 16,
+      "postId": 74,
+      "url": "https://res.cloudinary.com/dkm0ahny1/image/upload/v1760513747/uvybppodn6t4mpwnhnjo.png",
+      "caption": null,
+      "credit": null,
+      "createdAt": "2025-10-15T07:35:48.000Z",
+      "updatedAt": "2025-10-15T07:35:48.000Z"
+    },
+    {
+      "id": 18,
+      "postId": 14,
+      "url": "https://res.cloudinary.com/dkm0ahny1/image/upload/v1760514272/493_hrdjv2.avif",
+      "caption": null,
+      "credit": null,
+      "createdAt": "2025-10-15T09:35:48.000Z",
+      "updatedAt": "2025-10-15T09:35:48.000Z"
+    },
+    {
+      "id": 19,
+      "postId": 16,
+      "url": "https://res.cloudinary.com/dkm0ahny1/image/upload/v1760514636/1674_rycsy2.avif",
+      "caption": null,
+      "credit": null,
+      "createdAt": "2025-10-15T09:35:48.000Z",
+      "updatedAt": "2025-10-15T09:35:48.000Z"
+    },
+    {
+      "id": 20,
+      "postId": 17,
+      "url": "https://res.cloudinary.com/dkm0ahny1/image/upload/v1760514686/3446_y7ug8w.avif",
+      "caption": null,
+      "credit": null,
+      "createdAt": "2025-10-15T11:35:48.000Z",
+      "updatedAt": "2025-10-15T11:35:48.000Z"
+    },
+    {
+      "id": 21,
+      "postId": 18,
+      "url": "https://res.cloudinary.com/dkm0ahny1/image/upload/v1760514743/4_29a_DSCN6050.JPG_igpb27.webp",
+      "caption": null,
+      "credit": null,
+      "createdAt": "2025-10-15T13:35:48.000Z",
+      "updatedAt": "2025-10-15T13:35:48.000Z"
+    },
+    {
+      "id": 22,
+      "postId": 20,
+      "url": "https://res.cloudinary.com/dkm0ahny1/image/upload/v1760514821/R89eWC7KM9bXRF3XYNK9C4-1200-80.jpg_ekuahz.webp",
+      "caption": null,
+      "credit": null,
+      "createdAt": "2025-10-15T15:35:48.000Z",
+      "updatedAt": "2025-10-15T15:35:48.000Z"
+    },
+    {
+      "id": 24,
+      "postId": 22,
+      "url": "https://res.cloudinary.com/dkm0ahny1/image/upload/v1760515052/1668_lntrrb.avif",
+      "caption": null,
+      "credit": null,
+      "createdAt": "2025-10-15T09:57:07.000Z",
+      "updatedAt": "2025-10-15T09:57:07.000Z"
+    },
+    {
+      "id": 25,
+      "postId": 23,
+      "url": "https://res.cloudinary.com/dkm0ahny1/image/upload/v1760515127/Screenshot_2025-10-15_at_09.58.37_uqmvjn.png",
+      "caption": null,
+      "credit": null,
+      "createdAt": "2025-10-15T11:57:07.000Z",
+      "updatedAt": "2025-10-15T11:57:07.000Z"
+    },
+    {
+      "id": 26,
+      "postId": 24,
+      "url": "https://res.cloudinary.com/dkm0ahny1/image/upload/v1760515187/c40c293_sirius-fs-upload-1-jgrvomnoahmx-1746626561770-sipa-00836626-000004_yipluc.avif",
+      "caption": null,
+      "credit": null,
+      "createdAt": "2025-10-15T13:57:07.000Z",
+      "updatedAt": "2025-10-15T13:57:07.000Z"
+    },
+    {
+      "id": 27,
+      "postId": 25,
+      "url": "https://res.cloudinary.com/dkm0ahny1/image/upload/v1760515245/Philippine_reef_dn9u2e.jpg",
+      "caption": null,
+      "credit": null,
+      "createdAt": "2025-10-15T15:57:07.000Z",
+      "updatedAt": "2025-10-15T15:57:07.000Z"
+    },
+    {
+      "id": 28,
+      "postId": 15,
+      "url": "https://res.cloudinary.com/dkm0ahny1/image/upload/v1760521771/Hesperides1_uksfrm.jpg",
+      "caption": null,
+      "credit": null,
+      "createdAt": "2025-10-15T17:57:07.000Z",
+      "updatedAt": "2025-10-15T17:57:07.000Z"
+    },
+    {
+      "id": 29,
+      "postId": 7,
+      "url": "https://res.cloudinary.com/dkm0ahny1/image/upload/v1760521864/9993DD0F-0E04-4C00-A56C6FFCCBC763DD_source_q77gxv.webp",
+      "caption": null,
+      "credit": null,
+      "createdAt": "2025-10-15T19:57:07.000Z",
+      "updatedAt": "2025-10-15T19:57:07.000Z"
+    },
+    {
+      "id": 30,
+      "postId": 19,
+      "url": "https://res.cloudinary.com/dkm0ahny1/image/upload/v1760521941/767716_imagen2_-voluntario-recogiendo-microplaisticos-en-playa-1.png_yvf9k4.png",
+      "caption": null,
+      "credit": null,
+      "createdAt": "2025-10-15T23:57:07.000Z",
+      "updatedAt": "2025-10-15T23:57:07.000Z"
+    }
+  ],
+  "posts": [
+    {
+      "id": 1,
+      "userId": 1,
+      "title": "Nuevo tiburón linterna y cangrejo porcelana descubiertos en el mar profundo frente a Australia",
+      "content": "En una expedición liderada por el CSIRO en 2022, se identificaron dos especies nuevas: un tiburón linterna de Australia Occidental (Etmopterus westraliensis) y un cangrejo porcelana (Porcellanella brevidentata). El tiburón fue hallado a unos 610 m de profundidad y el cangrejo vive en simbiosis con corales blandos.",
+      "credits": "https://www.csiro.au/en/news/All/Articles/2025/October/New-species-of-shark-and-crab",
+      "createdAt": "2025-10-14T09:44:06.000Z",
+      "updatedAt": "2025-10-14T09:44:06.000Z"
+    },
+    {
+      "id": 2,
+      "userId": 1,
+      "title": "Más de 800 nuevas especies marinas descubiertas por el Ocean Census",
+      "content": "El proyecto global Ocean Census anunció el descubrimiento de 866 nuevas especies marinas, incluidos tiburones, corales, esponjas, crustáceos y más, en profundidades que van de 1 a 4.990 metros.",
+      "credits": "https://oceancensus.org/press-release-the-ocean-census-discovers-over-800-new-marine-species/",
+      "createdAt": "2025-10-14T09:44:06.000Z",
+      "updatedAt": "2025-10-14T09:44:06.000Z"
+    },
+    {
+      "id": 3,
+      "userId": 1,
+      "title": "Extrañas formas de vida descubiertas en el cañón Mar del Plata: langostas rosadas y calamares translúcidos",
+      "content": "En el cañón submarino frente a Argentina, exploraciones ROV revelaron decenas de posibles especies nuevas, entre las cuales se observan langostas de color pastel, calamares de apariencia inusual y otras criaturas abisales.",
+      "credits": "https://www.scientificamerican.com/article/strange-deep-sea-animals-discovered-in-underwater-argentine-canyon/",
+      "createdAt": "2025-10-14T09:44:06.000Z",
+      "updatedAt": "2025-10-14T09:44:06.000Z"
+    },
+    {
+      "id": 4,
+      "userId": 1,
+      "title": "La limática más profunda descrita hasta ahora: Bathylepeta wadatsumi",
+      "content": "Se descubrió una nueva especie de limática (molusco) viviendo a 5.922 metros de profundidad en el Pacífico noroeste. Este hallazgo marca el récord de la limática verdadera que más profundo se ha registrado hasta la fecha.",
+      "credits": "https://en.wikipedia.org/wiki/Bathylepeta_wadatsumi",
+      "createdAt": "2025-10-14T09:44:06.000Z",
+      "updatedAt": "2025-10-14T09:44:06.000Z"
+    },
+    {
+      "id": 5,
+      "userId": 1,
+      "title": "Esponjas, corales y decenas de especies nuevas descubiertas en Mar del Plata con tecnología de punta",
+      "content": "En una investigación con tecnología avanzada en el cañón de Mar del Plata, científicos sospechan haber encontrado más de 40 especies nuevas — incluyendo coral rojo del género Anthomastus, esponjas, equinodermos y otros organismos de aguas profundas.",
+      "credits": "https://schmidtocean.org/first-high-tech-exploration-of-argentinas-mar-del-plata-canyon-inspires-millions/",
+      "createdAt": "2025-10-14T09:44:06.000Z",
+      "updatedAt": "2025-10-14T09:44:06.000Z"
+    },
+    {
+      "id": 6,
+      "userId": 1,
+      "title": "Oasis quimiosintéticos hallados en lo profundo del Pacífico",
+      "content": "En las fosas de Kuril-Kamchatka y Aleutianas, un equipo científico ha descubierto ecosistemas vivos basados en quimiosíntesis hasta los 9.533 metros de profundidad. Estas comunidades, que incluyen gusanos tubícolas, almejas blancas y otros organismos, se alimentan de químicos como sulfuros e hidrocarburos, en ausencia total de luz.",
+      "credits": "https://www.reuters.com/business/environment/vibrant-oasis-chemical-eating-creatures-found-deep-pacific-2025-07-30/",
+      "createdAt": "2025-10-14T09:44:06.000Z",
+      "updatedAt": "2025-10-14T09:44:06.000Z"
+    },
+    {
+      "id": 7,
+      "userId": 1,
+      "title": "Conexiones evolutivas globales entre ecosistemas marinos profundos mediante “autopistas” del fondo oceánico",
+      "content": "Un estudio que analizó estrellas frágiles (“brittle stars”) recolectadas en todo el mundo —desde latitudes tropicales a polares, y desde aguas poco profundas hasta más de 3.500 metros de profundidad— detectó que especies muy distantes tienen parentescos cercanos. Esto sugiere que hay corrientes oceánicas profundas que actúan como vías de dispersión evolutiva que conectan ecosistemas marinos globales.",
+      "credits": "https://www.theguardian.com/environment/2025/jul/24/ancient-alien-brittle-stars-linked-to-relatives-across-the-globe-by-a-deep-sea-evolutionary-superhighway",
+      "createdAt": "2025-10-14T09:44:06.000Z",
+      "updatedAt": "2025-10-14T09:44:06.000Z"
+    },
+    {
+      "id": 8,
+      "userId": 1,
+      "title": "Zona hadal de la Fosa de las Marianas: diversidad microbiológica extraordinaria",
+      "content": "Proyecto MEER revela que en la zona hadal (más de 6.000 metros de profundidad) de la Fosa de las Marianas existe una biodiversidad microbiana enorme e inexplorada. Se identificaron miles de genomas nuevos, en su mayoría desconocidos hasta ahora, con adaptaciones genéticas para resistir presiones extremas, temperaturas bajas y escasez de nutrientes.",
+      "credits": "https://astrobiology.com/2025/03/life-thrives-in-the-deepest-ocean-new-discoveries-from-the-mariana-trench.html",
+      "createdAt": "2025-10-14T09:44:06.000Z",
+      "updatedAt": "2025-10-14T09:44:06.000Z"
+    },
+    {
+      "id": 9,
+      "userId": 1,
+      "title": "El calentamiento de los océanos de Nueva Zelanda va 34 % más rápido que la media global",
+      "content": "Un informe del Ministerio de Medio Ambiente de Nueva Zelanda muestra que las aguas oceánicas en esa región se están calentando a un ritmo un 34 % superior al promedio global. Esto provoca cambios en corrientes oceánicas, ecosistemas costeros y marinos, y supone riesgos para hábitats, especies, industrias pesqueras y comunidades costeras.",
+      "credits": "https://www.theguardian.com/world/2025/oct/08/new-zealand-oceans-warming-34-per-cent-faster-than-global-average?utm_source=chatgpt.com",
+      "createdAt": "2025-10-14T09:44:06.000Z",
+      "updatedAt": "2025-10-14T09:44:06.000Z"
+    },
+    {
+      "id": 10,
+      "userId": 1,
+      "title": "Expedición CONTRASTS: nuevos datos sobre derretimiento del hielo en el Ártico y efectos sobre ecosistemas marinos",
+      "content": "La expedición Contrasts (julio-septiembre 2025) estudió hielos marinos de diferentes tipos (nuevo, multianual) en el Ártico Central para entender mejor cómo responden estos hielos al cambio climático, y cómo ese cambio afecta los ecosistemas marinos que dependen de ellos, incluyendo especies adaptadas al hielo, corrientes, nutrientes y redes tróficas.",
+      "credits": "https://en.wikipedia.org/wiki/CONTRASTS_Expedition",
+      "createdAt": "2025-10-14T09:44:06.000Z",
+      "updatedAt": "2025-10-14T09:44:06.000Z"
+    },
+    {
+      "id": 11,
+      "userId": 1,
+      "title": "Miles de especies microbianas halladas en la región más profunda del océano (Fosa de las Marianas)",
+      "content": "En una serie de 33 inmersiones realizadas por el sumergible Fendouzhe, investigadores recolectaron muestras de sedimentos y agua en profundidades entre 6.000 y 10.900 metros en la Fosa de las Marianas. Identificaron unas 7.564 especies microbianas, de las cuales ~89,4 % no habían sido reportadas previamente, incluyendo virus y procariontes con adaptaciones genéticas para resistir alta presión, temperaturas bajísimas y escasez de nutrientes.",
+      "credits": "https://phys.org/news/2025-03-mariana-trench-lifeforms-flourishing-deep.html",
+      "createdAt": "2025-10-14T09:44:06.000Z",
+      "updatedAt": "2025-10-14T09:44:06.000Z"
+    },
+    {
+      "id": 12,
+      "userId": 1,
+      "title": "Submarino Alvin mejora para alcanzar profundidades nunca antes exploradas por él (~6.500 metros)",
+      "content": "El ya legendario vehículo habitado Alvin ha sido sometido a una mejora significativa que le permite ahora alcanzar los 6.500 metros de profundidad, superando su límite anterior de aproximadamente 4.500 metros. Esto aumenta enormemente el rango del fondo oceánico que puede ser observado directamente por seres humanos, lo que abre nuevas oportunidades para explorar hábitats, geología y biología profunda que antes estaban fuera de alcance.",
+      "credits": "https://phys.org/news/2025-02-alvin-ocean-depths.html",
+      "createdAt": "2025-10-14T09:44:06.000Z",
+      "updatedAt": "2025-10-14T09:44:06.000Z"
+    },
+    {
+      "id": 13,
+      "userId": 1,
+      "title": "Cuatro nuevos montes submarinos descubiertos en aguas internacionales entre Costa Rica y Chile",
+      "content": "Durante un tránsito de mapeo realizado por el buque Falkor (too) del Schmidt Ocean Institute, se identificaron cuatro montes submarinos en aguas internacionales, con alturas que varían entre los ~1.591 metros hasta ~2.681 metros, siendo el más grande de ellos de 2.681 metros de altura, y localizado a ~1.150 metros bajo la superficie del mar.",
+      "credits": "https://schmidtocean.org/four-new-seamounts-discovered-in-the-high-seas/",
+      "createdAt": "2025-10-14T09:44:06.000Z",
+      "updatedAt": "2025-10-14T09:44:06.000Z"
+    },
+    {
+      "id": 14,
+      "userId": 1,
+      "title": "Mapeo de cientos de cañones submarinos antárticos para entender el cambio climático",
+      "content": "Científicos de la Universidad de Barcelona y del University College Cork han cartografiado 332 redes de cañones submarinos en la Antártida usando datos de batimetría de alta resolución. Algunos de estos cañones tienen profundidades mayores a 4.000 metros. Estos vallones tienen impacto sobre la circulación oceánica, el transporte de sedimentos, el comportamiento de las plataformas de hielo, y por tanto sobre dinámicas de cambio climático y elevación del nivel del mar.",
+      "credits": "https://www.theguardian.com/environment/2025/jul/31/scientists-map-antarctic-seafloor-canyons-to-help-predict-climate-change",
+      "createdAt": "2025-10-14T09:44:06.000Z",
+      "updatedAt": "2025-10-14T09:44:06.000Z"
+    },
+    {
+      "id": 15,
+      "userId": 1,
+      "title": "Red de interacciones microbianas del océano revelada más allá de la superficie",
+      "content": "Un estudio liderado por el Institut de Ciències del Mar (CSIC, Barcelona) mostró que las interacciones entre microorganismos oceánicos (bacterias, archaea, picoeucariotas) cambian mucho según la profundidad y la región geográfica. Se encontró que mientras algunas asociaciones microbianas son globales a ciertas profundidades, un alto porcentaje son específicas de regiones y profundidades, siendo las zonas profundas (como la bathipelágica) donde hay menos asociaciones globales y más particularidad regional.",
+      "credits": "https://www.sciencedaily.com/releases/2024/01/240113143637.htm",
+      "createdAt": "2025-10-14T09:44:06.000Z",
+      "updatedAt": "2025-10-14T09:44:06.000Z"
+    },
+    {
+      "id": 16,
+      "userId": 1,
+      "title": "Ondas de calor marinas cada vez más frecuentes en costas de Reino Unido e Irlanda",
+      "content": "Un estudio reciente indica que las olas de calor marinas (episodios donde la temperatura del mar se eleva mucho sobre lo normal) se han vuelto mucho más probables en las costas británicas e irlandesas. Por ejemplo, en el Mar de Irlanda (Celtic Sea) la probabilidad de tales eventos pasó de ~3,8 % en 1993 a ~13,8 %. Estos eventos afectan ecosistemas marinos, reproducción de especies, salud de algas, coral, etc.",
+      "credits": "https://www.theguardian.com/environment/2025/oct/07/marine-heatwaves-more-frequent-uk-irish-coasts-experts-say",
+      "createdAt": "2025-10-14T09:44:06.000Z",
+      "updatedAt": "2025-10-14T09:44:06.000Z"
+    },
+    {
+      "id": 17,
+      "userId": 1,
+      "title": "Acidez oceánica ha cruzado umbral crítico global para la vida marina",
+      "content": "Informe del Potsdam Institute for Climate Impact Research muestra que los océanos del mundo han superado un umbral crítico de acidez. Desde la era preindustrial, el pH del océano superficial ha bajado (~0,1 unidades), lo que implica ~30-40 % más acidez. Esto debilita organismos que necesitan carbonato de calcio (corales, conchas, esqueletos), y amenaza cadenas alimenticias marinas y ecosistemas costeros.",
+      "credits": "https://www.theguardian.com/environment/2025/sep/24/worlds-oceans-fail-key-health-check-as-acidity-crosses-critical-threshold-for-marine-life",
+      "createdAt": "2025-10-14T09:44:06.000Z",
+      "updatedAt": "2025-10-14T09:44:06.000Z"
+    },
+    {
+      "id": 18,
+      "userId": 1,
+      "title": "Microplásticos presentes en todas las profundidades del océano",
+      "content": "Estudio apoyado por la National Science Foundation muestra que microplásticos (fragmentos de plástico muy pequeños) no solo flotan en la superficie, sino que están presentes hasta en zonas abisales, incluso en la Fosa de las Marianas. Esto supone que la contaminación plástica se infiltra toda la cadena alimentaria marina, y podría tener impactos en especies, salud humana y economía pesquera.",
+      "credits": "https://www.nsf.gov/news/researchers-discover-microplastics-all-ocean-depths",
+      "createdAt": "2025-10-14T09:44:06.000Z",
+      "updatedAt": "2025-10-14T09:44:06.000Z"
+    },
+    {
+      "id": 19,
+      "userId": 2,
+      "title": "Riesgos para la salud humana vinculados a microplásticos costeros",
+      "content": "Investigaciones indican que personas que viven cerca de costas con niveles muy altos de microplásticos tienen mayores tasas de enfermedades metabólicas como diabetes tipo 2, enfermedades coronarias y accidentes cerebrovasculares, en comparación con quienes viven cerca de aguas menos contaminadas. Esto sugiere que la contaminación plástica no es solo ambiental, también un problema de salud pública.",
+      "credits": "https://newsroom.heart.org/news/living-near-an-ocean-polluted-by-microplastics-may-increase-cardiometabolic-disease-risk",
+      "createdAt": "2025-10-14T11:44:06.000Z",
+      "updatedAt": "2025-10-14T11:44:06.000Z"
+    },
+    {
+      "id": 20,
+      "userId": 1,
+      "title": "Temperaturas oceánicas globales afectan al 96 % de los mares con olas de calor extremas en 2023",
+      "content": "Un estudio publicado en Science encontró que durante 2023 el 96 % de los océanos experimentaron olas de calor extremas, más intensas y prolongadas que el promedio histórico. Estas condiciones alteran el ecosistema: coral, fauna marina, productividad primaria, etc.",
+      "credits": "https://www.livescience.com/planet-earth/rivers-oceans/96-percent-of-oceans-worldwide-experienced-extreme-heatwaves-in-2023-new-study-finds",
+      "createdAt": "2025-10-14T09:44:06.000Z",
+      "updatedAt": "2025-10-14T09:44:06.000Z"
+    },
+    {
+      "id": 22,
+      "userId": 1,
+      "title": "Olas de calor marinas gigantes en el sudeste asiático y el Pacífico",
+      "content": "En 2024, una ola de calor marino afectó ~40 millones de km² de océano en el Sudeste Asiático y Pacífico, un área cinco veces mayor que Australia. La anomalía térmica, junto con otros factores como acidificación y niveles elevados del mar, dañó ecosistemas como arrecifes de coral, y afectó tanto a la biodiversidad como a comunidades humanas costeras.",
+      "credits": "https://www.theguardian.com/environment/2025/jun/05/marine-heatwave-found-to-have-engulfed-area-of-ocean-five-times-the-size-of-australia",
+      "createdAt": "2025-10-14T09:44:06.000Z",
+      "updatedAt": "2025-10-14T09:44:06.000Z"
+    },
+    {
+      "id": 23,
+      "userId": 1,
+      "title": "Desplazamiento de poblaciones de atún en el Pacífico: impacto en Tuvalu y otras islas",
+      "content": "El calentamiento de los océanos está empujando las poblaciones de atún lejos de las aguas tradicionales de Tuvalu y otras naciones isleñas del Pacífico. Esto está reduciendo los capturas locales y afectando ingresos que dependen de las licencias de pesca, con proyecciones de pérdidas de hasta el 25 % de la pesca de atún para 2050 si continúa la tendencia.",
+      "credits": "https://www.washingtonpost.com/world/interactive/2025/pacific-tuna-climate-change-tuvalu/",
+      "createdAt": "2025-10-14T09:44:06.000Z",
+      "updatedAt": "2025-10-14T09:44:06.000Z"
+    },
+    {
+      "id": 24,
+      "userId": 1,
+      "title": "Partes del Ártico y Antártida alteradas por derretimiento de hielo y cambio de color del océano",
+      "content": "En regiones polares, el derretimiento del hielo marino está modificando la cantidad y tipo de luz que penetra en el océano. Con menos hielo reflejando la luz, más luz azul alcanza el agua, lo que está cambiando la comunidad de algas y fitoplancton. Esto puede afectar a toda la cadena alimenticia oceánica, así como al ciclo del carbono.",
+      "credits": "https://www.lemonde.fr/en/environment/article/2025/05/08/melting-sea-ice-alters-color-of-arctic-and-antarctic-oceans_6741053_114.html",
+      "createdAt": "2025-10-14T09:44:06.000Z",
+      "updatedAt": "2025-10-14T09:44:06.000Z"
+    },
+    {
+      "id": 25,
+      "userId": 2,
+      "title": "Los arrecifes de coral del Sudeste Asiático muy amenazados por pesca destructiva y contaminación costera",
+      "content": "En el Sudeste Asiático, más del 50 % de los arrecifes de coral están bajo amenaza alta o muy alta. Las causas principales incluyen sobrepesca, pesca destructiva (como con explosivos o cianuro), sedimentación por deforestación o actividades agrícolas y contaminación desde la tierra.",
+      "credits": "https://en.wikipedia.org/wiki/Southeast_Asian_coral_reefs",
+      "createdAt": "2025-10-14T11:44:06.000Z",
+      "updatedAt": "2025-10-14T11:44:06.000Z"
+    },
+    {
+      "id": 28,
+      "userId": 4,
+      "title": "Argentina explora el abismo: una expedición submarina que cautiva al mundo",
+      "content": "Científicos del CONICET y el Schmidt Ocean Institute están explorando el cañón submarino de Mar del Plata, en el Atlántico Sur, a más de 3900 metros de profundidad. La misión, llamada Underwater Oases of Mar del Plata Canyon, se transmite en vivo por YouTube y ya ha reunido a miles de espectadores curiosos por descubrir los secretos del océano argentino.\n\nA bordo del buque Falkor, los investigadores utilizan el robot submarino SuBastian para capturar imágenes, videos y muestras biológicas del fondo marino. Gracias a esta tecnología, están identificando nuevas especies —como esponjas carnívoras y rayas de aguas profundas— y conociendo ecosistemas nunca antes vistos.\n\nLa expedición no solo marca un avance científico histórico, sino que también está inspirando vocaciones. Desde escuelas de Chubut hasta curiosos de todo el mundo, miles de personas siguen las transmisiones en directo, recordándonos que “no se puede conservar lo que no se conoce”.\n\nUna mirada al abismo, un paso hacia el futuro de la ciencia marina.",
+      "credits": "https://elpais.com/america-futura/2025-08-01/la-expedicion-submarina-argentina-que-se-ha-hecho-viral-con-sus-transmisiones-en-vivo.html",
+      "createdAt": "2025-10-14T16:39:46.000Z",
+      "updatedAt": "2025-10-14T16:39:46.000Z"
+    },
+    {
+      "id": 29,
+      "userId": 4,
+      "title": "Expedición Alrededor de África (OceanX + OceanQuest)",
+      "content": "Entre enero y abril, un equipo internacional de 69 científicos de 31 países llevó a cabo una gran expedición marina llamada “Alrededor de África”, destinada a explorar el fondo del océano en zonas clave del continente, desde el Canal de Mozambique hasta Cabo Verde y las Islas Canarias.\n\nA bordo del OceanXplorer, un buque de investigación de última generación, los científicos realizaron inmersiones profundas con robots submarinos y vehículos tripulados, cartografiando más de 150.000 km² de fondo marino. Durante el recorrido recogieron muestras biológicas, geológicas y de ADN, además de estudiar las corrientes oceánicas, los ecosistemas profundos y los microorganismos marinos que habitan en estas regiones prácticamente inexploradas.\n\nLa importancia de esta expedición va mucho más allá de la exploración: los datos obtenidos permitirán proteger la biodiversidad marina, mejorar la gestión pesquera y comprender mejor el impacto del cambio climático. Además, refuerza el papel de África como protagonista en la investigación oceánica, fomentando la cooperación científica internacional.\n\nLa misión también tuvo un fuerte componente educativo. Más de 300 estudiantes, profesores y jóvenes científicos africanos participaron en programas de formación práctica a bordo del buque, aprendiendo sobre oceanografía, cartografía submarina y análisis genético. De este modo, la expedición no solo generó conocimiento, sino también nuevas vocaciones científicas.\n\nEntre los colaboradores se encuentran instituciones africanas como el Instituto do Mar de Cabo Verde y la Universidad de Ciudad del Cabo, junto a organizaciones internacionales como la NASA, la NOAA y el centro alemán GEOMAR, entre muchas otras.\n\nAhora comienza una nueva fase centrada en el análisis de todos los datos obtenidos, cuyo objetivo es impulsar nuevas políticas medioambientales, estrategias de conservación marina y fortalecer el liderazgo africano en la ciencia oceánica. Esta misión marca un antes y un después en la exploración de los mares africanos y abre una puerta a una nueva era de conocimiento y cooperación global.",
+      "credits": "https://oceandecade.org/es/news/oceanx-and-oceanquest-conclude-seminal-around-africa-expedition/",
+      "createdAt": "2025-10-14T16:50:58.000Z",
+      "updatedAt": "2025-10-14T16:50:58.000Z"
+    },
+    {
+      "id": 73,
+      "userId": 2,
+      "title": "El Gran Agujero Azul de Belice: la joya submarina del Caribe",
+      "content": "En la costa de Belice, cerca del arrecife Lighthouse, se esconde una de las maravillas naturales más impresionantes del planeta: el Gran Agujero Azul. Este enorme círculo de color azul profundo, perfectamente delineado, mide unos 300 metros de ancho y alcanza una profundidad de 123 metros.\n\nSu origen se remonta a la época glacial, cuando el nivel del mar era mucho más bajo y la zona formaba parte de un sistema de cuevas de roca caliza. Al finalizar la Edad de Hielo, el aumento del nivel del mar inundó esas cuevas, provocando el colapso de sus techos y dando lugar a este espectacular sumidero natural.\n\nHoy, en sus profundidades habitan peces tropicales, tiburones, esponjas y corales, lo que lo convierte en un paraíso para los buceadores y en uno de los lugares más icónicos del mundo submarino. Además, forma parte del Patrimonio de la Humanidad de la UNESCO, un título bien merecido para esta joya azul en el corazón del Caribe.",
+      "credits": "https://quo.eldiario.es/naturaleza/g38829/los-10-paisajes-oceanicos-mas-bellos-del-mundo",
+      "createdAt": "2025-10-15T09:30:56.000Z",
+      "updatedAt": "2025-10-15T09:30:57.000Z"
+    },
+    {
+      "id": 74,
+      "userId": 4,
+      "title": "Malé, la diminuta capital que flota entre el lujo y la sobrepoblación",
+      "content": "Malé, la capital de Maldivas, es una de las ciudades más curiosas del planeta. Con apenas dos kilómetros de ancho y uno de largo, es el hogar de unas 100.000 personas, lo que la convierte en una de las islas más densamente pobladas del mundo.\n\nSituada en el atolón Kaafu, la ciudad ha crecido hasta ocupar prácticamente cada rincón disponible: edificios, carreteras y puertos cubren toda su superficie. Su energía depende de generadores diésel, y los residuos se trasladan a otras islas cercanas, lo que refleja los desafíos de vivir en un paraíso diminuto.\n\nUn contraste fascinante entre el turismo de lujo y la vida real de quienes habitan en el corazón de Maldivas.",
+      "credits": "https://quo.eldiario.es/naturaleza/g38829/los-10-paisajes-oceanicos-mas-bellos-del-mundo",
+      "createdAt": "2025-10-15T07:35:48.000Z",
+      "updatedAt": "2025-10-15T07:35:48.000Z"
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "username": "admin",
+      "firstname": "Admin",
+      "lastname": "User",
+      "email": "admin@example.com",
+      "password": "$2b$10$1dcLPKD33f6bpMioLJNNoOsS3xAiRuIM9t49nUaPdkZeuOlZ4GLbK",
+      "role": "admin",
+      "img": "https://res.cloudinary.com/dkm0ahny1/image/upload/v1760485034/bo0ny7dwp79n8xaweysr.png",
+      "createdAt": "2025-10-14T09:44:06.000Z",
+      "updatedAt": "2025-10-14T23:37:14.000Z"
+    },
+    {
+      "id": 2,
+      "username": "irina",
+      "firstname": "Irina",
+      "lastname": "Tiron",
+      "email": "irinatiron16@gmail.com",
+      "password": "$2b$10$1dcLPKD33f6bpMioLJNNoOsS3xAiRuIM9t49nUaPdkZeuOlZ4GLbK",
+      "role": "admin",
+      "img": "https://res.cloudinary.com/dkm0ahny1/image/upload/v1760090090/irina_fvp1m3.png",
+      "createdAt": "2025-10-14T09:44:06.000Z",
+      "updatedAt": "2025-10-14T09:44:06.000Z"
+    },
+    {
+      "id": 4,
+      "username": "Ady",
+      "firstname": "aday",
+      "lastname": "alvarez",
+      "email": "aday.alvarez84@gmail.com",
+      "password": "$2b$10$fN0IKR0UF/.c1sz104NmLO3VfT98h0R3qQzkiUOe1F07XSxrAARe2",
+      "role": "user",
+      "img": "https://res.cloudinary.com/dkm0ahny1/image/upload/v1760448337/y944t0m2mt5wsk00difo.png",
+      "createdAt": "2025-10-14T13:25:19.000Z",
+      "updatedAt": "2025-10-14T13:25:37.000Z"
+    }
+  ]
+}

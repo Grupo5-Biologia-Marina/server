@@ -61,7 +61,6 @@ UserModel.init(
   }
 );
 
-//  Asociación con likes
 UserModel.hasMany(LikeModel, {
   foreignKey: "userId",
   as: "likes",
