@@ -149,7 +149,7 @@ module.exports = {
                 updatedAt: new Date(),
             },
             {
-                userId: 1,
+                userId: 2,
                 title: "Riesgos para la salud humana vinculados a microplásticos costeros",
                 content: "Investigaciones indican que personas que viven cerca de costas con niveles muy altos de microplásticos tienen mayores tasas de enfermedades metabólicas como diabetes tipo 2, enfermedades coronarias y accidentes cerebrovasculares, en comparación con quienes viven cerca de aguas menos contaminadas. Esto sugiere que la contaminación plástica no es solo ambiental, también un problema de salud pública.",
                 credits: "https://newsroom.heart.org/news/living-near-an-ocean-polluted-by-microplastics-may-increase-cardiometabolic-disease-risk",
@@ -197,7 +197,7 @@ module.exports = {
                 updatedAt: new Date(),
             },
             {
-                userId: 1,
+                userId: 2,
                 title: "Los arrecifes de coral del Sudeste Asiático muy amenazados por pesca destructiva y contaminación costera",
                 content: "En el Sudeste Asiático, más del 50 % de los arrecifes de coral están bajo amenaza alta o muy alta. Las causas principales incluyen sobrepesca, pesca destructiva (como con explosivos o cianuro), sedimentación por deforestación o actividades agrícolas y contaminación desde la tierra.",
                 credits: "https://en.wikipedia.org/wiki/Southeast_Asian_coral_reefs",
