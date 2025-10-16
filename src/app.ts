@@ -6,7 +6,8 @@ import db_connection from "./database/db_connection";
 import authRoutes from "./routes/authRoutes";
 import userRoutes from "./routes/userRoutes";
 import postRoutes from "./routes/postRoutes";          
-import postImagesRouter from "./routes/postImages";    
+import postImagesRouter from "./routes/postImages";  
+import likeRoutes from "./routes/likeRoutes";  
 
 dotenv.config();
 
@@ -35,5 +36,6 @@ app.use("/auth", authRoutes);
 app.use("/users", userRoutes);  
 app.use("/api/posts", postRoutes);         
 app.use("/api/posts", postImagesRouter);
+app.use("/api/posts", likeRoutes);
 
 export { app };
