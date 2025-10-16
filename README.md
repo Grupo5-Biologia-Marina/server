@@ -376,6 +376,16 @@ EMAIL_APP_PASS=xvlotowcpiojllfa
 FRONTEND_URL=http://localhost:5173
 ```
 
+---
+## ⭐️ Funcionalidades extra
+
+### Subida de imágenes mediante Cloudinary
+
+<img src="src/assets/cloudinary.png" alt="Cloudinary desktop" width="400"/>
+
+### Email de bienvenida al registrarse con Nodemailer
+
+<img src="src/assets/nodemailer.png" alt="Email bienvenida" width="300"/>
 
 ---
 ## 👩🏻‍💻​ Creadoras
