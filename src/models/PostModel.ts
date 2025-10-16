@@ -99,7 +99,6 @@ CategoryModel.belongsToMany(PostModel, {
   timestamps: false,
 });
 
-// ❤️ Nueva relación con likes
 PostModel.hasMany(LikeModel, {
   foreignKey: "postId",
   as: "likes",

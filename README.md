@@ -30,6 +30,7 @@ server/
 │ ├── controllers/                          # Controladores de la lógica de negocio
 │ │   ├── AuthController.ts  
 │ │   ├── CategoryController.ts  
+│ │   ├── LikeController.ts  
 │ │   ├── PostController.ts  
 │ │   ├── PostImagesController.ts  
 │ │   └── UserController.ts        
@@ -55,6 +56,8 @@ server/
 │ │   └── UserModel.ts
 │ ├── routes/                               # Definición de rutas
 │ │   ├── authRoutes.ts
+│ │   ├── backupRoutes.ts
+│ │   ├── likeRoutes.ts
 │ │   ├── postImagesRoutes.ts 
 │ │   ├── postRoutes.ts
 │ │   └── userRoutes.ts
@@ -62,7 +65,9 @@ server/
 │ │   ├── 001-admin-user.js
 │ │   ├── 002-categories.js 
 │ │   ├── 003-admin-posts.js
-│ │   └── 004-admin-posts-categories.js
+│ │   ├── 004-admin-posts-categories.js
+│ │   ├── 005-admin-posts-img.js
+│ │   └── 006-admin-likes.js
 │ ├── tests/                                # Tests unitarios/integración
 │ │   ├── auth.test.ts
 │ │   └── posts.test.ts 
@@ -81,6 +86,7 @@ server/
 ├── .env.example                            # Modelo de .env
 ├── .gitignore                              # Archivos que no se suben a GitHub
 ├── .sequelizerc                            # Configuración Sequelize
+├── backup_railway.json                     # Copia de seguridad
 ├── docker-compose.yml                      # Configuración Docker
 ├── jest.config.js                          # Configuración Jest
 ├── lastdiscover_local.sql                  # Dump de la base de datos local para subir a Railway
@@ -187,8 +193,14 @@ server/
 - `DELETE /posts/:id` (admin o user autentificado autor) → eliminar post.  
 
 ### Images
-
 - `POST /:postId/images` → añadir una imagen a un post. 
+
+### Likes
+- `GET /posts/:id/likes` → recoge los likes.  
+- `POST /posts/:id/likes` → dar o quitar like 
+
+### Backup de la base de datos
+- `GET /backup` → al ejecutarse se crea un archivo json con los datos que están almacenados en Railway .  
 
 ---
 
@@ -260,10 +272,10 @@ npm install
     ```
     DB_NAME=lastdiscover_local
     DB_PORT=3306
-    DB_USER=appuser
-    DB_PASSWORD=password
-    DB_HOST=127.0.0.1
-    JWT_SECRET=supersecret
+    USER_DB=appuser
+    PASSWORD_DB=password
+    HOST=127.0.0.1
+    DB_DIALECT=mysql
     ```
 3. Ejecutar las migraciones y seeds:
     ```
@@ -364,6 +376,16 @@ EMAIL_APP_PASS=xvlotowcpiojllfa
 FRONTEND_URL=http://localhost:5173
 ```
 
+---
+## ⭐️ Funcionalidades extra
+
+### Subida de imágenes mediante Cloudinary
+
+<img src="src/assets/cloudinary.png" alt="Cloudinary desktop" width="400"/>
+
+### Email de bienvenida al registrarse con Nodemailer
+
+<img src="src/assets/nodemailer.png" alt="Email bienvenida" width="300"/>
 
 ---
 ## 👩🏻‍💻​ Creadoras

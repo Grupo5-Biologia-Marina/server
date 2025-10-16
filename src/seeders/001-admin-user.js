@@ -13,6 +13,7 @@ module.exports = {
         email: 'admin@example.com',
         password: passwordHash,
         role: 'admin',
+        img: 'https://res.cloudinary.com/dkm0ahny1/image/upload/v1760485034/bo0ny7dwp79n8xaweysr.png',
         createdAt: new Date(),
         updatedAt: new Date(),
       },

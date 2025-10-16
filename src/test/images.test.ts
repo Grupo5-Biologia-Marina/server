@@ -1,11 +1,9 @@
 import PostImageModel from '../models/PostImageModel';
 import PostModel from '../models/PostModel';
 
-// ===================== MOCKS =====================
 jest.mock('../models/PostImageModel');
 jest.mock('../models/PostModel');
 
-// ===================== CLOUDINARY IMAGES TESTS =====================
 describe('PostImageController - Cloudinary Integration (7 test cases)', () => {
   beforeEach(() => {
     jest.clearAllMocks();

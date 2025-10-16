@@ -1,11 +1,9 @@
 import LikeModel from '../models/LikeModel';
 import PostModel from '../models/PostModel';
 
-// ===================== MOCKS =====================
 jest.mock('../models/LikeModel');
 jest.mock('../models/PostModel');
 
-// ===================== LIKES TESTS =====================
 describe('LikesController (6 test cases)', () => {
   beforeEach(() => {
     jest.clearAllMocks();

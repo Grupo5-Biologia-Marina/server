@@ -23,7 +23,6 @@ export const registerUser = async (req: Request, res: Response): Promise<void> =
       return;
     }
 
-
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(email)) {
       res.status(400).json({ 
@@ -121,7 +120,6 @@ export const loginUser = async (req: Request, res: Response): Promise<void> => {
       return;
     }
 
-   
     const isMatch = await bcrypt.compare(password, user.password);
 
     if (!isMatch) {
@@ -132,7 +130,6 @@ export const loginUser = async (req: Request, res: Response): Promise<void> => {
       return;
     }
 
-    // Generar token JWT
     const token = jwt.sign(
       { id: user.id, role: user.role, username: user.username },
       process.env.JWT_SECRET || "defaultsecret",

@@ -88,7 +88,6 @@ describe('AuthController - Register (6 test cases)', () => {
   it('✅ should fail if required fields are missing', async () => {
     req = mockRequest({
       username: 'testuser',
-      // Missing email and password
     });
 
     await registerUser(req as Request, res as Response);

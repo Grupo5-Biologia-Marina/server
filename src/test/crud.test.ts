@@ -105,7 +105,7 @@ const createTestApp = () => {
     });
   });
 
-  // GET /api/discoveries/:id - Obtener descubrimiento por ID
+
   app.get('/api/discoveries/:id', (req, res) => {
     const id = parseInt(req.params.id);
     
@@ -122,7 +122,6 @@ const createTestApp = () => {
     res.status(200).json(discovery);
   });
 
-  // PUT /api/discoveries/:id - Actualizar descubrimiento
   app.put('/api/discoveries/:id', (req, res) => {
     const id = parseInt(req.params.id);
     
@@ -142,7 +141,6 @@ const createTestApp = () => {
 
     const { title, description, location } = req.body;
 
-    // Validar título si se está actualizando
     if (title !== undefined) {
       if (title.trim() === '') {
         return res.status(400).json({ error: 'El título no puede estar vacío' });
@@ -152,17 +150,15 @@ const createTestApp = () => {
       }
     }
 
-    // Actualizar discovery
     mockDiscoveries[discoveryIndex] = {
       ...mockDiscoveries[discoveryIndex],
       ...req.body,
-      id // Mantener el ID original
+      id 
     };
 
     res.status(200).json(mockDiscoveries[discoveryIndex]);
   });
 
-  // DELETE /api/discoveries/:id - Eliminar descubrimiento
   app.delete('/api/discoveries/:id', (req, res) => {
     const id = parseInt(req.params.id);
     
@@ -246,7 +242,6 @@ describe('Discoveries CRUD Tests', () => {
     });
 
     it('debería devolver un array vacío si no hay descubrimientos', async () => {
-      // Resetear la app para tener datos vacíos
       const emptyApp = express();
       emptyApp.use(express.json());
       emptyApp.get('/api/discoveries', (req, res) => {
@@ -325,7 +320,6 @@ describe('Discoveries CRUD Tests', () => {
         .delete('/api/discoveries/1')
         .expect(200);
 
-      // Verificar que ya no existe
       await request(app)
         .get('/api/discoveries/1')
         .expect(404);

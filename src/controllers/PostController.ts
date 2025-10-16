@@ -2,8 +2,6 @@ import { Request, Response } from 'express';
 import PostModel from '../models/PostModel';
 import { AuthenticatedRequest } from '../types/auth';
 import { PostCreateInput, PostOutput, ApiResponse } from '../types/posts';
-import cloudinary from '../utils/cloudinary';
-import db_connection from '../database/db_connection';
 import CategoryModel from '../models/CategoryModel';
 import PostImageModel from '../models/PostImageModel';
 import UserModel from '../models/UserModel';
@@ -18,14 +16,12 @@ export const createPost = async (req: AuthenticatedRequest, res: Response): Prom
 
     const postData: PostCreateInput = req.body;
 
-    // ✅ Extraer las propiedades de postData
     const { userId, title, content, credits, categories, images } = postData;
 
-    // 1️⃣ Crear post principal
+
     const post = await PostModel.create({ userId, title, content, credits });
     const postId = post.id;
 
-    // 2️⃣ Asociar categorías usando Sequelize (buscar por nombre)
     if (Array.isArray(categories) && categories.length > 0) {
       const categoryInstances = await CategoryModel.findAll({
         where: {
@@ -39,14 +35,12 @@ export const createPost = async (req: AuthenticatedRequest, res: Response): Prom
       }
     }
 
-    // 3️⃣ Guardar imágenes (tabla post_images)
     if (Array.isArray(images) && images.length > 0) {
       for (const imageUrl of images) {
         await PostImageModel.create({ postId, url: imageUrl });
       }
     }
 
-    // 4️⃣ Obtener el post completo con relaciones
     const fullPost = await PostModel.findByPk(postId, {
       include: [
         {
@@ -66,7 +60,6 @@ export const createPost = async (req: AuthenticatedRequest, res: Response): Prom
       ]
     });
 
-    // ✅ Respuesta
     const response: ApiResponse<any> = {
       success: true,
       data: fullPost?.toJSON(),
@@ -95,7 +88,6 @@ export const createPost = async (req: AuthenticatedRequest, res: Response): Prom
 
 export const getPosts = async (req: Request, res: Response): Promise<void> => {
   try {
-    // 🔍 Obtener posts con categorías, imágenes y usuario
     const posts = await PostModel.findAll({
       include: [
         {
@@ -186,7 +178,6 @@ export const getPostById = async (req: Request, res: Response): Promise<void> =>
   }
 };
 
-// GET ver posts por UserId
 export const getPostsByUserId = async (req: Request, res: Response): Promise<void> => {
   try {
     const { userId } = req.params;
@@ -232,7 +223,6 @@ export const deletePost = async (req: AuthenticatedRequest, res: Response): Prom
       return;
     }
 
-    // Admin puede borrar cualquier post, user solo el suyo
     if (req.user.role !== 'admin' && post.userId !== Number(req.user.id)) {
       res.status(403).json({ success: false, message: 'Forbidden: no puedes borrar este post' });
       return;
@@ -274,7 +264,6 @@ export const updatePost = async (req: AuthenticatedRequest, res: Response): Prom
       return;
     }
 
-    // Admin puede actualizar cualquier post, user solo el suyo
     if (req.user.role !== 'admin' && post.userId !== +req.user.id) {
       res.status(403).json({ success: false, message: 'Forbidden: no puedes actualizar este post' });
       return;
@@ -285,7 +274,6 @@ export const updatePost = async (req: AuthenticatedRequest, res: Response): Prom
 
     console.log('📦 Datos recibidos para actualizar:', { title, content, credits, categories, images });
 
-    // 1️⃣ Actualizar datos básicos del post (solo si se envían)
     const updateFields: any = {};
     if (title !== undefined) updateFields.title = title;
     if (content !== undefined) updateFields.content = content;
@@ -295,7 +283,6 @@ export const updatePost = async (req: AuthenticatedRequest, res: Response): Prom
       await post.update(updateFields);
     }
 
-    // 2️⃣ Actualizar categorías (siempre si se envían)
     if (categories !== undefined && Array.isArray(categories)) {
       console.log('📂 Actualizando categorías:', categories);
 
@@ -311,24 +298,20 @@ export const updatePost = async (req: AuthenticatedRequest, res: Response): Prom
         // @ts-ignore - Sequelize adds this method automatically
         await post.setCategories(categoryInstances);
       } else {
-        // Si se envía array vacío, eliminar todas las categorías
         // @ts-ignore
         await post.setCategories([]);
       }
     }
 
-    // 3️⃣ Actualizar imágenes (siempre si se envían)
     if (images !== undefined && Array.isArray(images)) {
       console.log('🖼️ Actualizando imágenes. Total:', images.length);
 
-      // Eliminar TODAS las imágenes antiguas primero
       const deletedCount = await PostImageModel.destroy({
         where: { postId: Number(id) }
       });
 
       console.log('🗑️ Imágenes eliminadas:', deletedCount);
 
-      // Crear las nuevas imágenes (si hay)
       if (images.length > 0) {
         for (const imageUrl of images) {
           await PostImageModel.create({
@@ -340,7 +323,6 @@ export const updatePost = async (req: AuthenticatedRequest, res: Response): Prom
       }
     }
 
-    // 4️⃣ Obtener el post actualizado con todas sus relaciones
     const updatedPost = await PostModel.findByPk(id, {
       include: [
         {

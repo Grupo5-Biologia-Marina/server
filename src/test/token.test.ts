@@ -4,7 +4,6 @@ import bcrypt from 'bcrypt';
 import { registerUser, loginUser } from '../controllers/AuthController';
 import UserModel from '../models/UserModel';
 
-// ===================== MOCKS =====================
 jest.mock('../models/UserModel');
 jest.mock('bcrypt');
 jest.mock('jsonwebtoken');
@@ -29,7 +28,6 @@ const mockRequest = (data?: any): Partial<Request> => {
   };
 };
 
-// ===================== JWT TOKEN TESTS =====================
 describe('JWT Token Generation (2 test cases)', () => {
   let req: Partial<Request>;
   let res: Partial<Response>;

@@ -1,0 +1,208 @@
+'use strict';
+
+module.exports = {
+  async up(queryInterface, Sequelize) {
+    const postImages = [
+      {
+        postId: 1,
+        url: "https://res.cloudinary.com/dkm0ahny1/image/upload/v1760511058/IN2022V09New-speciesPorcelain-crab-Porcellanella-brevidentataCSIROCindy-Bessey_mvfyax.jpg",
+        caption: null,
+        credit: null,
+        createdAt: new Date(),
+        updatedAt: new Date(),
+      },
+      {
+        postId: 2,
+        url: "https://res.cloudinary.com/dkm0ahny1/image/upload/v1760510623/2-Guitar-Shark_Rhinobatos-sp.-The-Nippon-Foundation-Nekton-Ocean-Census-_-Sergey-Bogorodsky-_-2025_pychlz.jpg",
+        caption: null,
+        credit: null,
+        createdAt: new Date(),
+        updatedAt: new Date(),
+      },
+      {
+        postId: 3,
+        url: "https://res.cloudinary.com/dkm0ahny1/image/upload/v1760511175/glass-squid_oxevif.webp",
+        caption: null,
+        credit: null,
+        createdAt: new Date(),
+        updatedAt: new Date(),
+      },
+      {
+        postId: 4,
+        url: "https://res.cloudinary.com/dkm0ahny1/image/upload/v1760511265/Bathylepeta_wadatsumi_2_ilwnhw.jpg",
+        caption: null,
+        credit: null,
+        createdAt: new Date(),
+        updatedAt: new Date(),
+      },
+      {
+        postId: 5,
+        url: "https://res.cloudinary.com/dkm0ahny1/image/upload/v1760511358/FKt250712-S0812-20250726T182941Z-340-scicam-PatrickStar-scaled_vy5hkq.jpg",
+        caption: null,
+        credit: null,
+        createdAt: new Date(),
+        updatedAt: new Date(),
+      },
+      {
+        postId: 6,
+        url: "https://res.cloudinary.com/dkm0ahny1/image/upload/v1760512005/Screenshot_2025-10-15_at_08.59.12_uc2eqk.png",
+        caption: null,
+        credit: null,
+        createdAt: new Date(),
+        updatedAt: new Date(),
+      },
+      {
+        postId: 7,
+        url: "https://res.cloudinary.com/dkm0ahny1/image/upload/v1760521864/9993DD0F-0E04-4C00-A56C6FFCCBC763DD_source_q77gxv.webp",
+        caption: null,
+        credit: null,
+        createdAt: new Date(),
+        updatedAt: new Date(),
+      },
+      {
+        postId: 8,
+        url: "https://res.cloudinary.com/dkm0ahny1/image/upload/v1760512113/Life-Thrives-In-The-Deepest-Ocean_t2mfmh.jpg",
+        caption: null,
+        credit: null,
+        createdAt: new Date(),
+        updatedAt: new Date(),
+      },
+      {
+        postId: 9,
+        url: "https://res.cloudinary.com/dkm0ahny1/image/upload/v1760512205/Screenshot_2025-10-15_at_09.09.26_b2umkl.png",
+        caption: null,
+        credit: null,
+        createdAt: new Date(),
+        updatedAt: new Date(),
+      },
+      {
+        postId: 10,
+        url: "https://res.cloudinary.com/dkm0ahny1/image/upload/v1760512433/RV_Polarstern_during_CONTRASTS_kvx1io.jpg",
+        caption: null,
+        credit: null,
+        createdAt: new Date(),
+        updatedAt: new Date(),
+      },
+      {
+        postId: 11,
+        url: "https://res.cloudinary.com/dkm0ahny1/image/upload/v1760512624/life-found-flourishing_rl55nz.jpg",
+        caption: null,
+        credit: null,
+        createdAt: new Date(),
+        updatedAt: new Date(),
+      },
+      {
+        postId: 12,
+        url: "https://res.cloudinary.com/dkm0ahny1/image/upload/v1760513224/an-upgraded-alvin-puts_i5ykku.jpg",
+        caption: null,
+        credit: null,
+        createdAt: new Date(),
+        updatedAt: new Date(),
+      },
+      {
+        postId: 13,
+        url: "https://res.cloudinary.com/dkm0ahny1/image/upload/v1760513298/FKt231218_Seamount_4_2681m_hi_res-1-scaled_fg8frw.jpg",
+        caption: null,
+        credit: null,
+        createdAt: new Date(),
+        updatedAt: new Date(),
+      },
+      {
+        postId: 14,
+        url: "https://res.cloudinary.com/dkm0ahny1/image/upload/v1760514272/493_hrdjv2.avif",
+        caption: null,
+        credit: null,
+        createdAt: new Date(),
+        updatedAt: new Date(),
+      },
+      {
+        postId: 15,
+        url: "https://res.cloudinary.com/dkm0ahny1/image/upload/v1760521771/Hesperides1_uksfrm.jpg",
+        caption: null,
+        credit: null,
+        createdAt: new Date(),
+        updatedAt: new Date(),
+      },
+      {
+        postId: 16,
+        url: "https://res.cloudinary.com/dkm0ahny1/image/upload/v1760514636/1674_rycsy2.avif",
+        caption: null,
+        credit: null,
+        createdAt: new Date(),
+        updatedAt: new Date(),
+      },
+      {
+        postId: 17,
+        url: "https://res.cloudinary.com/dkm0ahny1/image/upload/v1760514686/3446_y7ug8w.avif",
+        caption: null,
+        credit: null,
+        createdAt: new Date(),
+        updatedAt: new Date(),
+      },
+      {
+        postId: 18,
+        url: "https://res.cloudinary.com/dkm0ahny1/image/upload/v1760514743/4_29a_DSCN6050.JPG_igpb27.webp",
+        caption: null,
+        credit: null,
+        createdAt: new Date(),
+        updatedAt: new Date(),
+      },
+      {
+        postId: 19,
+        url: "https://res.cloudinary.com/dkm0ahny1/image/upload/v1760521941/767716_imagen2_-voluntario-recogiendo-microplaisticos-en-playa-1.png_yvf9k4.png",
+        caption: null,
+        credit: null,
+        createdAt: new Date(),
+        updatedAt: new Date(),
+      },
+      {
+        postId: 20,
+        url: "https://res.cloudinary.com/dkm0ahny1/image/upload/v1760514821/R89eWC7KM9bXRF3XYNK9C4-1200-80.jpg_ekuahz.webp",
+        caption: null,
+        credit: null,
+        createdAt: new Date(),
+        updatedAt: new Date(),
+      },
+      {
+        postId: 22,
+        url: "https://res.cloudinary.com/dkm0ahny1/image/upload/v1760515052/1668_lntrrb.avif",
+        caption: null,
+        credit: null,
+        createdAt: new Date(),
+        updatedAt: new Date(),
+      },
+      {
+        postId: 23,
+        url: "https://res.cloudinary.com/dkm0ahny1/image/upload/v1760515127/Screenshot_2025-10-15_at_09.58.37_uqmvjn.png",
+        caption: null,
+        credit: null,
+        createdAt: new Date(),
+        updatedAt: new Date(),
+      },
+      {
+        postId: 24,
+        url: "https://res.cloudinary.com/dkm0ahny1/image/upload/v1760515187/c40c293_sirius-fs-upload-1-jgrvomnoahmx-1746626561770-sipa-00836626-000004_yipluc.avif",
+        caption: null,
+        credit: null,
+        createdAt: new Date(),
+        updatedAt: new Date(),
+      },
+      {
+        postId: 25,
+        url: "https://res.cloudinary.com/dkm0ahny1/image/upload/v1760515245/Philippine_reef_dn9u2e.jpg",
+        caption: null,
+        credit: null,
+        createdAt: new Date(),
+        updatedAt: new Date(),
+      }
+    ];
+
+    await queryInterface.bulkInsert('post_images', postImages, {});
+  },
+
+  async down(queryInterface, Sequelize) {
+    await queryInterface.bulkDelete('post_images', {
+      postId: { [Sequelize.Op.in]: Array.from({length: 25}, (_, i) => i + 1) }
+    }, {});
+  }
+};
