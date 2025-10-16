@@ -30,6 +30,7 @@ server/
 │ ├── controllers/                          # Controladores de la lógica de negocio
 │ │   ├── AuthController.ts  
 │ │   ├── CategoryController.ts  
+│ │   ├── LikeController.ts  
 │ │   ├── PostController.ts  
 │ │   ├── PostImagesController.ts  
 │ │   └── UserController.ts        
@@ -55,6 +56,8 @@ server/
 │ │   └── UserModel.ts
 │ ├── routes/                               # Definición de rutas
 │ │   ├── authRoutes.ts
+│ │   ├── backupRoutes.ts
+│ │   ├── likeRoutes.ts
 │ │   ├── postImagesRoutes.ts 
 │ │   ├── postRoutes.ts
 │ │   └── userRoutes.ts
@@ -62,7 +65,9 @@ server/
 │ │   ├── 001-admin-user.js
 │ │   ├── 002-categories.js 
 │ │   ├── 003-admin-posts.js
-│ │   └── 004-admin-posts-categories.js
+│ │   ├── 004-admin-posts-categories.js
+│ │   ├── 005-admin-posts-img.js
+│ │   └── 006-admin-likes.js
 │ ├── tests/                                # Tests unitarios/integración
 │ │   ├── auth.test.ts
 │ │   └── posts.test.ts 
@@ -81,6 +86,7 @@ server/
 ├── .env.example                            # Modelo de .env
 ├── .gitignore                              # Archivos que no se suben a GitHub
 ├── .sequelizerc                            # Configuración Sequelize
+├── backup_railway.json                     # Copia de seguridad
 ├── docker-compose.yml                      # Configuración Docker
 ├── jest.config.js                          # Configuración Jest
 ├── lastdiscover_local.sql                  # Dump de la base de datos local para subir a Railway
