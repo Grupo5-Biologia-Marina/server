@@ -193,8 +193,14 @@ server/
 - `DELETE /posts/:id` (admin o user autentificado autor) → eliminar post.  
 
 ### Images
-
 - `POST /:postId/images` → añadir una imagen a un post. 
+
+### Likes
+- `GET /posts/:id/likes` → recoge los likes.  
+- `POST /posts/:id/likes` → dar o quitar like 
+
+### Backup de la base de datos
+- `GET /backup` → al ejecutarse se crea un archivo json con los datos que están almacenados en Railway .  
 
 ---
 

@@ -4,7 +4,6 @@ import LikeModel from '../models/LikeModel';
 import PostModel from '../models/PostModel';
 import { ApiResponse } from '../types/posts';
 
-// ❤️ Dar o quitar like (toggle)
 export const toggleLike = async (req: AuthenticatedRequest, res: Response): Promise<void> => {
   try {
     const { id: postId } = req.params;
@@ -16,20 +15,17 @@ export const toggleLike = async (req: AuthenticatedRequest, res: Response): Prom
 
     const userId = req.user.id;
 
-    // Verificar que el post existe
     const post = await PostModel.findByPk(postId);
     if (!post) {
       res.status(404).json({ success: false, message: 'Post not found' });
       return;
     }
 
-    // Buscar si ya existe el like
     const existingLike = await LikeModel.findOne({
       where: { userId, postId }
     });
 
     if (existingLike) {
-      // Si existe, lo eliminamos (unlike)
       await existingLike.destroy();
       
       const response: ApiResponse<{ liked: boolean }> = {
@@ -39,7 +35,6 @@ export const toggleLike = async (req: AuthenticatedRequest, res: Response): Prom
       };
       res.status(200).json(response);
     } else {
-      // Si no existe, lo creamos (like)
       await LikeModel.create({ userId: Number(userId), postId: Number(postId) });
       
       const response: ApiResponse<{ liked: boolean }> = {
@@ -60,15 +55,12 @@ export const toggleLike = async (req: AuthenticatedRequest, res: Response): Prom
   }
 };
 
-// 📊 Obtener información de likes de un post
 export const getLikeInfo = async (req: AuthenticatedRequest, res: Response): Promise<void> => {
   try {
     const { id: postId } = req.params;
 
-    // Contar total de likes
     const likesCount = await LikeModel.count({ where: { postId } });
 
-    // Verificar si el usuario actual dio like (si está autenticado)
     let isLikedByUser = false;
     if (req.user) {
       const userLike = await LikeModel.findOne({

@@ -2,9 +2,7 @@ import { Request, Response } from 'express';
 import CategoryModel from '../models/CategoryModel';
 import { AuthenticatedRequest } from '../types/auth';
 import { CategoryApiResponse } from '../types/category';
-import { ApiResponse } from '../types/posts';
 
-// GET: obtener todas las categorías
 export const getCategories = async (req: Request, res: Response): Promise<void> => {
   try {
     const categories = await CategoryModel.findAll();
@@ -24,7 +22,6 @@ export const getCategories = async (req: Request, res: Response): Promise<void> 
   }
 };
 
-// POST: crear una categoría
 export const createCategory = async (req: AuthenticatedRequest, res: Response): Promise<void> => {
   try {
     if (!req.user) {
@@ -70,7 +67,6 @@ export const createCategory = async (req: AuthenticatedRequest, res: Response): 
   }
 };
 
-// PUT: actualizar categoría
 export const updateCategory = async (req: AuthenticatedRequest, res: Response): Promise<void> => {
   try {
     if (!req.user) {
@@ -113,7 +109,6 @@ export const updateCategory = async (req: AuthenticatedRequest, res: Response): 
   }
 };
 
-// DELETE: eliminar categoría
 export const deleteCategory = async (req: AuthenticatedRequest, res: Response): Promise<void> => {
   try {
     if (!req.user) {
