@@ -387,9 +387,9 @@ npm install
     DB_DIALECT=mysql
     MYSQL_PUBLIC_URL=
     ```
-3. Importar la base de datos desde el dump 'lastdiscover_local.sql':
+3. Importar la base de datos desde el dump 'backup_local.sql':
     ```
-   mysql -h <host> -P <puerto> -u <usuario> -p <nombre_de_la_db> < lastdiscover_local.sql
+   mysql -h <host> -P <puerto> -u <usuario> -p <nombre_de_la_db> < backup_local.sql
     ```
 4. Iniciar el servidor localmente apuntando a la base de datos de Railway:
     ```
@@ -431,4 +431,5 @@ FRONTEND_URL=http://localhost:5173
 
 ## 📌 Notas
 
-Por defecto, el primer usuario creado debería ser admin (configurable).
+- Por defecto, el primer usuario creado debería ser admin (configurable).
+- Railway ofrece servicio gratuito 30 días por lo que no es una solución definitiva.
