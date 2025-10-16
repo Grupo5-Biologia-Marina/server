@@ -8,4 +8,5 @@ const UserModel = {
   count: jest.fn(),
 };
 
+
 export default UserModel;
