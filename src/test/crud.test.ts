@@ -1,12 +1,10 @@
 import request from 'supertest';
 import express from 'express';
 
-// Crear app de Express para testing
 const createTestApp = () => {
   const app = express();
   app.use(express.json());
   
-  // Mock data para simular una base de datos
   let mockDiscoveries = [
     { 
       id: 1, 
@@ -25,11 +23,9 @@ const createTestApp = () => {
   ];
   let nextId = 3;
 
-  // POST /api/discoveries - Crear descubrimiento
   app.post('/api/discoveries', (req, res) => {
     const { title, description, location, userId } = req.body;
 
-    // Validaciones
     if (!title || title.trim() === '') {
       return res.status(400).json({ error: 'El título es obligatorio' });
     }
@@ -46,10 +42,8 @@ const createTestApp = () => {
       return res.status(400).json({ error: 'El título es demasiado largo' });
     }
 
-    // Sanitizar título (remover scripts)
     const sanitizedTitle = title.replace(/<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi, '');
 
-    // Crear nuevo descubrimiento
     const newDiscovery = {
       id: nextId++,
       title: sanitizedTitle,
@@ -64,20 +58,17 @@ const createTestApp = () => {
     res.status(201).json(newDiscovery);
   });
 
-  // GET /api/discoveries - Obtener todos los descubrimientos
   app.get('/api/discoveries', (req, res) => {
     const { search, userId, sortBy = 'id', order = 'asc', limit } = req.query;
     
     let filteredDiscoveries = [...mockDiscoveries];
 
-    // Filtrar por búsqueda en título
     if (search && typeof search === 'string') {
       filteredDiscoveries = filteredDiscoveries.filter(discovery => 
         discovery.title.toLowerCase().includes(search.toLowerCase())
       );
     }
 
-    // Filtrar por usuario
     if (userId && typeof userId === 'string') {
       const userIdNum = parseInt(userId);
       if (!isNaN(userIdNum)) {
@@ -87,7 +78,6 @@ const createTestApp = () => {
       }
     }
 
-    // Ordenar
     if (sortBy === 'createdAt') {
       filteredDiscoveries.sort((a, b) => {
         const dateA = new Date(a.createdAt).getTime();
@@ -102,7 +92,6 @@ const createTestApp = () => {
       });
     }
 
-    // Limitar resultados
     if (limit && typeof limit === 'string') {
       const limitNum = parseInt(limit);
       if (!isNaN(limitNum) && limitNum > 0) {

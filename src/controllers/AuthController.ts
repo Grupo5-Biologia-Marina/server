@@ -4,7 +4,6 @@ import jwt from "jsonwebtoken";
 import UserModel from "../models/UserModel";
 import { sendWelcomeEmail } from "../utils/mailer";
 
-// Función para hashear contraseña
 const hashPassword = (password: string): string => {
   const salt = bcrypt.genSaltSync(10);
   return bcrypt.hashSync(password, salt);
@@ -16,7 +15,6 @@ export const registerUser = async (req: Request, res: Response): Promise<void> =
 
     const { username, firstname, lastname, email, password } = req.body;
 
-    // Validación de campos obligatorios
     if (!username || !email || !password) {
       res.status(400).json({ 
         success: false, 
@@ -25,7 +23,7 @@ export const registerUser = async (req: Request, res: Response): Promise<void> =
       return;
     }
 
-    // Validación de formato de email
+
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(email)) {
       res.status(400).json({ 
@@ -35,7 +33,6 @@ export const registerUser = async (req: Request, res: Response): Promise<void> =
       return;
     }
 
-    // Verificar si el usuario ya existe
     const existingUser = await UserModel.findOne({ where: { email } });
     if (existingUser) {
       res.status(409).json({ 
@@ -45,7 +42,6 @@ export const registerUser = async (req: Request, res: Response): Promise<void> =
       return;
     }
 
-    // Verificar si el username ya existe
     const existingUsername = await UserModel.findOne({ where: { username } });
     if (existingUsername) {
       res.status(409).json({ 
@@ -57,7 +53,6 @@ export const registerUser = async (req: Request, res: Response): Promise<void> =
 
     const hashedPassword = hashPassword(password);
 
-    // Crear usuario
     const user = await UserModel.create({
       username,
       firstname,
@@ -69,12 +64,10 @@ export const registerUser = async (req: Request, res: Response): Promise<void> =
 
     console.log(`✅ Usuario creado: ${user.username} (${user.email})`);
 
-    // Enviar email de bienvenida (sin bloquear la respuesta)
     sendWelcomeEmail(email, username)
       .then(() => console.log(`📧 Email de bienvenida enviado a ${email}`))
       .catch((error) => console.error(`⚠️ Error enviando email (no crítico):`, error.message));
 
-    // Generar token JWT
     const token = jwt.sign(
       { id: user.id, role: user.role, username: user.username },
       process.env.JWT_SECRET || "defaultsecret",
@@ -110,7 +103,6 @@ export const loginUser = async (req: Request, res: Response): Promise<void> => {
 
     const { email, password } = req.body;
 
-    // Validación de campos
     if (!email || !password) {
       res.status(400).json({ 
         success: false, 
@@ -119,7 +111,6 @@ export const loginUser = async (req: Request, res: Response): Promise<void> => {
       return;
     }
 
-    // Buscar usuario
     const user = await UserModel.findOne({ where: { email } });
 
     if (!user) {
@@ -130,7 +121,7 @@ export const loginUser = async (req: Request, res: Response): Promise<void> => {
       return;
     }
 
-    // Verificar contraseña
+   
     const isMatch = await bcrypt.compare(password, user.password);
 
     if (!isMatch) {

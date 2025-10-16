@@ -11,7 +11,6 @@ import UserModel from '../models/UserModel';
 
 export const createPost = async (req: AuthenticatedRequest, res: Response): Promise<void> => {
   try {
-    // ✅ Validar admin
     if (!req.user) {
       res.status(401).json({ success: false, message: 'Unauthorized' });
       return;

@@ -4,7 +4,7 @@ import bcrypt from 'bcrypt';
 import { registerUser } from '../controllers/AuthController';
 import UserModel from '../models/UserModel';
 
-// ===================== MOCKS =====================
+
 jest.mock('../models/UserModel');
 jest.mock('bcrypt');
 jest.mock('jsonwebtoken');
@@ -29,7 +29,6 @@ const mockRequest = (data?: any): Partial<Request> => {
   };
 };
 
-// ===================== REGISTER TESTS =====================
 describe('AuthController - Register (6 test cases)', () => {
   let req: Partial<Request>;
   let res: Partial<Response>;
