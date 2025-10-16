@@ -8,11 +8,9 @@ import db_connection from "./src/database/db_connection";
 
 const APP_PORT = Number(process.env.APP_PORT) || 4000;
 
-// 🔄 Sincronizar base de datos antes de iniciar el servidor
 const startServer = async () => {
   try {
-    // Sincronizar modelos con la base de datos (sin borrar datos)
-    await db_connection.sync({ alter: true });
+    await db_connection.sync(); 
     console.log('✅ Base de datos sincronizada');
 
     app.listen(APP_PORT, () => {
