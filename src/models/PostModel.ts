@@ -88,6 +88,7 @@ PostModel.belongsToMany(CategoryModel, {
   foreignKey: "postId",
   otherKey: "categoryId",
   as: "categories",
+  timestamps: false,
 });
 
 CategoryModel.belongsToMany(PostModel, {
@@ -95,6 +96,7 @@ CategoryModel.belongsToMany(PostModel, {
   foreignKey: "categoryId",
   otherKey: "postId",
   as: "posts",
+  timestamps: false,
 });
 
 // ❤️ Nueva relación con likes
