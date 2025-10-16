@@ -1,7 +1,6 @@
 import nodemailer from "nodemailer";
 import * as path from "path";
 
-// Validar variables de entorno al inicio
 const validateEmailConfig = () => {
   if (!process.env.EMAIL_USER || !process.env.EMAIL_APP_PASS) {
     throw new Error('❌ Faltan variables de entorno: EMAIL_USER o EMAIL_APP_PASS');
@@ -11,7 +10,6 @@ const validateEmailConfig = () => {
   console.log("📧 EMAIL_USER:", process.env.EMAIL_USER);
 };
 
-// Crear transporter una sola vez (mejor práctica)
 const createTransporter = () => {
   validateEmailConfig();
   
@@ -34,7 +32,6 @@ export const sendWelcomeEmail = async (to: string, username: string) => {
   
   const transporter = createTransporter();
   
-  // Verificar conexión antes de enviar
   try {
     await transporter.verify();
     console.log("✅ Conexión con servidor SMTP verificada");
@@ -43,7 +40,6 @@ export const sendWelcomeEmail = async (to: string, username: string) => {
     throw new Error("No se pudo conectar con Gmail. Verifica tus credenciales.");
   }
 
-  // Ruta al logo - Definir ANTES de usar en el HTML
   const logoPath = path.join(__dirname, "../assets/logo.png");
   console.log("📁 Ruta del logo:", logoPath);
 
@@ -149,7 +145,6 @@ export const sendWelcomeEmail = async (to: string, username: string) => {
     </html>
   `;
 
-  // Versión de texto plano (CRÍTICO para evitar spam)
   const textContent = `
 Hola ${username},
 

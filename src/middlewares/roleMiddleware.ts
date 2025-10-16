@@ -12,12 +12,10 @@ export const checkRole = (roles: string[]) => {
 
       const { id } = req.params;
 
-      // Caso 1: si el rol del usuario está incluido en los roles permitidos
       if (roles.includes(user.role)) {
         return next();
       }
 
-      // Caso 2: si no está incluido, pero está accediendo a su propio recurso
       if (id && user.id === id) {
         return next();
       }

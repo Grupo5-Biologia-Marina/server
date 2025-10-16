@@ -12,17 +12,12 @@ dotenv.config();
 
 const app = express();
 
-// Middlewares
 app.use(cors({
   origin: "http://localhost:5173",
   credentials: true,
 }));
 app.use(express.json());
-
-// Ruta para backup de la base de datos (genera un archivo .json)
 app.use("/", backupRouter);
-
-// Rutas principales
 app.use("/auth", authRoutes);   
 app.use("/users", userRoutes);  
 app.use("/api/posts", postRoutes);         
