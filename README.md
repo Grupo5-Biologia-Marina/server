@@ -18,6 +18,55 @@ Permite almacenar, gestionar y consultar información sobre nuevas especies, inv
 - **Desarrollo y utilidades:** ts-node, ts-node-dev, ESLint, Sequelize-CLI, Dotenv, UUID  
 - **Despliegue:** Railway
 
+---
+
+## ⭐️ Funcionalidades 
+
+### 🧱 Base de datos relacional
+Diseño relacional con Sequelize (MySQL), migraciones y seeders configurados para inicializar usuarios, categorías y publicaciones.
+
+### 🧩 Validación de datos
+Verificación y saneamiento de la información mediante validadores personalizados en `validators/`.
+Garantiza consistencia en formularios de autenticación y creación de posts.
+
+### 🔐 Autenticación y roles de usuario
+Gestión segura de registro, inicio y cierre de sesión mediante JWT.
+Los usuarios cuentan con diferentes permisos según su rol, controlados por middlewares de autorización.
+- Login con usuario y contraseña → devuelve un **JWT**.  
+- Rutas protegidas requieren `Authorization: Bearer <token>`.  
+- Roles disponibles:  
+  - `user`: permisos básicos.  
+  - `admin`: puede crear/editar/eliminar posts y categorías.  
+
+### 🗂️ Gestión de categorías
+Administración de categorías temáticas (por ejemplo vida marina, ecosistemas oceánicos, ciencia y exploración, etc.) para clasificar las publicaciones.
+Relación N:M entre posts y categorías mediante una tabla intermedia.
+
+### ❤️ Sistema de likes
+Implementa una tabla intermedia (Likes) que permite a los usuarios marcar o quitar “me gusta” en publicaciones.
+La lógica está gestionada desde `LikeController.ts` con rutas protegidas.
+
+### 🧪 Testing automatizado
+Cobertura de pruebas unitarias y de integración mediante Jest y Supertest, validando rutas de autenticación, CRUD y seguridad.
+
+<img src="src/assets/test-1.png" alt="Backend tests" width="400"/>
+
+<img src="src/assets/test-2.png" alt="Backend tests" width="400"/>
+
+### 🖼️ Subida y gestión de imágenes
+Integración con Cloudinary para almacenar imágenes asociadas a publicaciones.
+El sistema maneja metadatos opcionales como créditos y descripciones de imagen de manera opcional.
+
+<img src="src/assets/cloudinary.png" alt="Cloudinary desktop" width="400"/>
+
+### 📧 Notificaciones por correo electrónico
+Envío automático de un email de bienvenida al registrarse, utilizando Nodemailer y credenciales configuradas en el entorno.
+
+<img src="src/assets/nodemailer.png" alt="Email bienvenida" width="300"/>
+
+### 🔄 Copia de seguridad
+Ruta `/backup` que genera un archivo JSON con los datos actuales almacenados en la base de datos de Railway.
+Facilita la exportación y recuperación de información.
 
 ---
 
@@ -70,7 +119,12 @@ server/
 │ │   └── 006-admin-likes.js
 │ ├── tests/                                # Tests unitarios/integración
 │ │   ├── auth.test.ts
-│ │   └── posts.test.ts 
+│ │   ├── crud.test.ts
+│ │   ├── images.test.ts
+│ │   ├── likes.test.ts
+│ │   ├── login.test.ts
+│ │   ├── setup.ts
+│ │   └── token.test.ts 
 │ ├── types/                                # Definiciones TS (DTOs, interfaces, etc.)
 │ │   ├── auth.ts
 │ │   ├── category.ts
@@ -89,7 +143,7 @@ server/
 ├── backup_railway.json                     # Copia de seguridad
 ├── docker-compose.yml                      # Configuración Docker
 ├── jest.config.js                          # Configuración Jest
-├── lastdiscover_local.sql                  # Dump de la base de datos local para subir a Railway
+├── backup_local.sql                        # Dump copia de seguridad de la base de datos
 ├── package-lock.json                       # Dependencias
 ├── package.json                            # Dependencias
 ├── README.md                               # Documentación
@@ -159,15 +213,6 @@ server/
 | createdAt  | datetime           |                    |no      |
 | updatedAt  | datetime           |                    |no      |
 
----
-
-## 🔑 Autenticación
-
-- Login con usuario y contraseña → devuelve un **JWT**.  
-- Rutas protegidas requieren `Authorization: Bearer <token>`.  
-- Roles disponibles:  
-  - `user`: permisos básicos.  
-  - `admin`: puede crear/editar/eliminar posts y categorías.  
 
 ---
 
@@ -375,17 +420,6 @@ EMAIL_USER=el.gran.azul.post@gmail.com
 EMAIL_APP_PASS=xvlotowcpiojllfa
 FRONTEND_URL=http://localhost:5173
 ```
-
----
-## ⭐️ Funcionalidades extra
-
-### Subida de imágenes mediante Cloudinary
-
-<img src="src/assets/cloudinary.png" alt="Cloudinary desktop" width="400"/>
-
-### Email de bienvenida al registrarse con Nodemailer
-
-<img src="src/assets/nodemailer.png" alt="Email bienvenida" width="300"/>
 
 ---
 ## 👩🏻‍💻​ Creadoras
