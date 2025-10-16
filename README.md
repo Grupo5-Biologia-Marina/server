@@ -260,10 +260,10 @@ npm install
     ```
     DB_NAME=lastdiscover_local
     DB_PORT=3306
-    DB_USER=appuser
-    DB_PASSWORD=password
-    DB_HOST=127.0.0.1
-    JWT_SECRET=supersecret
+    USER_DB=appuser
+    PASSWORD_DB=password
+    HOST=127.0.0.1
+    DB_DIALECT=mysql
     ```
 3. Ejecutar las migraciones y seeds:
     ```
