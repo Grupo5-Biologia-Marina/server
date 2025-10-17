@@ -1,5 +1,6 @@
 import { Router } from "express";
-import { getPosts, getPostById, createPost, updatePost, deletePost, getPostsByUserId } from "../controllers/PostController";
+import { getPosts, getPostById, createPost, updatePost, deletePost, getPostsByUserId  } from "../controllers/PostController";
+import { toggleLike, getLikeInfo } from "../controllers/LikeController";
 import { authenticate } from "../middlewares/authMiddleware";
 import { checkRole } from "../middlewares/roleMiddleware";
 

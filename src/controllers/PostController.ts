@@ -5,6 +5,7 @@ import { PostCreateInput, PostOutput, ApiResponse } from '../types/posts';
 import CategoryModel from '../models/CategoryModel';
 import PostImageModel from '../models/PostImageModel';
 import UserModel from '../models/UserModel';
+import LikeModel from '../models/LikeModel';
 
 
 export const createPost = async (req: AuthenticatedRequest, res: Response): Promise<void> => {
@@ -131,6 +132,8 @@ export const getPosts = async (req: Request, res: Response): Promise<void> => {
 export const getPostById = async (req: Request, res: Response): Promise<void> => {
   try {
     const { id } = req.params;
+    
+    // 🔍 Obtener post con todas sus relaciones incluyendo conteo de likes
     const post = await PostModel.findByPk(id, {
       include: [
         {
@@ -148,8 +151,24 @@ export const getPostById = async (req: Request, res: Response): Promise<void> =>
           model: PostImageModel,
           as: 'images',
           attributes: ['id', 'url', 'caption', 'credit']
+        },
+        {
+          model: LikeModel,
+          as: 'likes',
+          attributes: [] // ❤️ Solo contar
         }
-      ]
+      ],
+      attributes: {
+        include: [
+          // ❤️ Añadir el conteo de likes
+          [
+            db_connection.fn('COUNT', db_connection.fn('DISTINCT', db_connection.col('likes.userId'))),
+            'likesCount'
+          ]
+        ]
+      },
+      group: ['Post.id', 'user.id', 'categories.id', 'images.id'],
+      subQuery: false
     });
 
     if (!post) {
